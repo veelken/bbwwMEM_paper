@@ -1,0 +1,180 @@
+\def\verPreprint{1}
+\def\verPAPER{2}
+\def\ver{1}
+
+\ifx\ver\verPreprint
+\documentclass[a4paper,english,11pt]{article}
+\usepackage[bindingoffset=0.5cm,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,footskip=1.0cm]{geometry}
+\usepackage{lineno,hepnames,bm,multirow,amssymb,authblk,graphicx,newclude,xspace,hyperref}
+\fi
+\ifx\ver\verPAPER
+\documentclass[1p]{elsarticle}
+\usepackage{lineno,hyperref,hepnames,bm,multirow,amssymb,xspace}
+\fi
+
+%\modulolinenumbers[5]
+
+%%\journal{Journal of \LaTeX\ Templates}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Custom latex macros
+%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\Plepton}{\ensuremath{\ell}}
+\newcommand{\ellStar}{\ensuremath{\ell^{\ast}}}
+\newcommand{\nuStar}{\ensuremath{\Pnu^{\ast}}}
+\newcommand{\ellMinus}{\ensuremath{\Plepton^{-}}\xspace}
+\newcommand{\ellPlus}{\ensuremath{\Plepton^{+}}\xspace}
+\newcommand{\ellnu}{\ensuremath{\Plepton\Pnu}\xspace}
+\newcommand{\ellnuStar}{\ensuremath{\Plepton^{\ast}\Pnu^{\ast}}\xspace}
+\newcommand{\ellMinusnu}{\ensuremath{\Plepton^{-}\APnu}\xspace}
+\newcommand{\ellPlusnu}{\ensuremath{\Plepton^{+}\Pnu}\xspace}
+\newcommand{\ellnuellnuStar}{\ensuremath{\Plepton\Pnu\Plepton^{\ast}\Pnu^{\ast}}\xspace}
+\newcommand{\ellnuellStar}{\ensuremath{\Plepton\Pnu\Plepton^{\ast}}\xspace}
+\newcommand{\dihiggs}{\ensuremath{\PHiggs\PHiggs}}
+\renewcommand{\Pbottom}{\ensuremath{\Pqb}}
+\renewcommand{\APbottom}{\ensuremath{\APqb}}
+\renewcommand{\Ptop}{\ensuremath{\Pqt}}
+\renewcommand{\APtop}{\ensuremath{\APqt}}
+\newcommand{\ttbar}{\ensuremath{\Ptop\APtop}}
+\newcommand{\ggHH}{\ensuremath{\Pgluon\Pgluon\PHiggs\PHiggs}}
+\newcommand{\qqHH}{\ensuremath{\textrm{qq}\PHiggs\PHiggs}}
+\newcommand{\VHH}{\ensuremath{\textrm{V}\PHiggs\PHiggs}}
+\newcommand{\ttHH}{\ensuremath{\Ptop\APtop\PHiggs\PHiggs}}
+\newcommand{\lambdaHHH}{\ensuremath{\lambda_{\PHiggs\PHiggs\PHiggs}}}
+\newcommand{\yt}{\ensuremath{y_{\Ptop}}}
+\newcommand{\vecy}{\ensuremath{\bm{y}}\xspace}
+\newcommand{\vecyhat}{\ensuremath{\bm{\hat{y}}}\xspace}
+\newcommand{\xhat}{\ensuremath{\hat{x}}\xspace}
+\newcommand{\vecp}{\ensuremath{\bm{p}}\xspace}
+\newcommand{\vecphat}{\ensuremath{\bm{\hat{p}}}\xspace}
+\newcommand{\pT}{\ensuremath{p_{\textrm{T}}}\xspace}
+\newcommand{\pThat}{\ensuremath{\hat{p}_{\textrm{T}}}\xspace}
+\newcommand{\etahat}{\ensuremath{\hat{\eta}}\xspace}
+\newcommand{\thetahat}{\ensuremath{\hat{\theta}}\xspace}
+\newcommand{\phihat}{\ensuremath{\hat{\phi}}\xspace}
+\newcommand{\betahat}{\ensuremath{\hat{\beta}}\xspace}
+\newcommand{\mhat}{\ensuremath{\hat{m}}\xspace}
+\newcommand{\Ehat}{\ensuremath{\hat{E}}\xspace}
+\newcommand{\ET}{\ensuremath{E_{\textrm{T}}}\xspace}
+\newcommand{\EThat}{\ensuremath{\hat{E}_{\textrm{T}}}\xspace}
+\newcommand{\pX}{\ensuremath{p_{\textrm{x}}}\xspace}
+\newcommand{\pXhat}{\ensuremath{\hat{p}_{\textrm{x}}}\xspace}
+\newcommand{\pY}{\ensuremath{p_{\textrm{y}}}\xspace}
+\newcommand{\pYhat}{\ensuremath{\hat{p}_{\textrm{y}}}\xspace}
+\newcommand{\pZ}{\ensuremath{p_{\textrm{z}}}\xspace}
+\newcommand{\pZhat}{\ensuremath{\hat{p}_{\textrm{z}}}\xspace}
+\newcommand{\uX}{\ensuremath{u_{\textrm{x}}}\xspace}
+\newcommand{\uY}{\ensuremath{u_{\textrm{y}}}\xspace}
+\newcommand{\vX}{\ensuremath{v_{\textrm{x}}}\xspace}
+\newcommand{\vY}{\ensuremath{v_{\textrm{y}}}\xspace}
+\newcommand{\MET}{\ensuremath{p_{\textrm{T}}^{\textrm{\kern0.10em miss}}}\xspace}
+\newcommand{\vecMET}{\ensuremath{\bm{p}_{\textrm{T}}^{\textrm{\kern0.10em miss}}}\xspace}
+\newcommand{\METx}{\ensuremath{p_{\textrm{x}}^{\textrm{\kern0.10em miss}}}\xspace}
+\newcommand{\METy}{\ensuremath{p_{\textrm{y}}^{\textrm{\kern0.10em miss}}}\xspace}
+\newcommand{\vece}{\ensuremath{\bm{e}}\xspace}
+\newcommand{\vecehat}{\ensuremath{\bm{\hat{e}}}\xspace}
+\newcommand{\defL}{\ensuremath{\mathrel{\mathop:\hspace{-.2em}\mathop:}=}\xspace}
+\newcommand{\defR}{\ensuremath{=\mathrel{\mathop:\hspace{-.2em}\mathop:}}\xspace}
+\newcommand{\X}{\ensuremath{\textrm{X}}}
+\newcommand{\MeV}{\ensuremath{\textrm{MeV}}\xspace}
+\newcommand{\GeV}{\ensuremath{\textrm{GeV}}\xspace}
+\newcommand{\TeV}{\ensuremath{\textrm{TeV}}\xspace}
+\newcommand{\rec}{\ensuremath{\textrm{rec}}}
+\newcommand{\true}{\ensuremath{\textrm{true}}}
+\newcommand{\miss}{\ensuremath{\textrm{miss}}}
+\newcommand{\T}{\ensuremath{\textrm{T}}}
+\newcommand{\cf}{cf.\xspace}
+\newcommand{\ie}{i.e.\xspace}
+\newcommand{\eg}{e.g.\xspace}
+\def\TReg{\textsuperscript{\textregistered}}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\ifx\ver\verPAPER
+\begin{frontmatter}
+\fi
+
+\title{Application of the matrix element method to Higgs boson pair production in the channel $\PHiggs\PHiggs \to \Pbottom\Pbottom\PW\PW^{*}$}
+
+%% Group authors per affiliation:
+
+\ifx\ver\verPreprint
+\author[1]{Alexandra Carvalho}
+\author[1]{Karl Ehat\"aht}
+\author[1]{Christian Veelken}
+\affil[1]{National Institute for Chemical Physics and Biophysics, 10143 Tallinn, Estonia}
+\fi
+\ifx\ver\verPAPER
+\author[tallinn]{Alexandra Carvalho}
+\ead{alexandra.oliveira@cern.ch}
+\author[tallinn]{Karl Ehat\"aht}
+\ead{karl.ehataht@cern.ch}
+\author[tallinn]{Christian Veelken}
+\ead{christian.veelken@cern.ch}
+\address[tallinn]{National Institute for Chemical Physics and Biophysics, 10143 Tallinn, Estonia}
+\fi
+
+\ifx\ver\verPreprint
+\maketitle
+\fi
+
+\begin{abstract}
+
+\end{abstract}
+
+\ifx\ver\verPAPER
+\end{frontmatter}
+\fi
+
+\clearpage
+
+%\linenumbers
+
+%\begingroup
+%\let\clearpage\relax
+\include*{introduction}
+\include*{mem}
+%\include*{performance}
+%\include*{summary}
+
+\include*{appendix}
+
+\bibliography{bbwwMEM}
+%\endgroup
+
+\end{document}
