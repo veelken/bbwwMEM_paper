@@ -20,10 +20,11 @@ The separation of the $\PHiggs\PHiggs$ signal from the irreducible $\ttbar$ back
 causing the probability densities $w_{0}(\vecy|\vecyhat)$ ($w_{1}(\vecy|\vecyhat)$) to be in general higher when evaluated on signal (background) events
 and lower when evaluated on background (signal) events.
 Given the probability densities $w_{0}(\vecy|\vecyhat)$ and $w_{1}(\vecy|\vecyhat)$ for the signal and background hypotheses,
-the Neyman lemma~\cite{Neyman:1937uhy} postulates that the ratio:
-\begin{equation*}
+the Neyman–Pearson lemma~\cite{Neyman:1937uhy} postulates that the likelihood ratio:
+\begin{equation}
 P(\vecy) = \frac{w_{0}(\vecy|\vecyhat)}{w_{0}(\vecy|\vecyhat) + w_{1}(\vecy|\vecyhat)}
-\end{equation*}
+\label{eq:memLR}
+\end{equation}
 then provides the optimal separation of the $\PHiggs\PHiggs$ signal from the irreducible $\ttbar$ background.
 
 Different nomenclatures and conventions for the MEM exist in the literature.
@@ -38,6 +39,7 @@ w_{i}(\vecy|\vecyhat) = & \frac{\Omega(\vecy)}{\sigma \, \mathcal{A}} \, \int \,
 \label{eq:mem1}
 \end{align}
 The symbol $\vert \mathcal{M}_{i}(\vecyhat) \vert^{2}$ denotes the squared modulus of the matrix element (ME) for either the signal ($i=0$) or for the background ($i=1$) hypothesis.
+We use ME generated at LO accuracy with the program MadGraph\_aMCatNLO 2.2.2~\cite{MadGraph_aMCatNLO} for the signal as well as for the background hypothesis[CV: CHECK MADGRAPH VERSION USED TO GENERATE ME].
 The symbols $\Ehat_{a}$ and $\Ehat_{b}$ ($\vecphat^{a}$ and $\vecphat^{b}$) denote the energies (momenta) of the two colliding protons,
 $\sqrt{s}$ their center-of-mass energy,
 $\xhat_{a}$ and $\xhat_{b}$ the Bjorken scaling variables~\cite{Bjorkenx},
@@ -184,7 +186,7 @@ In analogy to the procedure detailed in Ref.~\cite{SVfitMEM}, we replace the $\d
 $\delta( \pXhat^{\rho} + \sum_{i}^{6} \pXhat^{(i)})$ and $\delta( \pYhat^{\rho} + \sum_{i}^{6} \pYhat^{(i)})$
 that ensure the momentum conservation in the transverse plane
 by the TF for the hadronic recoil.
-A remaining issue is that we use leading order (LO) ME $\mathcal{M}_{i}(\vecphat)$ for the $\PHiggs\PHiggs$ signal and for the $\ttbar$ background in Eq.~(\ref{eq:mem2}).
+A remaining issue is that we use LO ME $\mathcal{M}_{i}(\vecphat)$ for the $\PHiggs\PHiggs$ signal and for the $\ttbar$ background in Eq.~(\ref{eq:mem2}).
 The LO ME for the signal (background) requires that the $\PHiggs\PHiggs$ ($\ttbar$) system has zero $\pT$, 
 a condition that (in the laboratory frame) only holds in case the hadronic recoil has zero $\pT$, 
 which rarely holds at the LHC, due to the abundance of ISR (as previously discussed).
@@ -236,6 +238,11 @@ while those specific to the background hypothesis are presented in Section~\ref{
 
 The final numeric integration is performed using the VAMP algorithm~\cite{VAMP}, a variant of the popular VEGAS algorithm~\cite{VEGAS},
 which has been optimized for the case of integrating multimodal functions, typically appearing in the integration of ME over regions in PS.
+We use $2500$ ($25000$) evaluations of the integrand for the computation of the probability density $w_{0}(\vecy|\vecyhat)$ ($w_{1}(\vecy|\vecyhat)$) 
+for the signal (background) hypothesis.
+The number of evaluations has been chosen such that the computation of $w_{0}(\vecy|\vecyhat)$ and $w_{1}(\vecy|\vecyhat)$ take approximately the same time
+and the computation of the likelihood ratio $P(\vecy)$ takes about one minute per event,
+using a single core of a $2.30$~GHz Intel\TReg~Xeon\TReg~E5-2695V3 processor.
 
 
 \subsection{Analytic transformations specific to the signal hypothesis}
