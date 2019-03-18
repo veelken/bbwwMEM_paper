@@ -1,0 +1,30 @@
+\begin{fmffile}{ttbar_tri}
+\begin{fmfgraph*}(70,50)
+\fmfset{arrow_len}{3mm}
+\fmfset{dot_size}{1.5thick}
+% set initial and final points
+\fmfleftn{i}{12}
+\fmfrightn{o}{12}
+% gluons
+\fmf{gluon,tension=1}{i4,v1}
+\fmf{gluon,tension=1}{i9,v1}
+\fmf{gluon,tension=2,label=$\mathrm{g}$,label.side=left}{v1,v2}
+\fmf{fermion}{o1,v3}
+\fmf{fermion,label=$\bar{\mathrm{t}}$,label.side=left}{v3,v2}
+\fmf{fermion,label=$\mathrm{t}$,label.side=left}{v2,v4}
+\fmf{fermion}{v4,o12}
+\fmffreeze
+\fmf{boson,label=$\mathrm{W}^{-}$}{v3,v5}
+\fmf{boson,label=$\mathrm{W}^{+}$}{v4,v6}
+\fmf{fermion}{o5,v5,o4}
+\fmf{fermion}{o7,v6,o8}
+\fmf{phantom,tension=0.3}{v5,i12}
+\fmf{phantom,tension=0.3}{v6,i1}
+\fmflabel{$\mathrm{b}$}{o12}
+\fmflabel{$\bar{\mathrm{b}}$}{o1}
+\fmflabel{$\nu_{\ell}$}{o4}
+\fmflabel{$\ell^{+}$}{o5}
+\fmflabel{$\bar{\nu}_{\ell}$}{o7}
+\fmflabel{$\ell^{-}$}{o8}
+\end{fmfgraph*}
+\end{fmffile}

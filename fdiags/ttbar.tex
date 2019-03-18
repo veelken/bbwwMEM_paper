@@ -1,0 +1,31 @@
+\begin{fmffile}{ttbar}
+\begin{fmfgraph*}(70,50)
+\fmfset{arrow_len}{3mm}
+\fmfset{dot_size}{1.5thick}
+% set initial and final points
+\fmfleftn{i}{6}
+\fmfrightn{o}{12}
+% gluons
+\fmf{gluon,label=$\mathrm{g}$,label.side=left}{i2,v1}
+\fmf{gluon,label=$\mathrm{g}$,label.side=right,label.dist=4mm}{i5,v2}
+\fmf{fermion}{o1,v3}
+\fmf{fermion,label=$\bar{\mathrm{t}}$,label.side=left}{v3,v1}
+\fmf{fermion}{v1,v2}
+\fmf{fermion,label=$\mathrm{t}$}{v2,v4}
+\fmf{fermion}{v4,o12}
+\fmffreeze
+\fmf{boson,label=$\mathrm{W}^{+}$,label.side=left}{v3,v5}
+\fmf{boson,label=$\mathrm{W}^{-}$}{v4,v6}
+\fmf{fermion}{o5,v5,o4}
+\fmf{fermion}{o8,v6,o9}
+\fmf{phantom,tension=0.35}{i5,v5}
+\fmf{phantom,tension=0.35}{i2,v6}
+\fmfdot{v1,v2,v3,v4,v5,v6}
+\fmflabel{$\mathrm{b}$}{o12}
+\fmflabel{$\bar{\mathrm{b}}$}{o1}
+\fmflabel{$\ell^{+}$}{o5}
+\fmflabel{$\nu_{\ell}$}{o4}
+\fmflabel{$\ell^{-}$}{o9}
+\fmflabel{$\bar{\nu}_{\ell}$}{o8}
+\end{fmfgraph*}
+\end{fmffile}

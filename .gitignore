@@ -1,0 +1,12 @@
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.1
+*.log
+*.mp
+*.t1
+bbwwMEM.pdf
