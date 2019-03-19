@@ -5,17 +5,18 @@ The MEM computes probability densities $w_{i}(\vecy|\vecyhat)$
 for obtaining the measured observables $\vecy$, assuming the event has been produced by the process $i$.
 The probability densities $w_{i}(\vecy|\vecyhat)$ are interpreted as quantifying the compatibility of the measured observables $\vecy$
 with the signal ($i=0$) and background ($i=1$) hypothesis.
-In the analysis of Higgs boson pair ($\PHiggs\PHiggs$) production in the decay channel 
+In the analysis of $\PHiggs\PHiggs$ production in the decay channel 
 $\PHiggs\PHiggs \to \Pbottom\APbottom \, \PW^{+}\PW^{-} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$
 the observables $\vecy$ refer to 
 the measured momenta of the two $\Pbottom$-jets, the two charged leptons, and the measured missing transverse momentum ($\vecMET$) in the event.
 We use symbols with a hat to denote the true values of energies and momenta.
 Bold letters denote vector quantities.
 The vector $\vecyhat$ denotes the true values of the $\Pbottom$-jet and charged lepton momenta and the true values of the momenta of the two neutrinos produced in the $\PW$ boson decays.
-Note that $\PHiggs\PHiggs \to \Pbottom\APbottom \, \PW^{+}\PW^{-} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$ signal events
+
+\textcolor{blue}{As already mentioned} \st{Note that} $\PHiggs\PHiggs \to \Pbottom\APbottom \, \PW^{+}\PW^{-} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$ signal events
 contain the same number of $\Pbottom$-jets, charged leptons, and neutrinos as the dominant background,
-arising from top quark pair production ($\ttbar \to \Pbottom\PW^{+} \, \APbottom\PW^{-} \to \Pbottom\ellPlusnu \, \APbottom\ellMinusnu$),
-in this channel.
+arising from top quark pair production ($\ttbar \to \Pbottom\PW^{+} \, \APbottom\PW^{-} \to \Pbottom\ellPlusnu \, \APbottom\ellMinusnu$). \st{,
+in this channel.}
 The separation of the $\PHiggs\PHiggs$ signal from the irreducible $\ttbar$ background is based on the difference in event kinematics,
 causing the probability densities $w_{0}(\vecy|\vecyhat)$ ($w_{1}(\vecy|\vecyhat)$) to be in general higher when evaluated on signal (background) events
 and lower when evaluated on background (signal) events.
@@ -25,7 +26,7 @@ the Neyman–Pearson lemma~\cite{Neyman:1937uhy} postulates that the likelihood 
 P(\vecy) = \frac{w_{0}(\vecy|\vecyhat)}{w_{0}(\vecy|\vecyhat) + w_{1}(\vecy|\vecyhat)}
 \label{eq:memLR}
 \end{equation}
-then provides the optimal separation of the $\PHiggs\PHiggs$ signal from the irreducible $\ttbar$ background.
+\st{then} provides the optimal separation of the $\PHiggs\PHiggs$ signal from the irreducible $\ttbar$ background.
 
 Different nomenclatures and conventions for the MEM exist in the literature.
 In this note, we follow the nomenclature and conventions introduced in Ref.~\cite{Volobouev:2011vb}.
@@ -39,22 +40,19 @@ w_{i}(\vecy|\vecyhat) = & \frac{\Omega(\vecy)}{\sigma \, \mathcal{A}} \, \int \,
 \label{eq:mem1}
 \end{align}
 The symbol $\vert \mathcal{M}_{i}(\vecyhat) \vert^{2}$ denotes the squared modulus of the matrix element (ME) for either the signal ($i=0$) or for the background ($i=1$) hypothesis.
-We use ME generated at LO accuracy with the program MadGraph\_aMCatNLO 2.2.2~\cite{MadGraph_aMCatNLO} for the signal as well as for the background hypothesis[CV: CHECK MADGRAPH VERSION USED TO GENERATE ME].
+We use ME generated at LO accuracy with the program MadGraph\_aMCatNLO 2.2.2~\cite{MadGraph_aMCatNLO} for the signal as well as for the background hypothesis[CV: CHECK MADGRAPH VERSION USED TO GENERATE ME]. \textcolor{red}{X: as referee I would ask why so old version, this is to be compatible with the model that is based on form factors -- that BTW we need to cite. We use this old model because we could not use the loop induced by some practical reason that I do not remember. I would do a chapter "MC modelling", where we collect the MC info instead of having it popping up eventually.}
+
 The symbols $\Ehat_{a}$ and $\Ehat_{b}$ ($\vecphat^{a}$ and $\vecphat^{b}$) denote the energies (momenta) of the two colliding protons,
 $\sqrt{s}$ their center-of-mass energy,
 $\xhat_{a}$ and $\xhat_{b}$ the Bjorken scaling variables~\cite{Bjorkenx},
 and $f(\xhat_{a})$ and $f(\xhat_{b})$ the corresponding parton distribution functions (PDF).
 We use the MSTW 2008 LO PDF set~\cite{MSTW} to evaluate $f(\xhat_{a})$ and $f(\xhat_{b})$.
 We denote by $n$ the number of particles in the final state,
-by $\vecp^{(i)}$ ($\vecphat^{(i)}$) the measured (true) momentum of the $i$-th final state particle, and by 
-$d\Phi_{n} = \prod_{i}^{n} \, \frac{d^{3}\vecphat^{(i)}}{(2\pi)^{3} \, 2 \Ehat_{(i)}}$ 
-the differential $n$-particle phase space (PS) element.
-For the $\PHiggs\PHiggs$ signal 
-as well as for the $\ttbar$ background,
-$n=6$, as the final state in both cases contains a pair of $\Pbottom$ and $\APbottom$ quarks, two charged leptons, and two neutrinos.
+by $\vecp^{(i)}$ ($\vecphat^{(i)}$) the measured (true) momentum of the $i$-th final state particle. 
 The $\delta$-functions $\delta( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{i}^{n} \Ehat_{(i)})$
 and $\delta^{3}( \xhat_{a} \, \vecphat^{a} + \xhat_{b} \, \vecphat^{b} - \sum_{i}^{n} \vecphat^{(i)})$ 
 impose conservation of energy and momentum.
+
 The functions $W(\vecy|\vecyhat)$ are referred to as ``transfer functions'' (TF) in the literature.
 They represent the probability density to observe the measured values $\vecy$, given the true values $\vecyhat$.
 The vector $\vecyhat$ corresponds to a point $\vecphat$ in the $n$-particle PS.
@@ -74,6 +72,11 @@ provided that the TF satisfy the normalization condition
 $\int \, d\vecy \, \Omega(\vecy) \, W(\vecy|\vecyhat) = 1$
 for every $\vecy$.
 
+The $d\Phi_{n} = \prod_{i}^{n} \, \frac{d^{3}\vecphat^{(i)}}{(2\pi)^{3} \, 2 \Ehat_{(i)}}$ 
+represents the differential $n$-particle phase space (PS) element.
+For the $\PHiggs\PHiggs$ signal 
+as well as for the $\ttbar$ background,
+$n=6$.  \st{as the final state in both cases contains a pair of $\Pbottom$ and $\APbottom$ quarks, two charged leptons, and two neutrinos.} \textcolor{red}{X:I just changed the order of the presentation of pieces to not have to repeat again the counting.}
 We express the PS element $d\Phi_{6}$ in terms of the energies $\Ehat_{(i)}$, the polar angles $\thetahat_{(i)}$, and the azimuthal angles $\phihat_{(i)}$ 
 of the pair of $\Pbottom$ and $\APbottom$ quarks, of the two charged leptons, and of the two neutrinos:
 \begin{eqnarray}
@@ -103,7 +106,7 @@ taking advantage of the fact that the directions of quarks (jets) and charged le
 With the further assumption that also the energy of charged leptons can be measured with negligible experimental resolution,
 the integration over $d\Ehat_{\Plepton^{+}}$ and $d\Ehat_{\Plepton^{-}}$ can be carried out trivially too.
 We shall only consider events that pass the event selection criteria, \ie for which the indicator function $\Omega(\vecy)$ is equal to $1$.
-For simplicity, we moreover neglect the effect of the efficiency $\epsilon(\vecyhat)$ and of the acceptance $\mathcal{A}$.
+For simplicity, we \st{moreover} neglect the effect of the efficiency $\epsilon(\vecyhat)$ and of the acceptance $\mathcal{A}$.
 With these assumptions and upon inserting the expressions for the TF given by Eqs.~(\ref{eq:TF_ell}),~(\ref{eq:TF_b}), and~(\ref{eq:TF_f}) in the appendix
 into Eq.~(\ref{eq:PS_inPolarCoordinates}), we obtain:
 \begin{align}
@@ -150,7 +153,7 @@ As detailed in Ref.~\cite{Alwall:2010cq}, significant amounts of QCD radiation, 
 are a typical feature of most signal and background processes at the LHC.
 The longitudinal momentum of the additional jets produced by QCD radiation alters the relations for $\xhat_{a}$ and $\xhat_{b}$ somewhat,
 compared to the values given by Eq.~(\ref{eq:Bjorkenx}).
-We expect the effect of QCD radiation on the energy and longitudinal momentum components to be small, however, and thus neglect it.
+We expect the effect of QCD radiation on the energy and longitudinal momentum components to be small\st{, however,} and thus neglect it.
 The effect on the transverse momentum balance is important, however,
 as QCD radiation distorts the kinematic relations that would be expected to hold in the absence of such radiation.
 As a consequence, the $\delta$-functions that ensure the conservation of momentum in the transverse plane need to be modified. 
@@ -181,15 +184,18 @@ W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) =
 \label{eq:TF_hadRecoil}
 \end{equation}
 where the matrix $V$ quantifies the resolution on the hadronic recoil in the transverse plane.
-The CMS collaboration computes the matrix $V$ event-by-event, using an algorithm referred to as ``$\MET$-significance'' algorithm~\cite{JME-10-009}.
+
+The CMS collaboration computes the matrix $V$ event-by-event, using an algorithm referred to as ``$\MET$-significance'' algorithm~\cite{JME-10-009}. \textcolor{red}{in the context of the XX analysis??? Maybe it worths to mention that this is an adaptation of what is being used on CMS Htata on intro to make this comment here?} 
 In analogy to the procedure detailed in Ref.~\cite{SVfitMEM}, we replace the $\delta$-functions 
 $\delta( \pXhat^{\rho} + \sum_{i}^{6} \pXhat^{(i)})$ and $\delta( \pYhat^{\rho} + \sum_{i}^{6} \pYhat^{(i)})$
 that ensure the momentum conservation in the transverse plane
 by the TF for the hadronic recoil.
+
 A remaining issue is that we use LO ME $\mathcal{M}_{i}(\vecphat)$ for the $\PHiggs\PHiggs$ signal and for the $\ttbar$ background in Eq.~(\ref{eq:mem2}).
 The LO ME for the signal (background) requires that the $\PHiggs\PHiggs$ ($\ttbar$) system has zero $\pT$, 
 a condition that (in the laboratory frame) only holds in case the hadronic recoil has zero $\pT$, 
 which rarely holds at the LHC, due to the abundance of ISR (as previously discussed).
+\textcolor{red}{Again I am confused ISR and FSR come from showering. LO means that the system has zero momenta on the HH(tt) CM. NLO is not only about ISR/FSR.} 
 The issue that the LO ME is only well-defined for events with zero ISR
 is resolved by evaluating the ME $\mathcal{M}_{i}(\vecyhat)$ in a frame in which the $\PHiggs\PHiggs$ ($\ttbar$) system has zero $\pT$, 
 to which we refer as the zero-transverse-momentum (ZTM) frame.
@@ -224,13 +230,12 @@ in case of the signal ($i=0$) as well as the background ($i=1$) hypothesis.
 
 A few more transformations are necessary to handle the presence of Breit-Wigner (BW) propagators in the ME $\mathcal{M}_{i}(\vecphat)$ while performing the numeric integration.
 The effect of the BW propagators is that only narrow slices in the $6$-particle PS yield sizeable contribution to the integral,
-namely the regions where the $6$ final state particles (the $\Pbottom$ and $\APbottom$ quarks, the two charged leptons, and the two neutrinos)
+namely the regions where the $6$ final state particles \st{(the $\Pbottom$ and $\APbottom$ quarks, the two charged leptons, and the two neutrinos)}
 satisfy certain mass constraints.
 The mass constraints reflect the presence of (on-shell) $\PHiggs$ bosons, $\PW$ bosons, and top quarks in the decay chains
 $\PHiggs\PHiggs \to \Pbottom\APbottom \, \PW^{+}\PW^{-} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$ and
 $\ttbar \to \Pbottom\PW^{+} \, \APbottom\PW^{-} \to \Pbottom\ellPlusnu \, \APbottom\ellMinusnu$.
-The presence of these narrow slices in the $6$-particle PS renders the numeric integration inefficient, unless the mass constraints are treated analytically.
-We use the narrow-width approximation~\cite{NWA} to treat the mass constraints and replace the BW propagators by $\delta$-functions,
+The presence of these narrow slices in the $6$-particle PS renders the numeric integration inefficient, unless the mass constraints are treated analytically. We use the narrow-width approximation~\cite{NWA} to treat the mass constraints and replace the BW propagators by $\delta$-functions,
 which has the effect of restricting the numerical integration to the regions in PS where the mass constraints are satisfied
 and the ME $\mathcal{M}_{i}(\vecphat)$ yields a sizeable contribution to the integral.
 The analytic transformations specific to the signal hypothesis are detailed in Section~\ref{sec:mem_signal},

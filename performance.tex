@@ -6,8 +6,8 @@ that is achieved by the likelihood ratio $P$ given by Eq.~(\ref{eq:memLR}),
 using Monte Carlo (MC) simulated samples of 
 $\dihiggs \to \Pbottom\APbottom \, \PW^{+}\PW^{-} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$ signal 
 and $\ttbar \to \Pbottom\PW^{+} \, \APbottom\PW^{-} \to \Pbottom\ellPlusnu \, \APbottom\ellMinusnu$ background events.
-The signal and background samples are generated at LO accuracy with the program MadGraph\_aMCatNLO 2.2.2~\cite{MadGraph_aMCatNLO}[CV: CHECK MADGRAPH VERSION USED TO PRODUCE MC SAMPLES],
-taking the $\PHiggs$ boson mass to be $m_{\PHiggs} = 125$~\GeV and a top quark mass to be $m_{\Ptop} = XXX.X$~\GeV[CV: CHECK TOP QUARK MASS USED TO PRODUCE MC SAMPLES].
+The signal and background samples are generated \st{at LO accuracy with the program MadGraphaMCatNLO 2.2.2 CV: CHECK MADGRAPH VERSION USED TO PRODUCE MC SAMPLES,}
+taking the $\PHiggs$ boson mass to be $m_{\PHiggs} = 125$~\GeV and a top quark mass to be $m_{\Ptop} = XXX.X$~\GeV[CV: CHECK TOP QUARK MASS USED TO PRODUCE MC SAMPLES]. \textcolor{red}{We already described the MC}
 We have checked that the small differences between the masses used to generate the MC samples
 and the mass values used in the reconstruction ($m_{\PHiggs} = 125.1$~\GeV and $m_{\Ptop} = 173.0$~\GeV, \cf Sections~\ref{sec:mem_signal} and~\ref{sec:mem_background})
 has negligible effect.
@@ -15,8 +15,8 @@ All events are generated for proton-proton collisions at $\sqrt{s} = 13$~\TeV ce
 The NNPDF3.1 set of parton distribution functions have been used~\cite{NNPDF1,NNPDF2,NNPDF3}.
 Parton shower and hadronization processes are modeled using the generator PYTHIA with the tune CP5~\cite{PYTHIA_CP5tune_CMS}.
 Events containing $\PW^{+} \to \Pgt^{+}\Pnu_{\Pgt} \to \Plepton^{+}\Pnu_{\Plepton}\APnu_{\Pgt}\Pnu_{\Pgt}$ 
-or $\PW^{-} \to \Pgt^{-}\APnu_{\Pgt} \to \Plepton^{-}\APnu_{\Plepton}\Pnu_{\Pgt}\APnu_{\Pgt}$ decays,
-where $\Plepton$ refers to an electron or muon, are excluded from the performance study that we present in the following.
+or $\PW^{-} \to \Pgt^{-}\APnu_{\Pgt} \to \Plepton^{-}\APnu_{\Plepton}\Pnu_{\Pgt}\APnu_{\Pgt}$ decays \st{,
+where $\Plepton$ refers to an electron or muon,} are excluded from the performance study. \st{that we present in the following.}
 
 We first study the events on MC truth level.
 The experimental resolution on the energy of $\Pbottom$-jets and on the hadronic recoil still enters via the choice of the TF $W(E|\Ehat)$ in Eq.~(\ref{eq:TF_b})
@@ -101,7 +101,7 @@ while the resolution on the energy of $\Pbottom$-jets has merely a small effect.
 \caption{
   Effect of the experimental resolutions on the energy of $\Pbottom$-jets (``$E_{\Pbottom}$ smearing'') and on the hadronic recoil (``$\rho$ smearing'') 
   on the separation between the $\dihiggs$ signal and the $\ttbar$ background,
-  quantified by the ROC curve, based on the likelihood ratio $P$.
+  quantified by the ROC curve, based on the likelihood ratio $P$. 
 }
 \label{fig:ROC_smeared}
 \end{figure}
@@ -115,12 +115,18 @@ or from additional proton-proton interactions (pileup) occurring in the same bun
 gets misidentified as $\Pbottom$-jet.
 The efficiency to identify $\Pbottom$-jet typically amounts to $60$-$70\%$ at the ATLAS and CMS experiments,
 for a misidentification rate for light quarks and gluon jets of order $1\%$~\cite{Aad:2015ydr,BTV-16-002}.
+
 We simulate the effect that one of the true $\Pbottom$-jets fails to get reconstructed and a light quark or gluon jets gets misidentified as $\Pbottom$-jet,
 by replacing $10\%$ of true $\Pbottom$-jets by randomly selected light quark or gluon jets produced by either ISR or FSR, or from the underlying event 
-(our simulated samples of signal and background events do not include pileup).
-The distributions in $P$ obtained in case one of the two $\Pbottom$-jet candidates taken as input to the MEM 
+(our simulated samples of signal and background events do not include pileup). 
+\textcolor{blue}{We then compare the response of MEM only on events that only have genuine $\Pbottom$-jets and only on events that have one or more induced fakes.}
+
+\st{The distributions in $P$ obtained in case one of the two $\Pbottom$-jet candidates taken as input to the MEM 
 is due to the misidentification of a light quark or gluon jet 
-are compared to the distributions obtained for the case that both $\Pbottom$-jet candidates are genuine $\Pbottom$-jets in Fig.~\ref{fig:memLR_fakeBJet}.
+are compared to the distributions obtained for the case that both $\Pbottom$-jet candidates are genuine $\Pbottom$-jets in Fig. }
+In Fig.~\ref{fig:memLR_fakeBJet} we see the distributions in $P$ obtained in case one of the two $\Pbottom$-jet candidates taken as input to the MEM 
+is  misidentified and the same distribution obtained for the case that both $\Pbottom$-jet candidates are genuine $\Pbottom$-jets. 
+\textcolor{red}{X: I tried to rephrase the previous sentence in a more direct way, I  had to read 3 times to understand the original. But, if you are comparing events that are genuine with events that have a certified fake, why did you did a sample }
 The distribution in $P$ obtained for signal (background) events is seen to become significantly more background-like (signal-like) 
 in case a light quark or gluon jet is misidentified as $\Pbottom$-jet candidate.
 The corresponding ROC curve is shown in Fig.~\ref{fig:ROC_fakeBJet}.
@@ -128,9 +134,17 @@ The separation between the $\dihiggs$ signal and the $\ttbar$ background is affe
 In case one of the two $\Pbottom$-jet candidates taken as input to the MEM is due to the misidentification of a light quark or gluon jet,
 the rate of $\ttbar$ background obtained for a signal efficiency of $35\%$ increases by about two orders of magnitude 
 compared to the case that both $\Pbottom$-jet candidates are genuine $\Pbottom$-jets.
+
 Compared to the effect of the experimental resolution on the $\Pbottom$-jet energy and on the hadronic recoil,
 the loss in signal-to-background separation arising from the misidentification of a light quark or gluon jet as $\Pbottom$-jet candidate
-is much more severe.
+is much more severe. 
+\textcolor{red}{X: I pulled this paragraph up.} 
+We expect \textcolor{blue}{however} that the $\Pbottom$-jet candidate taken as input to the MEM will be a genuine $\Pbottom$-jet for the vast majority of signal and background events
+selected in the $\Pbottom\Pbottom\PW\PW^{*}$ channel at the LHC.
+The $\Pbottom$-tagging algorithms employed by the ATLAS and CMS collaborations provide a continuous discriminant, 
+and we expect that sorting the $\Pbottom$-jet candidates by decreasing discriminant value and taking the $\Pbottom$-jet with the highest discriminant value as input to the MEM
+will yield a genuine $\Pbottom$-jet in the vast majority of cases. \textcolor{red}{X: can we quote a number referent to the last publications? or an estimation, like "~5\% of the cases"?} 
+
 
 \begin{figure}
 \setlength{\unitlength}{1mm}
@@ -165,7 +179,7 @@ is much more severe.
 \label{fig:ROC_fakeBJet}
 \end{figure}
 
-The magnitude of the effect warrants further investigations concerning its origin and the development of approaches to mitigate the effect.
+The magnitude of the effect on events with one or more misidentified $\Pbottom$-jets anyway warrants further investigations concerning its origin and the development of approaches to mitigate the effect.
 In Fig.~\ref{fig:probS_and_probB_fakeBJet} we show the distributions in the probability densities $w_{0}$ and $w_{1}$,
 which quantify the level of compatibility with the signal and background hypotheses,
 for signal and background events in which one of the two $\Pbottom$-jet candidates taken as input to the MEM is due to the misidentification of a light quark or gluon jet,
@@ -218,11 +232,7 @@ and the case that it is due to the misidentification of a light quark or gluon j
 The marginalization reduces the amount of kinematic information that is utilized for separating the signal from the background,
 resulting in an increased overlap in the distributions in $P_{\textrm{m}}$ for the $\dihiggs$ signal and for the $\ttbar$ background,
 but also makes the distributions less susceptible to the non-reconstruction of one of the $\Pbottom$-jets.
-We expect that the $\Pbottom$-jet candidate taken as input to the MEM will be a genuine $\Pbottom$-jet for the vast majority of signal and background events
-selected in the $\Pbottom\Pbottom\PW\PW^{*}$ channel at the LHC.
-The $\Pbottom$-tagging algorithms employed by the ATLAS and CMS collaborations provide a continuous discriminant, 
-and we expect that sorting the $\Pbottom$-jet candidates by decreasing discriminant value and taking the $\Pbottom$-jet with the highest discriminant value as input to the MEM
-will yield a genuine $\Pbottom$-jet in the vast majority of cases.
+
 
 \begin{figure}
 \setlength{\unitlength}{1mm}
@@ -257,27 +267,19 @@ will yield a genuine $\Pbottom$-jet in the vast majority of cases.
 \label{fig:ROC_missingBJet}
 \end{figure}
 
+\section{Usage and challenges}
+
 We expect that searches for non-resonant $\dihiggs$ production in the channel $\Pbottom\Pbottom\PW\PW^{*}$ at the LHC
-will benefit from using a multivariate approach, for example based on a BDT or neural network (NN)~\cite{TensorFlow,Keras},
+will benefit from using a multivariate approach, for example based on a BDT or Neural Network (NN)~\cite{TensorFlow,Keras},
 using the likelihood ratio $P$ given by Eq.~(\ref{eq:memLR}) and the marginalized one $P_{\textrm{m}}$ as input,
 together with other observables such as the number of $\Pbottom$-jet candidates and their $\Pbottom$-tagging discriminant values, 
 the mass of the two jets with the highest $\Pbottom$-tagging discriminant, and other kinematic observables.
 Other, subdominant, backgrounds can be included in the training of the BDT or NN
 to further improve the separation of the $\dihiggs$ signal from backgrounds.
 
-So far, we have focused on non-resonant $\dihiggs$ production with SM-like event kinematics.
-In case the $\dihiggs$ production rate is enhanced compared to the SM cross section, the scenario probed by the present searches for $\dihiggs$ production at the LHC,
-it is reasonable to expect that the contributions of BSM physics, which enhance the cross section, also alter the event kinematics.
-In the context of an EFT approach to probe the existence of such BSM physics,
-we recommend to compute the likelihood ratios $P$ and $P_{\textrm{m}}$ for the SM case and each of the $12$ benchmark scenarios detailed in Refs.~\cite{Carvalho:2015ttv,Carvalho:2016rys},
-and run a parametrized training of the BDT or NN for these benchmark scenarios.
-The ME $\vert \mathcal{M}_{0} \vert^{2}$ obtained from the program MadGraph\_aMCatNLO 2.2.2~\cite{MadGraph_aMCatNLO}[CV: CHECK MADGRAPH VERSION USED TO GENERATE ME]
-allows to set the two parameters $\kappa_{\lambda}$ and $\kappa_{\Ptop}$ and the coefficients $c_{2}$, $c_{\Pgluon}$, and $c_{2\Pgluon}$
-to the values given in Table~1 of Ref.~\cite{Carvalho:2015ttv} for the SM case and each of the $12$ benchmark scenarios.
-
 One remaining issue in practical applications of the MEM may be the computing time requirements.
 Experimental analyses will usually need to evaluate the integrals in Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background})
-multiple times for each event and benchmark scenario,
+multiple times for each event \st{and benchmark scenario} 
 in order to assess the effect of systematic uncertainties.
 Taken together with the large cross section for $\ttbar$ production at the LHC,
 the integrals in Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background}) will need to be computed in the order of $100$ million times.
@@ -292,3 +294,15 @@ Another alternative is to take advantage of the parallelizability of multidimens
 Speedup factors of order $100$, compared to using a single core of a general-purpose central processing unit (CPU) 
 such as the $2.30$~GHz Intel\TReg~Xeon\TReg~E5-2695V3 processor that we used for the studies presented in this paper,
 are reported in the literature for performing numeric integrations on GPUs~\cite{Hagiwara:2009aq,Hagiwara:2009cy,Kanzaki:2010ym,Hagiwara:2013oka,Schouten:2014yza,Grasseau:2015vfa}.
+
+\section{Extension for application on non-resonant BSM HH production}
+
+So far, we have focused on non-resonant $\dihiggs$ production with SM-like event kinematics.
+\textcolor{blue}{As already mentioned,} in case the $\dihiggs$ production rate is enhanced compared to the SM cross section, the scenario probed by the present searches for $\dihiggs$ production at the LHC,
+\st{it is reasonable to expect that the} contributions of BSM physics, which enhance the cross section, also alter the event kinematics.
+In the context of an EFT approach to probe the existence of such BSM physics,
+we recommend to compute the likelihood ratios $P$ and $P_{\textrm{m}}$ for the SM case and each of the $12$ benchmark scenarios detailed in Refs.~\cite{Carvalho:2015ttv,Carvalho:2016rys},
+and run a parametrized training of the BDT or NN for these shape benchmark scenarios. \textcolor{red}{If we want to explain that I need to spend some time explaining the method of finding the closest  shape benchmark.... it goes as other 1/2 page paragraph -- the sentence bellow makes no sense, and I commented we already said that the model allows parameters.} 
+%\textcolor{blue}{Using the same model [cite] we can also }  ME $\vert \mathcal{M}_{0} \vert^{2}$ \st{obtained from the program MadGraph\_aMCatNLO 2.2.2~\cite{MadGraph_aMCatNLO}[CV: CHECK MADGRAPH VERSION USED TO GENERATE ME]}
+%allows to set the two parameters $\kappa_{\lambda}$ and $\kappa_{\Ptop}$ and the coefficients $c_{2}$, $c_{\Pgluon}$, and $c_{2\Pgluon}$
+%to the values given in Table~1 of Ref.~\cite{Carvalho:2015ttv} for the SM case and each of the $12$ benchmark scenarios.

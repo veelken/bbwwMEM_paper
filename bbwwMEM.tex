@@ -17,7 +17,8 @@
 \unitlength = 1mm
 
 %\modulolinenumbers[5]
-
+\usepackage{soul}
+\usepackage[dvipsnames]{xcolor}
 %%\journal{Journal of \LaTeX\ Templates}
 
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -170,6 +171,13 @@ or from additional proton-proton interactions (pileup) occurring in the same bun
 gets misidentified as $\Pbottom$-jet.
 \end{abstract}
 
+Code:
+\begin{itemize}
+\item \textcolor{red}{Internal comments}
+\item \textcolor{blue}{New text (Xanda)}
+\item \st{remove}
+\end{itemize}
+
 \ifx\ver\verPAPER
 \end{frontmatter}
 \fi
@@ -177,6 +185,7 @@ gets misidentified as $\Pbottom$-jet.
 \clearpage
 
 %\linenumbers
+
 
 %\begingroup
 %\let\clearpage\relax
