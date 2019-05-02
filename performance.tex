@@ -1,4 +1,4 @@
-\section{Performance}
+\section{Performance in the SM-like kinematics}
 \label{sec:performance}
 
 The performance of the algorithm is studied in terms of the separation between the $\dihiggs$ signal and the $\ttbar$ background 
@@ -6,8 +6,8 @@ that is achieved by the likelihood ratio $P$ given by Eq.~(\ref{eq:memLR}),
 using Monte Carlo (MC) simulated samples of 
 $\dihiggs \to \Pbottom\APbottom \, \PW^{+}\PW^{-} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$ signal 
 and $\ttbar \to \Pbottom\PW^{+} \, \APbottom\PW^{-} \to \Pbottom\ellPlusnu \, \APbottom\ellMinusnu$ background events.
-The signal and background samples are generated \st{at LO accuracy with the program MadGraphaMCatNLO 2.2.2 CV: CHECK MADGRAPH VERSION USED TO PRODUCE MC SAMPLES,}
-taking the $\PHiggs$ boson mass to be $m_{\PHiggs} = 125$~\GeV and a top quark mass to be $m_{\Ptop} = XXX.X$~\GeV[CV: CHECK TOP QUARK MASS USED TO PRODUCE MC SAMPLES]. \textcolor{red}{We already described the MC}
+The signal and background samples are generated 
+taking the $\PHiggs$ boson mass to be $m_{\PHiggs} = 125$~\GeV and a top quark mass to be $m_{\Ptop} = 173.0$~\GeV. 
 We have checked that the small differences between the masses used to generate the MC samples
 and the mass values used in the reconstruction ($m_{\PHiggs} = 125.1$~\GeV and $m_{\Ptop} = 173.0$~\GeV, \cf Sections~\ref{sec:mem_signal} and~\ref{sec:mem_background})
 has negligible effect.
@@ -15,8 +15,7 @@ All events are generated for proton-proton collisions at $\sqrt{s} = 13$~\TeV ce
 The NNPDF3.1 set of parton distribution functions have been used~\cite{NNPDF1,NNPDF2,NNPDF3}.
 Parton shower and hadronization processes are modeled using the generator PYTHIA with the tune CP5~\cite{PYTHIA_CP5tune_CMS}.
 Events containing $\PW^{+} \to \Pgt^{+}\Pnu_{\Pgt} \to \Plepton^{+}\Pnu_{\Plepton}\APnu_{\Pgt}\Pnu_{\Pgt}$ 
-or $\PW^{-} \to \Pgt^{-}\APnu_{\Pgt} \to \Plepton^{-}\APnu_{\Plepton}\Pnu_{\Pgt}\APnu_{\Pgt}$ decays \st{,
-where $\Plepton$ refers to an electron or muon,} are excluded from the performance study. \st{that we present in the following.}
+or $\PW^{-} \to \Pgt^{-}\APnu_{\Pgt} \to \Plepton^{-}\APnu_{\Plepton}\Pnu_{\Pgt}\APnu_{\Pgt}$ decays  are excluded from the performance study. 
 
 We first study the events on MC truth level.
 The experimental resolution on the energy of $\Pbottom$-jets and on the hadronic recoil still enters via the choice of the TF $W(E|\Ehat)$ in Eq.~(\ref{eq:TF_b})
@@ -266,43 +265,3 @@ but also makes the distributions less susceptible to the non-reconstruction of o
 }
 \label{fig:ROC_missingBJet}
 \end{figure}
-
-\section{Usage and challenges}
-
-We expect that searches for non-resonant $\dihiggs$ production in the channel $\Pbottom\Pbottom\PW\PW^{*}$ at the LHC
-will benefit from using a multivariate approach, for example based on a BDT or Neural Network (NN)~\cite{TensorFlow,Keras},
-using the likelihood ratio $P$ given by Eq.~(\ref{eq:memLR}) and the marginalized one $P_{\textrm{m}}$ as input,
-together with other observables such as the number of $\Pbottom$-jet candidates and their $\Pbottom$-tagging discriminant values, 
-the mass of the two jets with the highest $\Pbottom$-tagging discriminant, and other kinematic observables.
-Other, subdominant, backgrounds can be included in the training of the BDT or NN
-to further improve the separation of the $\dihiggs$ signal from backgrounds.
-
-One remaining issue in practical applications of the MEM may be the computing time requirements.
-Experimental analyses will usually need to evaluate the integrals in Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background})
-multiple times for each event \st{and benchmark scenario} 
-in order to assess the effect of systematic uncertainties.
-Taken together with the large cross section for $\ttbar$ production at the LHC,
-the integrals in Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background}) will need to be computed in the order of $100$ million times.
-Even with several thousands of computing jobs running in parallel,
-as it is nowadays commonplace for experimental analyses performed at the LHC,
-the computation still requires a few weeks of nonstop computing time.
-Several possibilities to speed up the numeric integrations, which take most of the computing time in practical applications of the MEM,
-have been explored in the literature.
-One alternative is to use vector integrands to evaluate the likelihood ratio for all systematic uncertainties simultaneously~\cite{CUBA},
-taking advantage of the fact that the systematic uncertainties typically constitute small changes with respect to the nominal value.
-Another alternative is to take advantage of the parallelizability of multidimensional integration and perform the integration on graphics processing units (GPUs).
-Speedup factors of order $100$, compared to using a single core of a general-purpose central processing unit (CPU) 
-such as the $2.30$~GHz Intel\TReg~Xeon\TReg~E5-2695V3 processor that we used for the studies presented in this paper,
-are reported in the literature for performing numeric integrations on GPUs~\cite{Hagiwara:2009aq,Hagiwara:2009cy,Kanzaki:2010ym,Hagiwara:2013oka,Schouten:2014yza,Grasseau:2015vfa}.
-
-\section{Extension for application on non-resonant BSM HH production}
-
-So far, we have focused on non-resonant $\dihiggs$ production with SM-like event kinematics.
-\textcolor{blue}{As already mentioned,} in case the $\dihiggs$ production rate is enhanced compared to the SM cross section, the scenario probed by the present searches for $\dihiggs$ production at the LHC,
-\st{it is reasonable to expect that the} contributions of BSM physics, which enhance the cross section, also alter the event kinematics.
-In the context of an EFT approach to probe the existence of such BSM physics,
-we recommend to compute the likelihood ratios $P$ and $P_{\textrm{m}}$ for the SM case and each of the $12$ benchmark scenarios detailed in Refs.~\cite{Carvalho:2015ttv,Carvalho:2016rys},
-and run a parametrized training of the BDT or NN for these shape benchmark scenarios. \textcolor{red}{If we want to explain that I need to spend some time explaining the method of finding the closest  shape benchmark.... it goes as other 1/2 page paragraph -- the sentence bellow makes no sense, and I commented we already said that the model allows parameters.} 
-%\textcolor{blue}{Using the same model [cite] we can also }  ME $\vert \mathcal{M}_{0} \vert^{2}$ \st{obtained from the program MadGraph\_aMCatNLO 2.2.2~\cite{MadGraph_aMCatNLO}[CV: CHECK MADGRAPH VERSION USED TO GENERATE ME]}
-%allows to set the two parameters $\kappa_{\lambda}$ and $\kappa_{\Ptop}$ and the coefficients $c_{2}$, $c_{\Pgluon}$, and $c_{2\Pgluon}$
-%to the values given in Table~1 of Ref.~\cite{Carvalho:2015ttv} for the SM case and each of the $12$ benchmark scenarios.
