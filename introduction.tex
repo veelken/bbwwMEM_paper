@@ -118,15 +118,14 @@ Its advantage is to make optimal use of the kinematical information available in
 while the presence of a single dominant and furthermore irreducible background significantly reduces the complexity of the work required to use the MEM. 
 Still, two potential difficulties exist for the application of the MEM to the $\Pbottom\Pbottom\PW\PW^{*}$ channel at the LHC.
 First, the large cross section for $\ttbar$ production at the LHC implies that experimental analyses need to compute the MEM for several millions of events,
-a task that represents a significant computational challenge even for the most modern large-scale computing systems. \textcolor{red}{X: I did not understood the second dificulty, I understood a problem caused by an approximation due the 'first' dificulty.}
-
-In order to reduce the demand for computing time,
-we will use LO matrix elements for the $\dihiggs$ signal and for the $\ttbar$ background in this paper.
-The LO matrix elements neglect the occurrence of initial and final state radiation.  \textcolor{red}{X: It is not clear here if we use shower, NLO is not only about radiation.} 
-In particular for processes predominantly mediated by gluons, such as $\dihiggs$ and $\ttbar$ production,
+a task that represents a significant computational challenge even for the most modern large-scale computing systems. Second, the high multiplicity of elements on the hard scattering $\Pbottom\Pbottom\PW\PW^{*}$ also demands a large computing time per event, already without consider extra QCD radiation. 
+ In order to reduce the demand for computing time,
+we will not consider QCD radiation jets at matrix element level for the $\dihiggs$ signal and for the $\ttbar$ background\footnote{In particular for processes predominantly mediated by gluons, such as $\dihiggs$ and $\ttbar$ production,
 initial state radiation (ISR) is typically substantial at the LHC~\cite{Alwall:2010cq},
-causing extra jets to be produced and the transverse momentum balance of the event to get distorted compared to the expectation obtained from using LO matrix elements. \st{,constituting the second difficulty.}
-We will discuss the solutions to \st{both difficulties} \textcolor{blue}{how to improve computing time and improve the simulation approximations} in more detail in the following. \textcolor{red}{X: I did not recognized a discussion of solution to the LO on the rest of the text approximation, BTW I think we have a language problem.} 
+causing extra jets to be produced and the transverse momentum balance of the event to get distorted compared to the expectation obtained from using the simple hard scattering matrix elements without radiation, specially for $\ttbar$ production.}.
+%The LO matrix elements neglect the occurrence of initial and final state radiation.  \textcolor{red}{X: It is not clear here if we use shower, NLO is not only about radiation.} 
+ Therefore, for consistency on the calculations, we will consider only LO simulations for both  $\dihiggs$ signal and for the $\ttbar$ background hard scattering. 
+We will discuss the solutions to  how to improve computing time and improve the simulation approximations in more detail in the following. \textcolor{red}{X: I did not recognized a discussion of solution for the fact we are neglecting QCD radiation and NLO corrections on the rest of the text approximation.} 
 
 For experimental analyses of $\dihiggs$ production in the channel $\Pbottom\Pbottom\PW\PW^{*}$ at the LHC,
 we envisage that the result of the MEM, computed event-by-event as described in this paper, 
@@ -136,7 +135,7 @@ with the aim of improving in particular the separation of the signal from the su
 The paper is organized as follows:
 In Section~\ref{sec:mem} we describe the MEM and its application to the $\Pbottom\Pbottom\PW\PW^{*}$ channel.
 The performance achieved in separating the SM-like $\dihiggs$ signal from the $\ttbar$ background is studied in Section~\ref{sec:performance}. 
-\textcolor{red}{X: after we plan BSM? otherwise there was no point in introducing Higgs anomalous couplings with so many details -- BTW if we keep it I would separate it in a section, it is too detailed to an introduction.} 
+\textcolor{red}{X: after we plan BSM? } 
 We summarize our findings in Section~\ref{sec:summary}.
 
-\textcolor{red}{X: For the SM there is already a NLO + to mass affects model, do we want to use it? I see after that not, but we should at least mention it at some point. The modifications are not much on mhh, but sizeable on the pthh spectra, comment something on those lines somewhere}
+\textcolor{red}{X: For the SM there is already a NLO + to mass affects model. We should at least mention it at some point. I still did not found out where. The modifications are not much on mhh, but sizeable on the pthh spectra, comment something on those lines somewhere}
