@@ -8,9 +8,14 @@ the mass of the two jets with the highest $\Pbottom$-tagging discriminant, and o
 Other, subdominant, backgrounds can be included in the training of the BDT or NN
 to further improve the separation of the $\dihiggs$ signal from backgrounds.
 
+At the point this paper is finished there was an active field the computations of the $\dihiggs$ process at NLO in QCD (see for example~\cite{deFlorian:2013jea, Borowka:2016ehy, Heinrich:2017kxx}). 
+One of the main effects of the correction on the computation is a sizeable shifting on the $\dihiggs$ system $p_T$ while,  on the other hand,
+the most important signal feature for the signal discrimination ($m_{\dihiggs}$)  remains mostly resilient against NLO effects. 
+In the definition of the MEM algorithm we had made the effort of make the MEM be mostly dependent of radiation resilient variables when we decided to calculate it on the ZTM frame. 
+
 One remaining issue in practical applications of the MEM may be the computing time requirements.
 Experimental analyses will usually need to evaluate the integrals in Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background})
-multiple times for each event \st{and benchmark scenario} 
+multiple times for each event (and eventually benchmark scenario) 
 in order to assess the effect of systematic uncertainties.
 Taken together with the large cross section for $\ttbar$ production at the LHC,
 the integrals in Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background}) will need to be computed in the order of $100$ million times.

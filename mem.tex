@@ -13,10 +13,9 @@ We use symbols with a hat to denote the true values of energies and momenta.
 Bold letters denote vector quantities.
 The vector $\vecyhat$ denotes the true values of the $\Pbottom$-jet and charged lepton momenta and the true values of the momenta of the two neutrinos produced in the $\PW$ boson decays.
 
-\textcolor{blue}{As already mentioned} \st{Note that} $\PHiggs\PHiggs \to \Pbottom\APbottom \, \PW^{+}\PW^{-} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$ signal events
+As already mentioned, $\PHiggs\PHiggs \to \Pbottom\APbottom \, \PW^{+}\PW^{-} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$ signal events
 contain the same number of $\Pbottom$-jets, charged leptons, and neutrinos as the dominant background,
-arising from top quark pair production ($\ttbar \to \Pbottom\PW^{+} \, \APbottom\PW^{-} \to \Pbottom\ellPlusnu \, \APbottom\ellMinusnu$). \st{,
-in this channel.}
+arising from top quark pair production ($\ttbar \to \Pbottom\PW^{+} \, \APbottom\PW^{-} \to \Pbottom\ellPlusnu \, \APbottom\ellMinusnu$). 
 The separation of the $\PHiggs\PHiggs$ signal from the irreducible $\ttbar$ background is based on the difference in event kinematics,
 causing the probability densities $w_{0}(\vecy|\vecyhat)$ ($w_{1}(\vecy|\vecyhat)$) to be in general higher when evaluated on signal (background) events
 and lower when evaluated on background (signal) events.
@@ -26,7 +25,7 @@ the Neyman–Pearson lemma~\cite{Neyman:1937uhy} postulates that the likelihood 
 P(\vecy) = \frac{w_{0}(\vecy|\vecyhat)}{w_{0}(\vecy|\vecyhat) + w_{1}(\vecy|\vecyhat)}
 \label{eq:memLR}
 \end{equation}
-\st{then} provides the optimal separation of the $\PHiggs\PHiggs$ signal from the irreducible $\ttbar$ background.
+provides the optimal separation of the $\PHiggs\PHiggs$ signal from the irreducible $\ttbar$ background.
 
 Different nomenclatures and conventions for the MEM exist in the literature.
 In this note, we follow the nomenclature and conventions introduced in Ref.~\cite{Volobouev:2011vb}.
@@ -40,7 +39,8 @@ w_{i}(\vecy|\vecyhat) = & \frac{\Omega(\vecy)}{\sigma \, \mathcal{A}} \, \int \,
 \label{eq:mem1}
 \end{align}
 The symbol $\vert \mathcal{M}_{i}(\vecyhat) \vert^{2}$ denotes the squared modulus of the matrix element (ME) for either the signal ($i=0$) or for the background ($i=1$) hypothesis.
-We use ME generated at LO accuracy with the program MadGraph\_aMCatNLO 2.2.2~\cite{MadGraph_aMCatNLO} for the signal as well as for the background hypothesis[CV: CHECK MADGRAPH VERSION USED TO GENERATE ME]. \textcolor{red}{X: as referee I would ask why so old version, this is to be compatible with the model that is based on form factors -- that BTW we need to cite. We use this old model because we could not use the loop induced by some practical reason that I do not remember. I would do a chapter "MC modelling", where we collect the MC info instead of having it popping up eventually.}
+We use ME generated at LO accuracy with the program MadGraph\_aMCatNLO 2.2.2~\cite{MadGraph_aMCatNLO} for the signal as well as for the background hypothesis. For signal we used a private version of the UFO files~\cite{Degrande:2011ua} constructed by the authors of~\cite{Hespel:2014sla}, based on the form factors calculted in~\cite{Plehn:1996wb}. 
+% https://cp3.irmp.ucl.ac.be/projects/madgraph/wiki/HiggsPairProduction
 
 The symbols $\Ehat_{a}$ and $\Ehat_{b}$ ($\vecphat^{a}$ and $\vecphat^{b}$) denote the energies (momenta) of the two colliding protons,
 $\sqrt{s}$ their center-of-mass energy,
@@ -76,7 +76,7 @@ The $d\Phi_{n} = \prod_{i}^{n} \, \frac{d^{3}\vecphat^{(i)}}{(2\pi)^{3} \, 2 \Eh
 represents the differential $n$-particle phase space (PS) element.
 For the $\PHiggs\PHiggs$ signal 
 as well as for the $\ttbar$ background,
-$n=6$.  \st{as the final state in both cases contains a pair of $\Pbottom$ and $\APbottom$ quarks, two charged leptons, and two neutrinos.} \textcolor{red}{X:I just changed the order of the presentation of pieces to not have to repeat again the counting.}
+$n=6$.  
 We express the PS element $d\Phi_{6}$ in terms of the energies $\Ehat_{(i)}$, the polar angles $\thetahat_{(i)}$, and the azimuthal angles $\phihat_{(i)}$ 
 of the pair of $\Pbottom$ and $\APbottom$ quarks, of the two charged leptons, and of the two neutrinos:
 \begin{eqnarray}
@@ -106,7 +106,7 @@ taking advantage of the fact that the directions of quarks (jets) and charged le
 With the further assumption that also the energy of charged leptons can be measured with negligible experimental resolution,
 the integration over $d\Ehat_{\Plepton^{+}}$ and $d\Ehat_{\Plepton^{-}}$ can be carried out trivially too.
 We shall only consider events that pass the event selection criteria, \ie for which the indicator function $\Omega(\vecy)$ is equal to $1$.
-For simplicity, we \st{moreover} neglect the effect of the efficiency $\epsilon(\vecyhat)$ and of the acceptance $\mathcal{A}$.
+For simplicity, we neglect the effect of the efficiency $\epsilon(\vecyhat)$ and of the acceptance $\mathcal{A}$.
 With these assumptions and upon inserting the expressions for the TF given by Eqs.~(\ref{eq:TF_ell}),~(\ref{eq:TF_b}), and~(\ref{eq:TF_f}) in the appendix
 into Eq.~(\ref{eq:PS_inPolarCoordinates}), we obtain:
 \begin{align}
@@ -153,7 +153,7 @@ As detailed in Ref.~\cite{Alwall:2010cq}, significant amounts of QCD radiation, 
 are a typical feature of most signal and background processes at the LHC.
 The longitudinal momentum of the additional jets produced by QCD radiation alters the relations for $\xhat_{a}$ and $\xhat_{b}$ somewhat,
 compared to the values given by Eq.~(\ref{eq:Bjorkenx}).
-We expect the effect of QCD radiation on the energy and longitudinal momentum components to be small\st{, however,} and thus neglect it.
+We expect the effect of QCD radiation on the energy and longitudinal momentum components to be small and thus neglect it.
 The effect on the transverse momentum balance is important, however,
 as QCD radiation distorts the kinematic relations that would be expected to hold in the absence of such radiation.
 As a consequence, the $\delta$-functions that ensure the conservation of momentum in the transverse plane need to be modified. 
@@ -191,14 +191,13 @@ $\delta( \pXhat^{\rho} + \sum_{i}^{6} \pXhat^{(i)})$ and $\delta( \pYhat^{\rho} 
 that ensure the momentum conservation in the transverse plane
 by the TF for the hadronic recoil.
 
-A remaining issue is that we use LO ME $\mathcal{M}_{i}(\vecphat)$ for the $\PHiggs\PHiggs$ signal and for the $\ttbar$ background in Eq.~(\ref{eq:mem2}).
-The LO ME for the signal (background) requires that the $\PHiggs\PHiggs$ ($\ttbar$) system has zero $\pT$, 
+A remaining issue is that we use only the information of the the hard $gg\to\Pbottom\Pbottom\PW\PW^{*}$ scattering in Eq.~(\ref{eq:mem2}).
+This regime for the signal (background) requires that the $\PHiggs\PHiggs$ ($\ttbar$) system has zero $\pT$, 
 a condition that (in the laboratory frame) only holds in case the hadronic recoil has zero $\pT$, 
-which rarely holds at the LHC, due to the abundance of ISR (as previously discussed).
-\textcolor{red}{Again I am confused ISR and FSR come from showering. LO means that the system has zero momenta on the HH(tt) CM. NLO is not only about ISR/FSR.} 
-The issue that the LO ME is only well-defined for events with zero ISR
+which rarely holds at the LHC, due to the abundance of ISR. 
+The issue that the MEM based on the information of the $2\to6$ hard scattering is only well-defined for events with zero ISR
 is resolved by evaluating the ME $\mathcal{M}_{i}(\vecyhat)$ in a frame in which the $\PHiggs\PHiggs$ ($\ttbar$) system has zero $\pT$, 
-to which we refer as the zero-transverse-momentum (ZTM) frame.
+to which we refer as the zero-transverse-momentum (ZTM) frame. 
 The Lorentz transformation of the energy $\Ehat_{(i)}$ and momenta $\vecphat^{(i)}$ in Eq.~(\ref{eq:mem2})
 from the laboratory to the ZTM frame is performed using the vector $(-\frac{\pX^{\rho}}{\pT^{\rho}},-\frac{\pY^{\rho}}{\pT^{\rho}},0)$ as the boost vector.
 
@@ -230,7 +229,7 @@ in case of the signal ($i=0$) as well as the background ($i=1$) hypothesis.
 
 A few more transformations are necessary to handle the presence of Breit-Wigner (BW) propagators in the ME $\mathcal{M}_{i}(\vecphat)$ while performing the numeric integration.
 The effect of the BW propagators is that only narrow slices in the $6$-particle PS yield sizeable contribution to the integral,
-namely the regions where the $6$ final state particles \st{(the $\Pbottom$ and $\APbottom$ quarks, the two charged leptons, and the two neutrinos)}
+namely the regions where the $6$ final state particles 
 satisfy certain mass constraints.
 The mass constraints reflect the presence of (on-shell) $\PHiggs$ bosons, $\PW$ bosons, and top quarks in the decay chains
 $\PHiggs\PHiggs \to \Pbottom\APbottom \, \PW^{+}\PW^{-} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$ and

@@ -20,7 +20,7 @@ The SM predicts $\PHiggs$ boson self-interactions via trilinear and quadlinear c
 Measurements of the $\PHiggs$ boson self-interactions will allow to determine the potential of the $\PHiggs$ field,
 thereby ultimately either confirming or falsifying that the Brout-Englert-Higgs mechanism of the SM is responsible for EWSB.
 The trilinear coupling ($\lambdaHHH$) can be determined at the LHC, by measuring the rate for $\PHiggs$ boson pair production ($\dihiggs$)\footnote{The measurement of the quadlinear coupling is not possible at the LHC, 
-even with the $3000$~fb$^{-1}$ of data foreseen to be recorded at $\sqrt{s}=14$~\TeV center-of-mass energy during the upcoming HL-LHC data-taking period~\cite{Cepeda:2019klc}[CV: NEED REFERENCE. \textcolor{red}{X: I am not sure what you wanted to reference, that is my guess}],
+even with the $3000$~fb$^{-1}$ of data foreseen to be recorded at $\sqrt{s}=14$~\TeV center-of-mass energy during the upcoming HL-LHC data-taking period~\cite{Cepeda:2019klc}, 
 as the cross section of the corresponding process triple $\PHiggs$ boson production, is much too small, 
 on the level of $5 \cdot 10^{-2}$~\cite{Plehn:2005nk,Binoth:2006ym}. }. 
 In analogy to the production of single $\PHiggs$ bosons, 
@@ -118,14 +118,14 @@ Its advantage is to make optimal use of the kinematical information available in
 while the presence of a single dominant and furthermore irreducible background significantly reduces the complexity of the work required to use the MEM. 
 Still, two potential difficulties exist for the application of the MEM to the $\Pbottom\Pbottom\PW\PW^{*}$ channel at the LHC.
 First, the large cross section for $\ttbar$ production at the LHC implies that experimental analyses need to compute the MEM for several millions of events,
-a task that represents a significant computational challenge even for the most modern large-scale computing systems. Second, the high multiplicity of elements on the hard scattering $\Pbottom\Pbottom\PW\PW^{*}$ also demands a large computing time per event, already without consider extra QCD radiation. 
+a task that represents a significant computational challenge even for the most modern large-scale computing systems. Second, the high multiplicity of elements on the hard $gg\to\Pbottom\Pbottom\PW\PW^{*}$ scattering  also demands a large computing time per event. 
  In order to reduce the demand for computing time,
-we will not consider QCD radiation jets at matrix element level for the $\dihiggs$ signal and for the $\ttbar$ background\footnote{In particular for processes predominantly mediated by gluons, such as $\dihiggs$ and $\ttbar$ production,
-initial state radiation (ISR) is typically substantial at the LHC~\cite{Alwall:2010cq},
+we will not consider initial or final QCD radiation jets at matrix element level on the computation of the MEM for both the $\dihiggs$ signal and for the $\ttbar$ background\footnote{In particular, for processes predominantly mediated by gluons, such as $\dihiggs$ and $\ttbar$ production,
+initial state radiation (ISR) can be typically substantial at the LHC~\cite{Alwall:2010cq},
 causing extra jets to be produced and the transverse momentum balance of the event to get distorted compared to the expectation obtained from using the simple hard scattering matrix elements without radiation, specially for $\ttbar$ production.}.
 %The LO matrix elements neglect the occurrence of initial and final state radiation.  \textcolor{red}{X: It is not clear here if we use shower, NLO is not only about radiation.} 
- Therefore, for consistency on the calculations, we will consider only LO simulations for both  $\dihiggs$ signal and for the $\ttbar$ background hard scattering. 
-We will discuss the solutions to  how to improve computing time and improve the simulation approximations in more detail in the following. \textcolor{red}{X: I did not recognized a discussion of solution for the fact we are neglecting QCD radiation and NLO corrections on the rest of the text approximation.} 
+ For consistency on the calculations, we will consider LO simulations for both  $\dihiggs$ signal and for the $\ttbar$ background hard scattering. 
+We will discuss the solutions to  how to improve computing time and how to mitigate the effects on the simulation level in more detail in the following. 
 
 For experimental analyses of $\dihiggs$ production in the channel $\Pbottom\Pbottom\PW\PW^{*}$ at the LHC,
 we envisage that the result of the MEM, computed event-by-event as described in this paper, 
@@ -137,5 +137,3 @@ In Section~\ref{sec:mem} we describe the MEM and its application to the $\Pbotto
 The performance achieved in separating the SM-like $\dihiggs$ signal from the $\ttbar$ background is studied in Section~\ref{sec:performance}. 
 \textcolor{red}{X: after we plan BSM? } 
 We summarize our findings in Section~\ref{sec:summary}.
-
-\textcolor{red}{X: For the SM there is already a NLO + to mass affects model. We should at least mention it at some point. I still did not found out where. The modifications are not much on mhh, but sizeable on the pthh spectra, comment something on those lines somewhere}
