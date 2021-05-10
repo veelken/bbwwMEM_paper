@@ -19,29 +19,32 @@ Evidence for its coupling to up-type fermions, at a strength compatible with the
 The SM predicts $\PHiggs$ boson self-interactions via trilinear and quadlinear couplings. 
 Measurements of the $\PHiggs$ boson self-interactions will allow to determine the potential of the $\PHiggs$ field,
 thereby ultimately either confirming or falsifying that the Brout-Englert-Higgs mechanism of the SM is responsible for EWSB.
+
 The trilinear coupling ($\lambdaHHH$) can be determined at the LHC, by measuring the rate for $\PHiggs$ boson pair production ($\dihiggs$). 
 In analogy to the production of single $\PHiggs$ bosons, 
 four different processes are relevant for $\dihiggs$ production at the LHC: 
 gluon fusion ($\ggHH$), vector boson fusion ($\qqHH$), the associated production with a $\PW$ or $\PZ$ boson ($\VHH$, also referred to as ``Higgsstrahlung''),
 and associated production of the $\PHiggs$ boson pair with a pair of top quarks ($\ttHH$).
 The total $\dihiggs$ production rate is dominated by the $\ggHH$ process.
-The cross section for the latter has been computed at next-to-next-to-leading order (NNLO) in quantum chromodynamics,
+The cross section for the latter has been computed at next-to-next-to-leading order (NNLO) in quantum chromodynamics (QCD),
 with resummation of soft gluon contributions at next-to-next-to-leading logarithmic accuracy.
 Including corrections for finite top quark mass effects, computed at next-to-leading order (NLO),
-it amounts to $XX.XX \pm X.XX$~fb~\cite{}[CV: NEED TO UPDATE VALUE, NEED REFERENCE].
-The cross section is rather small, \textcolor{blue}{as this is a loop induced process.} \st{resulting from the negative interference of two competing production mechanisms}. \textcolor{red}{X: the cancelation does not even remove one order of magnitude in xs, it is initially small, period.}
-The leading order (LO) Feynman diagrams for the two mechanisms are shown in Fig.~\ref{fig:ggHH_FeynmanDiagram}.
+the SM cross section for the $\ggHH$ process amounts to $31.05^{+1.40}_{-1.98}$~\fb~\cite{Grazzini:2018hh}.
+The cross section is rather small, as the production of $\PHiggs$ boson pairs through gluon fusion is a loop induced process,
+and is further reduced by the negative interference of two competing production mechanisms.
+The leading order (LO) Feynman diagrams for the two $\ggHH$ production mechanisms are shown in Fig.~\ref{fig:ggHH_FeynmanDiagram}.
 The left diagram, referred to as ``box'' diagram, does actually not depend on the trilinear $\PHiggs$ boson self-coupling $\lambdaHHH$.
 The diagram that provides the sensitivity to $\lambdaHHH$ is the ``triangle'' diagram shown on the right.
 Both diagrams depend on the coupling of the $\PHiggs$ boson to the top quark, denoted by the symbol $\yt$,
 which is measured with an uncertainty of order $10\%$ at present~\cite{Aaboud:2018urx,HIG-17-035}.
-The cross sections for the $\qqHH$, $\VHH$, and $\ttHH$ process are more than one order of magnitude smaller~\cite{Baglio:2012np}[CV: NEED TO UPDATE REFERENCE, E.G. BY LHCHIGGSXSWG PAPER ? no, we need to add the originals, just HXSWG is not fair].
+The cross sections for the $\qqHH$, $\VHH$, and $\ttHH$ process are more than one order of magnitude smaller~\cite{Baglio:2012np}.
 As the sensitivity of experimental analyses at the LHC is limited by the small signal rate at present,
-we will focus on the $\qqHH$ production process in this paper.
-The measurement of the quadlinear coupling is not possible at the LHC, 
-even with the $3000$~fb$^{-1}$ of data foreseen to be recorded at $\sqrt{s}=14$~\TeV center-of-mass energy during the upcoming HL-LHC data-taking period~\cite{}[CV: NEED REFERENCE],
+we will focus on the $\ggHH$ production process in this paper.
+
+The measurement of the quadlinear coupling is not possible at the LHC~\cite{de_Florian_2020}, 
+even with the $3000$~fb$^{-1}$ of data foreseen to be recorded at $\sqrt{s}=14$~\TeV center-of-mass energy during the upcoming HL-LHC data-taking period~\cite{HL-LHC-TDR},
 as the cross section of the corresponding process triple $\PHiggs$ boson production, is much too small, 
-on the level of $5 \cdot 10^{-2}$~\cite{Plehn:2005nk,Binoth:2006ym}.
+on the level of $5 \cdot 10^{-2}$~\fb~\cite{Plehn:2005nk,Binoth:2006ym}.
 
 \begin{figure}
 \setlength{\unitlength}{1mm}
@@ -51,12 +54,10 @@ on the level of $5 \cdot 10^{-2}$~\cite{Plehn:2005nk,Binoth:2006ym}.
 \qquad + &
 \raisebox{-.45\height}{\resizebox{0.3\textwidth}{!}{\input{./fdiags/hh_box}}}
 \end{tabular}
-%\begin{picture}(160,54)(0,0)
-%\put(4.0, 0.0){\mbox{\includegraphics*[height=54mm]
-%{figures/ggHH_FeynmanDiagram_box.pdf}}}
-%\put(84.0, 0.0){\mbox{\includegraphics*[height=54mm]
-%{figures/ggHH_FeynmanDiagram_triangle.pdf}}}
-%\end{picture}
+\begin{picture}(170,30)(0,0)
+\put(  2.5, 0.0){\mbox{\includegraphics*[height=30mm]{figures/ggHH_triangle.pdf}}}
+\put( 90.5, 0.0){\mbox{\includegraphics*[height=30mm]{figures/ggHH_box.pdf}}}
+\end{picture}
 \end{center}
 \caption{
   Leading order (LO) Feynman diagrams for the $\ggHH$ production process in $\Pp\Pp$ collisions at the LHC.
@@ -65,16 +66,15 @@ on the level of $5 \cdot 10^{-2}$~\cite{Plehn:2005nk,Binoth:2006ym}.
 \end{figure}
 
 The $\dihiggs$ production rate may be enhanced significantly in case an as yet unknown resonance decays to pairs of $\PHiggs$ bosons.
-Such resonances are predicted in models with two Higgs doublets~\cite{Branco:2011iw}, composite $\PHiggs$ boson models~\cite{Grober:2010yv,Contino:2010mh}, 
-Higgs portal models~\cite{Patt:2006fw}, and models involving extra dimensions~\cite{Randall:1999ee}.[CV: CHECK IF MORE MODELS ARE RELEVANT AND/OR ADDITIONAL REFERENCES ARE NEEDED]
+Such resonances are predicted in models with two Higgs doublets~\cite{Craig:2013hca,Nhung:2013lpa}, composite $\PHiggs$ boson models~\cite{Grober:2010yv,Contino:2010mh}, 
+Higgs portal models~\cite{Englert:2011yb,No:2013wsa}, and models involving extra dimensions~\cite{Randall:1999ee}.
+
 In the absence of new resonances decaying into $\PHiggs$ boson pairs,
-the $\dihiggs$ production cross section may be enhanced by the contribution of \textcolor{blue}{BSM interactions} and/or new particles to the loops 
+the $\dihiggs$ production cross section may be enhanced by deviations of the couplings $$ and $$ from the SM expectation for these couplings
+and by the contribution of new particles to the loops 
 that are present in the triangle and box diagrams shown in Fig.~\ref{fig:ggHH_FeynmanDiagram}.
-\st{Since no evidence for such particles have been found at the LHC so far,
-we assume that they are heavy compared to the mass of the $\PHiggs$ boson, 
-so that the contribution of these particles }
-\textcolor{blue}{The effect of such}  can adequately be described by anomalous $\PHiggs$ boson couplings. \st{an effective field theory (EFT) approach
-In the context of the EFT approach,}
+The effect of contributions from new particles to these loops can adequately be described by anomalous $\PHiggs$ boson couplings.
+More specifically,
 the production of $\PHiggs$ boson pairs via gluon fusion in Beyond the Standard Model (BSM) theories can be described to leading approximation by the \textcolor{blue}{non-linear}  Lagrangian~\cite{Buchmuller:1985jz}:
 \begin{eqnarray}
 \mathcal{L} & = & \frac{1}{2} \partial_{\mu}\PHiggs\partial^{\mu}\PHiggs - \frac{1}{2} m_{\PHiggs}^{2} \PHiggs^{2} - \kappa_{\lambda} \lambdaHHH^{\textrm{SM}} v \PHiggs^{3} \nonumber \\
@@ -83,41 +83,41 @@ the production of $\PHiggs$ boson pairs via gluon fusion in Beyond the Standard 
 \end{eqnarray}
 where $v = 246$~\GeV denotes the vacuum expectation value of the Higgs field
 and the parameters $\kappa_{\lambda} = \lambdaHHH/\lambdaHHH^{\textrm{SM}}$ and $\kappa_{\Ptop} = \yt/\yt^{\textrm{SM}}$ 
-quantify the deviations of the trilinear Higgs self-coupling and of the coupling of the $\PHiggs$ boson to the top quark from their SM values.
+quantify the deviations of the trilinear $\PHiggs$ boson self-coupling and of the coupling of the $\PHiggs$ boson to the top quark from their SM values.
 Besides the two parameters $\kappa_{\lambda}$ and $\kappa_{\Ptop}$,
 the Lagrangian contains the coefficients of three BSM operators which account for contact interactions 
 between a $\PHiggs$ boson and either one ($c_{\Pgluon}$) or two ($c_{2\Pgluon}$) gluons
-and between a pair of $\PHiggs$ bosons and a pair of top quarks ($c_{2}$)~\footnote{ \textcolor{red}{X: explain why we ignore the chomomagnetic here}}.
+and between a pair of $\PHiggs$ bosons and a pair of top quarks ($c_{2}$).
+The contact interactions can be interpreted in an effective field theory (EFT) approach~\cite{Buchalla:2015wfa, Goertz:2014qta}.
+The production of $\PHiggs$ boson pairs in the absence of new resonances is referred to as non-resonant $\dihiggs$ production,
+the case that we focus on in this paper.
 
-These couplings can be related with an effective field theory (EFT) approach
-In the context of the EFT approach~\cite{Buchalla:2015wfa, Goertz:2014qta} or as the connection to a ultraviolet theory~\cite{Carvalho:2017vnu} \textcolor{red}{X: this is a summary, cite also some originals.} The production of $\PHiggs$ boson pairs in the absence of new resonances is referred to as non-resonant $\dihiggs$ production.
-We focus on the case of non-resonant $\dihiggs$ production in this paper.
 The distribution in mass of the $\PHiggs$ boson pair, $m_{\dihiggs}$, is rather broad in this case.
-Deviations of  \textcolor{blue}{the $\PHiggs$ boson couplings } \st{$\lambdaHHH$ and $\yt$} from their SM values,
-\st{as well as non-zero values of the coefficients $c_{2}$, $c_{\Pgluon}$, and $c_{2\Pgluon}$}
-\textcolor{blue}{ induces different interference patterns between the different production diagrams and} may  significantly alter the distribution in $m_{\dihiggs}$,
-as well as the event kinematics,
-that is the distributions in the momenta and angles of the particles reconstructed in the final state,
-besides affecting the $\dihiggs$ production cross section.
-\st{The interference between  between all the production modes  has the effect of enlarging these deviations.}
- \textcolor{red}{X: For the SM there is already a NLO + to mass affects model, do we want to use it? I see after that not, but we should at least mention it at some point.}
+Deviations of the $\PHiggs$ boson couplings from their SM values
+induces different interference patterns between the triangle and box diagrams.
+Besides affecting the $\dihiggs$ production cross section,
+the change in interference patterns may  significantly alter the distribution in $m_{\dihiggs}$,
+that is the distributions in the momenta and angles of the particles reconstructed in the final state.
 
 The ATLAS and CMS collaborations have searched for non-resonant $\dihiggs$ production in the decay channels 
-$\dihiggs \to \Pbottom\Pbottom\Pbottom\Pbottom$, $\Pbottom\Pbottom\Pgt\Pgt$, $\Pbottom\Pbottom\PW\PW^{*}$, $\Pbottom\Pbottom\Pgamma\Pgamma$
-using the data recorded during LHC Runs $1$ and $2$~\cite{HIG-13-032,HIG-15-013,HIG-17-030,Aad:2015xja,Aaboud:2018knk,Aaboud:2018ftw,Aaboud:2018sfw,Aaboud:2018zhh}.
-ATLAS has further performed searches in the decay channels $\dihiggs \to \Pgamma\Pgamma\PW\PW^{*}$ and $\PW\PW^{*}\PW\PW^{*}$~\cite{Aad:2015xja,Aaboud:2018ewm,Aaboud:2018ksn}.
+$\dihiggs \to \Pbottom\Pbottom\Pbottom\Pbottom$, $\Pbottom\Pbottom\Pgt\Pgt$, $\Pbottom\Pbottom\PW\PW^{\ast}$, $\Pbottom\Pbottom\Pgamma\Pgamma$
+using the data recorded during LHC Runs $1$ and $2$~\cite{HIG-13-032,HIG-15-013,HIG-17-030,Sirunyan:2020xok,Aad:2015xja,Aaboud:2018knk,Aaboud:2018ftw,Aaboud:2018sfw,Aaboud:2018zhh}.
+ATLAS has further performed searches in the decay channels $\dihiggs \to \Pgamma\Pgamma\PW\PW^{\ast}$ and $\PW\PW^{\ast}\PW\PW^{\ast}$~\cite{Aad:2015xja,Aaboud:2018ewm,Aaboud:2018ksn}.
+The asterisk ($^{\ast}$) denotes $\PW$ bosons that are off-shell.
 Phenomenological studies of non-resonant $\dihiggs$ production are presented in 
 Refs.~\cite{Baur:2002rb,Baur:2002qd,Baur:2003gpa,Baur:2003gp,Dolan:2012rv,Papaefstathiou:2012qe,Baglio:2012np,deLima:2014dta,Wardrope:2014kya,Behr:2015oqq,Li:2015yia,Adhikary:2017jtu}.
 No evidence for a signal has been found in the LHC data so far.
-The present analyses are able to probe the existence of a \textcolor{blue}{SM-like} $\dihiggs$ signal produced with a cross section of order $10$ times the SM production rate.  \textcolor{blue}{With a combination of all the above mentined channels the CMS collaboration had preliminary exploited the anomalous couplings scenario by use of representative shape benchmarks~\cite{Carvalho:2015ttv} and can exclude a range of cross sections for the process $pp\to HH$ between 100~fb and 3~pb, depending on the shape benchmark~\cite{Sirunyan:2018two}.}
+The present analyses are able to probe the existence of a SM-like $\dihiggs$ signal produced with a cross section of order $10$ times the SM production rate.
 
-\textcolor{blue}{For SM-like signal} the decay channels providing the highest sensitivity is the $\Pbottom\Pbottom\Pgt\Pgt$ channel in case of ATLAS and the $\Pbottom\Pbottom\Pgamma\Pgamma$ channel in case of CMS.
+The decay channel providing the highest sensitivity for an SM-like $\dihiggs$ signal 
+is the $\Pbottom\Pbottom\Pgt\Pgt$ channel in case of ATLAS~\cite{Aaboud:2018sfw} and the $\Pbottom\Pbottom\Pgamma\Pgamma$ channel in case of CMS~\cite{Sirunyan:2020xok}.
 Both channels provide a favorable signal-to-background ratio and are limited mainly by statistical uncertainties at present,
 resulting from the limited amount of data recorded so far compared to the small SM $\ggHH$ production cross section.
-The channels $\Pbottom\Pbottom\Pbottom\Pbottom$ and $\Pbottom\Pbottom\PW\PW^{*}$ provide a significantly larger signal rate,
+The channels $\Pbottom\Pbottom\Pbottom\Pbottom$ and $\Pbottom\Pbottom\PW\PW^{\ast}$ provide a significantly larger signal rate,
 but suffer from sizeable backgrounds,
 arising from QCD multijet production in case of the $\Pbottom\Pbottom\Pbottom\Pbottom$ channel 
-and from $\ttbar$ production in case of the $\Pbottom\Pbottom\PW\PW^{*}$ channel. \textcolor{blue}{We are interested on the $\Pbottom\Pbottom\PW\PW^{*}$ channel.  } %  Although there are techniques proposed to overcome this problem [some references] we ......\textcolor{red}{why do we want to add one more revolutionary way}
+and from top quark pair ($\ttbar$) production in case of the $\Pbottom\Pbottom\PW\PW^{\ast}$ channel.
+In this paper, we focus on the $\Pbottom\Pbottom\PW\PW^{\ast}$ channel.
  
 \begin{figure}
 \setlength{\unitlength}{1mm}
@@ -133,46 +133,24 @@ and from $\ttbar$ production in case of the $\Pbottom\Pbottom\PW\PW^{*}$ channel
 %\end{picture}
 \end{center}
 \caption{
-  LO Feynman diagrams for $\ttbar$ production, the dominant irreducible background relevant for $\dihiggs$ searches in the decay channel $\dihiggs \to \Pbottom\Pbottom\PW\PW^{*}$,
+  LO Feynman diagrams for $\ttbar$ production, the dominant irreducible background relevant for $\dihiggs$ searches in the decay channel $\dihiggs \to \Pbottom\Pbottom\PW\PW^{\ast}$,
   in $\Pp\Pp$ collisions at the LHC.
 }
 \label{fig:ttbar_FeynmanDiagram}
 \end{figure}
 
-The separation of the $\dihiggs$ signal from the large $\ttbar$ background constitutes the main experimental challenge in the $\Pbottom\Pbottom\PW\PW^{*}$ channel.
+The separation of the $\dihiggs$ signal from the large $\ttbar$ background constitutes the main experimental challenge in the $\Pbottom\Pbottom\PW\PW^{\ast}$ channel.
 The $\ttbar$ background is irreducible in this channel, as it produces the exact same multiplicity of charged leptons, neutrinos, and $\Pbottom$-jets as the $\dihiggs$ signal.
-In this paper, we focus on events in which the charge leptons are electrons or muons and use the symbol $\Plepton$ to refer to either an electron or a muon.
 The LO Feynman diagram for $\ttbar$ production is shown in Fig.~\ref{fig:ttbar_FeynmanDiagram}.
 The main handle to separate the signal from the background is the difference in event kinematics,
 that is, the differences in the distributions of energies and angles of the charged leptons, $\Pbottom$-jets, and of the missing transverse momentum reconstructed in the event.
 The present CMS analysis~\cite{HIG-17-006} utilizes multivariate methods, \textcolor{blue}{ based on a Deep Neural network},
 to separate the $\dihiggs$ signal from the $\ttbar$ background, while the current ATLAS analysis~\cite{Aaboud:2018zhh} employs a sequence of hard cuts for this purpose.
 In this paper, we propose an alternative multivariate method for the separation of the $\dihiggs$ signal from the $\ttbar$ background,
-the matrix element method (MEM)~\cite{Kondo:1988yd,Kondo:1991dw} and apply it to events in which both $\PW$ bosons decay to charged leptons.
-
-The MEM is almost ideally suited for the application to the $\Pbottom\Pbottom\PW\PW^{*}$ channel.
-Its advantage is to make optimal use of the kinematical information available in each event,
-while the presence of a single dominant and furthermore irreducible background significantly reduces the complexity of the work required to use the MEM. \st{in this channel
-in contrast to other potential use cases of the MEM, where this work may well be prohibitive.}
-Still, two potential difficulties exist for the application of the MEM to the $\Pbottom\Pbottom\PW\PW^{*}$ channel at the LHC.
-First, the large cross section for $\ttbar$ production at the LHC implies that experimental analyses need to compute the MEM for several millions of events,
-a task that represents a significant computational challenge even for the most modern large-scale computing systems. \textcolor{red}{X: I did not understood the second dificulty, I understood a problem caused by an approximation due the 'first' dificulty.}
-
-In order to reduce the demand for computing time,
-we will use LO matrix elements for the $\dihiggs$ signal and for the $\ttbar$ background in this paper.
-The LO matrix elements neglect the occurrence of initial and final state radiation.  \textcolor{red}{X: It is not clear here if we use shower, NLO is not only about radiation.} 
-In particular for processes predominantly mediated by gluons, such as $\dihiggs$ and $\ttbar$ production,
-initial state radiation (ISR) is typically substantial at the LHC~\cite{Alwall:2010cq},
-causing extra jets to be produced and the transverse momentum balance of the event to get distorted compared to the expectation obtained from using LO matrix elements. \st{,constituting the second difficulty.}
-We will discuss the solutions to \st{both difficulties} \textcolor{blue}{how to improve computing time and improve the simulation approximations} in more detail in the following. \textcolor{red}{X: I did not recognized a discussion of solution to the LO on the rest of the text approximation, BTW I think we have a language problem.} 
-
-For experimental analyses of $\dihiggs$ production in the channel $\Pbottom\Pbottom\PW\PW^{*}$ at the LHC,
-we envisage that the result of the MEM, computed event-by-event as described in this paper, 
-is used as an input to a \st{BDT} \textcolor{blue}{multivariate method} \st{, which is trained to separate the $\dihiggs$ signal from the $\ttbar$ and from other, subdominant, backgrounds},
-with the aim of improving in particular the separation of the signal from the subdominant backgrounds. \st{with the aid of the BDT.}  \textcolor{red}{X: we do not need to be so precise on the MVA method. The 2D BDT way is not on top of the head of a reader and we would need to explain more to the referee what we mean. Besides we know that 2D BDT is a shity poor man's method.}
+the matrix element method (MEM)~\cite{Kondo:1988yd,Kondo:1991dw} and apply it to events in which both $\PW$ bosons decay to charged leptons (electrons or muons),
+denoted by the symbol $\Plepton$.
 
 The paper is organized as follows:
-In Section~\ref{sec:mem} we describe the MEM and its application to the $\Pbottom\Pbottom\PW\PW^{*}$ channel.
-The performance achieved in separating the SM-like $\dihiggs$ signal from the $\ttbar$ background is studied in Section~\ref{sec:performance}. 
-\textcolor{red}{X: after we plan BSM? otherwise there was no point in introducing Higgs anomalous couplings with so many details -- BTW if we keep it I would separate it in a section, it is too detailed to an introduction.} 
-We summarize our findings in Section~\ref{sec:summary}.
+In Section~\ref{sec:mem} we describe the MEM and its application to the $\Pbottom\Pbottom\PW\PW^{\ast}$ channel.
+The performance achieved in separating an $\dihiggs$ signal with SM-like event kinematics from the $\ttbar$ background is studied in Section~\ref{sec:performance}.
+We conclude the paper with a summary in Section~\ref{sec:summary}.
