@@ -6,16 +6,16 @@ for obtaining the measured observables $\vecy$, assuming that the event has been
 The PDs $w_{i}(\vecy|\vecyhat)$ are interpreted as quantifying the compatibility of the measured observables $\vecy$
 with the signal ($i=0$) and background ($i=1$) hypothesis.
 In the analysis of $\PHiggs\PHiggs$ production in the decay channel 
-$\PHiggs\PHiggs \to \Pbottom\Pbottom\PW\PW^{\ast} \to \Pbottom\Pbottom \, \ellPlusnu\ellMinusnu$
+$\PHiggs\PHiggs \to \Pbottom\APbottom\PW\PW^{\ast} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$
 the observables $\vecy$ refer to 
 the measured momenta of the two $\Pbottom$-jets, of the two charged leptons, and of the measured missing transverse momentum ($\vecMET$) in the event.
 We use symbols with a hat to denote the true values of energies and momenta.
 Bold letters denote vector quantities.
 The vector $\vecyhat$ denotes the true values of the $\Pbottom$-jet and charged lepton momenta and the true values of the momenta of the two neutrinos produced in the $\PW$ boson decays.
 
-As already mentioned, $\PHiggs\PHiggs \to \Pbottom\Pbottom\PW\PW^{\ast} \to \Pbottom\Pbottom \, \ellPlusnu\ellMinusnu$ signal events
+As already mentioned, $\PHiggs\PHiggs \to \Pbottom\APbottom\PW\PW^{\ast} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$ signal events
 contain the same number of $\Pbottom$-jets, charged leptons, and neutrinos as the dominant background,
-arising from $\ttbar \to \Pbottom\PW\Pbottom\PW \to \Pbottom\ellPlusnu \, \Pbottom\ellMinusnu$.
+arising from $\ttbar \to \Pbottom\PW\APbottom\PW \to \Pbottom\ellPlusnu \, \APbottom\ellMinusnu$.
 The separation of the $\PHiggs\PHiggs$ signal from the irreducible $\ttbar$ background is based on the difference in event kinematics,
 causing the PD $w_{0}(\vecy|\vecyhat)$ to be in general higher when evaluated on signal events
 and lower when evaluated on background events, and vice versa for the PD $w_{1}(\vecy|\vecyhat)$.
@@ -231,8 +231,8 @@ as the presence of these propagators represent an obstacle for the numeric integ
 The effect of the BW propagators is that only narrow slices in the $6$-particle PS yield sizeable contribution to the integral,
 namely the regions where the $6$ final state particles satisfy certain mass constraints.
 The mass constraints arise from the presence of on-shell $\PHiggs$ bosons, $\PW$ bosons, and top quarks in the decay chains
-$\PHiggs\PHiggs \to \Pbottom\Pbottom\PW\PW^{\ast} \to \Pbottom\Pbottom \, \ellPlusnu\ellMinusnu$ and
-$\ttbar \to \Pbottom\PW\Pbottom\PW \to \Pbottom\ellPlusnu \, \APbottom\ellMinusnu$.
+$\PHiggs\PHiggs \to \Pbottom\APbottom\PW\PW^{\ast} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$ and
+$\ttbar \to \Pbottom\PW\APbottom\PW \to \Pbottom\ellPlusnu \, \APbottom\ellMinusnu$.
 Their presence renders the numeric integration inefficient, unless the mass constraints are treated analytically. 
 We use the narrow-width approximation~\cite{NWA} to handle the mass constraints and replace the BW propagators by $\delta$-functions,
 which has the effect of restricting the numerical integration to the narrow slices in the $6$-particle PS where the mass constraints are satisfied
@@ -254,7 +254,7 @@ using a single core of a $2.30$~GHz Intel\TReg~Xeon\TReg~E5-2695V3 processor.
 \subsection{Analytic transformations specific to the signal hypothesis}
 \label{sec:mem_signal}
 
-In $\PHiggs\PHiggs \to \Pbottom\Pbottom\PW\PW^{\ast} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$ signal events,
+In $\PHiggs\PHiggs \to \Pbottom\APbottom\PW\PW^{\ast} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$ signal events,
 either the $\PW^{+}$ or the $\PW^{-}$ boson is off-shell.
 We use an asterisk to refer to the charged lepton and the neutrino that originate from the decay of the off-shell $\PW$ boson.
 When evaluating the integrand in Eq.~(\ref{eq:mem3}) for the signal hypothesis,
@@ -338,7 +338,7 @@ and using the average of these four values when evaluating the LR in Eq.~(\ref{e
 \subsection{Analytic transformations specific to the background hypothesis}
 \label{sec:mem_background}
 
-In $\ttbar \to \Pbottom\PW\Pbottom\PW \to \Pbottom\ellPlusnu \, \Pbottom\ellMinusnu$ background events,
+In $\ttbar \to \Pbottom\PW\APbottom\PW \to \Pbottom\ellPlusnu \, \APbottom\ellMinusnu$ background events,
 both $\PW$ bosons are on-shell and sizeable contributions to the value of the integral $w_{1}(\vecy|\vecyhat)$ are thus obtained only
 for those points $\vecphat$ in the $6$-particle PS for which:
 \begin{itemize}
