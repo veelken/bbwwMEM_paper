@@ -292,6 +292,45 @@ The approach of using the LR $P_{\textrm{m}}(\vecy)$ as an input to an ML algori
 that other, subdominant, backgrounds can be included in the training of the ML algorithm, thereby further improving the sensitivity for the $\dihiggs$ signal.
 
 
+\subsection{Effect of leading-order matrix elements}
+
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\begin{center}
+\begin{picture}(160,54)(0,0)
+\put(0.0, 0.0){\mbox{\includegraphics*[height=54mm]
+ {plots/hh_bbwwMEM_dilepton_lo_vs_nlo_memLR_signal.pdf}}}
+\put(81.0, 0.0){\mbox{\includegraphics*[height=54mm]
+ {plots/hh_bbwwMEM_dilepton_lo_vs_nlo_memLR_background.pdf}}}
+\end{picture}
+\end{center}
+\caption{
+  Distribution in the LR $P(\vecy)$ 
+  for $\dihiggs$ signal (left) and $\ttbar$ background (right) events
+  simulated at LO and at NLO accuracy in pQCD.
+  The signal and background events are studied on MC-truth level.
+}
+\label{fig:memLR_LO_vs_NLO}
+\end{figure}
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\begin{center}
+\begin{picture}(160,54)(0,0)
+\put(40.5, 0.0){\mbox{\includegraphics*[height=54mm]
+ {plots/hh_bbwwMEM_dilepton_lo_vs_nlo_ROC.pdf}}}
+\end{picture}
+\end{center}
+\caption{
+  Separation between $\dihiggs$ signal and $\ttbar$ background events
+  simulated at LO and at NLO accuracy in pQCD.
+  The signal and background events are studied on MC-truth level.
+}
+\label{fig:ROC_LO_vs_NLO}
+\end{figure}
+
+
 \section{Remark on computing-time requirements}
 
 One remaining issue in practical applications of the MEM may be the computing time requirements.
