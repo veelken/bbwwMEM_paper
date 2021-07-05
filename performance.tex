@@ -59,10 +59,10 @@ For a signal efficiency of $35\%$, the $\ttbar$ background is reduced by three o
 \begin{figure}
 \setlength{\unitlength}{1mm}
 \begin{center}
-\begin{picture}(160,54)(0,0)
-\put(0.0, 0.0){\mbox{\includegraphics*[height=68mm]
+\begin{picture}(160,67)(0,0)
+\put(-1.0, 1.0){\mbox{\includegraphics*[height=66mm]
  {plots/hh_bbwwMEM_dilepton_signal_vs_background_memLR_unsmeared.pdf}}}
-\put(81.0, 0.0){\mbox{\includegraphics*[height=68mm]
+\put(80.0, 0.0){\mbox{\includegraphics*[height=67mm]
  {plots/hh_bbwwMEM_dilepton_ROC_unsmeared.pdf}}}
 \end{picture}
 \end{center}
@@ -119,7 +119,7 @@ while the resolution on the energy of $\Pbottom$-jets has merely a small effect.
 \setlength{\unitlength}{1mm}
 \begin{center}
 \begin{picture}(160,78)(0,0)
-\put(40.5, 0.0){\mbox{\includegraphics*[height=78mm]
+\put(39.5, 0.0){\mbox{\includegraphics*[height=78mm]
  {plots/hh_bbwwMEM_dilepton_effectOfSmearing_ROC.pdf}}}
 \end{picture}
 \end{center}
@@ -159,10 +159,10 @@ The loss in performance can be seen clearly in the ROC curve, which is shown in 
 \begin{figure}
 \setlength{\unitlength}{1mm}
 \begin{center}
-\begin{picture}(160,54)(0,0)
-\put(0.0, 0.0){\mbox{\includegraphics*[height=54mm]
+\begin{picture}(160,66)(0,0)
+\put(-1.0, 0.0){\mbox{\includegraphics*[height=66mm]
  {plots/hh_bbwwMEM_dilepton_effectOfFakes_2histograms_memLR_signal.pdf}}}
-\put(81.0, 0.0){\mbox{\includegraphics*[height=54mm]
+\put(80.0, 0.0){\mbox{\includegraphics*[height=66mm]
  {plots/hh_bbwwMEM_dilepton_effectOfFakes_2histograms_memLR_background.pdf}}}
 \end{picture}
 \end{center}
@@ -176,8 +176,8 @@ The loss in performance can be seen clearly in the ROC curve, which is shown in 
 \begin{figure}
 \setlength{\unitlength}{1mm}
 \begin{center}
-\begin{picture}(160,54)(0,0)
-\put(40.5, 0.0){\mbox{\includegraphics*[height=54mm]
+\begin{picture}(160,66)(0,0)
+\put(39.5, 0.0){\mbox{\includegraphics*[height=66mm]
  {plots/hh_bbwwMEM_dilepton_effectOfFakes_2graphs_ROC.pdf}}}
 \end{picture}
 \end{center}
@@ -213,14 +213,14 @@ which diminish the value of the integrand.
 \begin{figure}
 \setlength{\unitlength}{1mm}
 \begin{center}
-\begin{picture}(160,116)(0,0)
-\put(0.0, 62.0){\mbox{\includegraphics*[height=54mm]
+\begin{picture}(160,144)(0,0)
+\put(-1.0, 78.0){\mbox{\includegraphics*[height=66mm]
  {plots/hh_bbwwMEM_dilepton_effectOfFakes_2histograms_probS_signal.pdf}}}
-\put(81.0, 62.0){\mbox{\includegraphics*[height=54mm]
+\put(80.0, 78.0){\mbox{\includegraphics*[height=66mm]
  {plots/hh_bbwwMEM_dilepton_effectOfFakes_2histograms_probB_signal.pdf}}}
-\put(0.0, 0.0){\mbox{\includegraphics*[height=54mm]
+\put(-1.0, 0.0){\mbox{\includegraphics*[height=66mm]
  {plots/hh_bbwwMEM_dilepton_effectOfFakes_2histograms_probS_background.pdf}}}
-\put(81.0, 0.0){\mbox{\includegraphics*[height=54mm]
+\put(80.0, 0.0){\mbox{\includegraphics*[height=66mm]
  {plots/hh_bbwwMEM_dilepton_effectOfFakes_2histograms_probB_background.pdf}}}
 \end{picture}
 \end{center}
@@ -259,10 +259,10 @@ and a light quark or gluon jet is misidentified as $\Pbottom$-jet.
 \begin{figure}
 \setlength{\unitlength}{1mm}
 \begin{center}
-\begin{picture}(160,54)(0,0)
-%\put(0.0, 0.0){\mbox{\includegraphics*[height=54mm]
-% {plots/hh_bbwwMEM_dilepton_effectOfFakes_memLR_missingBJet.pdf}}}
-\put(81.0, 0.0){\mbox{\includegraphics*[height=54mm]
+\begin{picture}(160,66)(0,0)
+\put(-1.0, 1.0){\mbox{\includegraphics*[height=66mm]
+ {plots/hh_bbwwMEM_dilepton_effectOfFakes_memLR_missingBJet.pdf}}}
+\put(80.0, 0.0){\mbox{\includegraphics*[height=67mm]
  {plots/hh_bbwwMEM_dilepton_effectOfFakes_ROC_missingBJet.pdf}}}
 \end{picture}
 \end{center}
@@ -271,7 +271,7 @@ and a light quark or gluon jet is misidentified as $\Pbottom$-jet.
   Right: Graph of background rate versus signal efficiency (``ROC curve''), obtained by applying a cut on the distribution shown on the left
   and varying the cut threshold.
 }
-\label{fig:memLR_and_ROC_missingBJet}
+\label{fig:memLR_missingBJet}
 \end{figure}
 
 Different options exist for using the marginalized LR $P_{\textrm{m}}(\vecy)$ in data analyses of $\dihiggs$ production at the LHC.
@@ -294,6 +294,16 @@ that other, subdominant, backgrounds can be included in the training of the ML a
 
 \subsection{Effect of leading-order matrix elements}
 
+The effect of using LO ME is quantified by comparing the separation between the $\dihiggs$ signal and the $\ttbar$ background
+for signal and background events simulated at LO and at NLO accuracy in pQCD.
+Distributions in the LR $P_{\textrm{m}}(\vecy)$ for events in which both reconstructed $\Pbottom$-jets are genuine $\Pbottom$-jets
+are shown in Fig.~\ref{fig:memLR_LO_vs_NLO}.
+The signal and background events are studied on MC-truth level, assuming an optimal experimental resolution.
+The corresponding ROC curve is shown in Fig.~\ref{fig:ROC_LO_vs_NLO}.
+The usage of LO ME causes a moderate loss in signal-to-background separation, 
+amounting to a few percent loss in signal efficiency for constant background rate.
+This loss in performance seems acceptable to us, given that the computing-time requirements are significantly lower when using LO ME
+compared to using ME of higher order.
 
 \begin{figure}
 \setlength{\unitlength}{1mm}
