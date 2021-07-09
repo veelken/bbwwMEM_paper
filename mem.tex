@@ -20,7 +20,7 @@ The separation of the $\PHiggs\PHiggs$ signal from the irreducible $\ttbar$ back
 causing the PD $w_{0}(\vecy|\vecyhat)$ to be in general higher when evaluated on signal events
 and lower when evaluated on background events, and vice versa for the PD $w_{1}(\vecy|\vecyhat)$.
 Given the PDs $w_{0}(\vecy|\vecyhat)$ and $w_{1}(\vecy|\vecyhat)$ for the signal and background hypotheses,
-the Neyman–Pearson lemma~\cite{Neyman:1937uhy} postulates that the likelihood ratio (LR):
+the Neyman-Pearson lemma~\cite{Neyman:1937uhy} postulates that the likelihood ratio (LR):
 \begin{equation}
 P(\vecy) = \frac{w_{0}(\vecy|\vecyhat)}{w_{0}(\vecy|\vecyhat) + w_{1}(\vecy|\vecyhat)}
 \label{eq:memLR}
@@ -31,7 +31,7 @@ Different nomenclatures and conventions for the MEM exist in the literature.
 In this note, we follow the nomenclature and conventions introduced in Ref.~\cite{Volobouev:2011vb}.
 The PDs $w_{i}(\vecy|\vecyhat)$ are given by the integral:
 \begin{align}
-w_{i}(\vecy|\vecyhat) = & \frac{\Omega(\vecy)}{\sigma \, \mathcal{A}} \, \int \, d\xhat_{a} \, d\xhat_{b} \,
+w_{i}(\vecy|\vecyhat) = & \frac{\Omega(\vecy)}{\sigma \cdot \mathcal{A}} \, \int \, d\xhat_{a} \, d\xhat_{b} \,
   d\Phi_{n} \, \frac{f(\xhat_{a}) \, f(\xhat_{b})}{2 \, \xhat_{a} \, \xhat_{b} \, s} \, (2\pi)^{4} \,
   \delta\left( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{i}^{n} \Ehat_{(i)} \right) \nonumber \\
  & \quad \cdot \, \delta^{3}( \xhat_{a} \, \vecphat^{a} + \xhat_{b} \, \vecphat^{b} - \sum_{i}^{n} \vecphat^{(i)}) \, 
@@ -64,7 +64,7 @@ is denoted by $\epsilon(\vecy)$.
 Finally, the symbol $\mathcal{A}$ denotes the acceptance of the event selection, 
 that is, the percentage of events which pass the event selection criteria,
 while $\sigma$ denotes the total (inclusive) cross section.
-Division of the right-hand-side (RHS) of Eq.~(\ref{eq:mem1}) by the product $\sigma \, \mathcal{A}$
+Division of the right-hand-side (RHS) of Eq.~(\ref{eq:mem1}) by the product $\sigma \cdot \mathcal{A}$
 ensures that $w_{i}(\vecy|\vecyhat)$ has the correct normalization required for a probability density, 
 \ie $\int \, d\vecy \, w_{i}(\vecy|\vecyhat) = 1$,
 provided that the TF satisfy the normalization condition
@@ -104,7 +104,7 @@ taking advantage of the fact that the directions of quarks (jets) and charged le
 With the further assumption that also the energy of charged leptons can be measured with negligible experimental resolution,
 the integration over $d\Ehat_{\Plepton^{+}}$ and $d\Ehat_{\Plepton^{-}}$ can be carried out trivially too.
 We shall only consider events that pass the event selection criteria, \ie for which the indicator function $\Omega(\vecy)$ is equal to $1$.
-For simplicity, we \st{moreover} neglect the effect of the efficiency $\epsilon(\vecyhat)$ and of the acceptance $\mathcal{A}$.
+For simplicity, we neglect the effect of the efficiency $\epsilon(\vecyhat)$ and of the acceptance $\mathcal{A}$.
 With these assumptions and upon inserting the expressions for the TF given by Eqs.~(\ref{eq:TF_ell}),~(\ref{eq:TF_b}), and~(\ref{eq:TF_f}) in the appendix
 into Eq.~(\ref{eq:PS_inPolarCoordinates}), we obtain:
 \begin{align}
@@ -151,7 +151,7 @@ As detailed in Ref.~\cite{Alwall:2010cq}, significant amounts of QCD radiation, 
 are a typical feature of most signal and background processes at the LHC.
 The longitudinal momentum of the additional jets produced by QCD radiation alters the relations for $\xhat_{a}$ and $\xhat_{b}$ somewhat,
 compared to the values given by Eq.~(\ref{eq:Bjorkenx}).
-We expect the effect of QCD radiation on the energy and longitudinal momentum components to be small\st{, however,} and thus neglect it.
+We expect the effect of QCD radiation on the energy and longitudinal momentum components to be small and thus neglect it.
 The effect on the transverse momentum balance is important, however,
 as QCD radiation distorts the kinematic relations that would be expected to hold in the absence of such radiation.
 As a consequence, the $\delta$-functions that ensure the conservation of momentum in the transverse plane need to be modified. 
@@ -183,12 +183,12 @@ W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) =
 \end{equation}
 where the matrix $V$ quantifies the resolution on the hadronic recoil in the transverse plane.
 
-The CMS collaboration computes the matrix $V$ on an event-by-event bases, using an algorithm referred to as ``$\MET$-significance'' algorithm~\cite{JME-10-009}.
+The CMS collaboration computes the matrix $V$ on an event-by-event bases, using an algorithm referred to as the ``$\MET$-significance'' algorithm~\cite{JME-10-009}.
 Alternatively, one could determine an average resolution $\sigma_{\rho}$ for a sample of $\dihiggs$ signal and $\ttbar$ background events using the Monte Carlo simulation
 and take the matrix $V$ to be $V = \sigma_{\rho}^{2} \, I_{2}$, where $I_{2}$ denotes the identity matrix of size $2$.
 We follow the procedure detailed in Ref.~\cite{SVfitMEM} and replace the $\delta$-functions 
-$\delta( \pXhat^{\rho} + \sum_{i}^{6} \pXhat^{(i)})$ and $\delta( \pYhat^{\rho} + \sum_{i}^{6} \pYhat^{(i)})$
-that ensure the momentum conservation in the transverse plane
+$\delta( \pXhat^{\rho} + \sum_{i}^{6} \pXhat^{(i)})$ and $\delta( \pYhat^{\rho} + \sum_{i}^{6} \pYhat^{(i)})$,
+which ensure the momentum conservation in the transverse plane,
 by the TF for the hadronic recoil.
 
 A remaining issue is that we use LO ME $\mathcal{M}_{i}(\vecphat)$ for the $\PHiggs\PHiggs$ signal and for the $\ttbar$ background in Eq.~(\ref{eq:mem2}).
@@ -234,8 +234,8 @@ The mass constraints arise from the presence of on-shell $\PHiggs$ bosons, $\PW$
 $\PHiggs\PHiggs \to \Pbottom\APbottom\PW\PW^{\ast} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$ and
 $\ttbar \to \Pbottom\PW\APbottom\PW \to \Pbottom\ellPlusnu \, \APbottom\ellMinusnu$.
 Their presence renders the numeric integration inefficient, unless the mass constraints are treated analytically. 
-We use the narrow-width approximation~\cite{NWA} to handle the mass constraints and replace the BW propagators by $\delta$-functions,
-which has the effect of restricting the numerical integration to the narrow slices in the $6$-particle PS where the mass constraints are satisfied
+We use the narrow-width approximation (NWA)~\cite{NWA} to handle the mass constraints and replace the BW propagators by $\delta$-functions.
+The NWA has the effect of restricting the numerical integration to the narrow slices in the $6$-particle PS where the mass constraints are satisfied
 and the ME $\mathcal{M}_{i}(\vecphat)$ yields a sizeable contribution to the integral.
 The analytic transformations that are needed to handle the BW propagators differ for the signal and for the background hypothesis,
 reflecting the presence of different resonances in the respective decay chains.
@@ -254,9 +254,6 @@ using a single core of a $2.30$~GHz Intel\TReg~Xeon\TReg~E5-2695V3 processor.
 \subsection{Analytic transformations specific to the signal hypothesis}
 \label{sec:mem_signal}
 
-In $\PHiggs\PHiggs \to \Pbottom\APbottom\PW\PW^{\ast} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$ signal events,
-either the $\PW^{+}$ or the $\PW^{-}$ boson is off-shell.
-We use an asterisk to refer to the charged lepton and the neutrino that originate from the decay of the off-shell $\PW$ boson.
 When evaluating the integrand in Eq.~(\ref{eq:mem3}) for the signal hypothesis,
 only those points in the $6$-particle PS provide a sizeable contribution to the value of the integral $w_{0}(\vecy|\vecyhat)$
 which satisfy the following conditions:
@@ -271,6 +268,7 @@ The procedure is explained in Section~\ref{sec:appendix_mass_constraints} of the
 More specifically, we insert
 one $\delta$-function of the type $g(\Ehat_{\APbottom})$ given by Eq.~(\ref{eq:bEn_Hbb1}), 
 one of the type $g(\Ehat_{\Pnu})$ given by Eq.~(\ref{eq:nuEn_Wlnu1}), and one of the type $g(\Ehat_{\nuStar})$ given by Eq.~(\ref{eq:nuEn_Hww1}) into the integrand of Eq.~(\ref{eq:mem3}).
+We denote the charged lepton and the neutrino originating from the decay of the off-shell $\PW$ boson, which can be either the $\PW^{+}$ or the $\PW^{-}$, by an asterisk.
 The charged lepton and the neutrino that are referred to without asterisks are subject to the $\PW$ mass constraint.
 
 After solving for the $\delta$-functions analytically, as detailed in Sections~\ref{sec:appendix_bEn_Hbb}, ~\ref{sec:appendix_nuEn_Wlnu}, and~\ref{sec:appendix_nuEn_Hww} of the appendix,
@@ -339,7 +337,7 @@ and using the average of these four values when evaluating the LR in Eq.~(\ref{e
 \label{sec:mem_background}
 
 In $\ttbar \to \Pbottom\PW\APbottom\PW \to \Pbottom\ellPlusnu \, \APbottom\ellMinusnu$ background events,
-both $\PW$ bosons are on-shell and sizeable contributions to the value of the integral $w_{1}(\vecy|\vecyhat)$ are thus obtained only
+both $\PW$ bosons are on-shell. Sizeable contributions to the value of the integral $w_{1}(\vecy|\vecyhat)$ are obtained only
 for those points $\vecphat$ in the $6$-particle PS for which:
 \begin{itemize}
 \item The masses of the $\ellPlusnu$ as well as of the $\ellMinusnu$ system are equal to $m_{\PW} = 80.4$~\GeV~\cite{PDG}.
@@ -347,11 +345,11 @@ for those points $\vecphat$ in the $6$-particle PS for which:
 \end{itemize}
 
 We account for these mass constraints by inserting four $\delta$-functions $\delta\left( g(x) \right)$ into the integrand of Eq.~(\ref{eq:mem3}):
-two $\delta$-functions of the type $g(\Ehat_{\Pnu})$ given by Eq.~(\ref{eq:nuEn_Wlnu1}) 
-and two $\delta$-functions of the type $g(\Ehat_{\Pbottom})$ given by Eq.~(\ref{eq:bEn_top1}).
+two $\delta$-functions of the type $g(\Ehat_{\Pnu})$, given by Eq.~(\ref{eq:nuEn_Wlnu1}),
+and two $\delta$-functions of the type $g(\Ehat_{\Pbottom})$, given by Eq.~(\ref{eq:bEn_top1}).
 We denote the second $\delta$-function of the type given by Eq.~(\ref{eq:nuEn_Wlnu1}) by the symbol $g(\Ehat_{\APnu})$
 and the second $\delta$-function of the type given by Eq.~(\ref{eq:bEn_top1}) by the symbol $g(\Ehat_{\APbottom})$
-to indicate that they refer to the anti-neutrino and to the anti-bottom quark produced in the decay of the anti-top quark.
+to indicate that they refer to the anti-neutrino and to the anti-bottom quark, which are produced in the decay of the anti-top quark.
 
 After solving for the $\delta$-functions analytically, following Sections~\ref{sec:appendix_nuEn_Wlnu} and~\ref{sec:appendix_bEn_top} of the appendix,
 we obtain the following expression for the integral $w_{1}(\vecy|\vecyhat)$ for the background hypothesis:
@@ -415,5 +413,5 @@ We deal with this ambiguity by evaluating the integral $w_{1}(\vecy|\vecyhat)$ g
 corresponding to the two possible associations of the measured $\Pbottom$-jets to the $\Pbottom$ and $\APbottom$ quarks.
 In contrast to the signal hypothesis,
 there is no ambiguity in associating the two measured leptons to the two $\PW$ bosons,
-as both $\PW$ bosons are on-shell in case of the background hypothesis,
+as in $\ttbar$ background events both $\PW$ bosons are on-shell,
 and the measurement of the lepton charge allows for a unique association of each charged lepton to either the $\PW^{+}$ or the $\PW^{-}$ boson.
