@@ -81,7 +81,7 @@ The $\delta$-function rule:
 \delta\left( g(x) \right) = \frac{1}{|g^{\prime}(x_{0})|} \, \delta( x - x_{0} ) 
 \label{eq:deltaFuncRule}
 \end{equation}
-yields a factor of $|g^{\prime}(x_{0})|^{-1} \defL \lvert \frac{\partial g}{\partial x} \rvert_{x = x_{0}}$, 
+yields a factor of $|g^{\prime}(x_{0})|^{-1} \defL \left\lvert \frac{\partial g}{\partial x} \right\rvert_{x = x_{0}}$,
 which we account for when eliminating the integration over $\Ehat$.
 The symbol $x_{0}$ denotes the root of $g(x)$. 
 
@@ -122,15 +122,16 @@ We discard the solution of lower energy and consider the solution of higher ener
 The derivative of the RHS of Eq.~(\ref{eq:bEn_Hbb1}) with respect to $\Ehat_{\APbottom}$ amounts to:
 \begin{eqnarray}
 \frac{1}{|g^{\prime}(\Ehat_{\APbottom})|} 
-& = & \frac{1}{\lvert a - \frac{b \, \Ehat_{\APbottom}}{\underbrace{\sqrt{\Ehat_{\APbottom}^{2} - m_{\Pbottom}^{2}}}_{= \beta_{\APbottom} \, \Ehat_{\APbottom}}} \rvert} 
- = \frac{1}{\lvert a - \frac{1}{\betahat_{\APbottom}} \, b \rvert} \nonumber \\
-& = & \frac{1}{\lvert \Ehat_{\Pbottom} - \frac{1}{\betahat_{\APbottom}} \, 
-\underbrace{\sqrt{\Ehat_{\Pbottom}^{2} - m_{\Pbottom}^{2}}}_{= \betahat_{\Pbottom} \, \Ehat_{\Pbottom}} \, 
-\underbrace{\vecehat_{\Pbottom} \cdot \vecehat_{\APbottom}}_{\defL \cos\sphericalangle(\vecehat_{\Pbottom},\vecehat_{\APbottom})} \rvert} 
- = \frac{1}{\lvert \Ehat_{\Pbottom} \, \left( 1 - \frac{\betahat_{\Pbottom}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vecehat_{\Pbottom},\vecehat_{\APbottom}) \right) \rvert} \, .
+& = & \frac{1}{\Bigg\lvert a - \frac{b \, \Ehat_{\APbottom}}{\underbrace{\sqrt{\Ehat_{\APbottom}^{2} - m_{\Pbottom}^{2}}}_{= \beta_{\APbottom} \, \Ehat_{\APbottom}}} \Bigg\rvert}
+ = \frac{1}{\left\lvert a - \frac{1}{\betahat_{\APbottom}} \, b \right\rvert} \nonumber \\
+& = & \frac{1}{\left\lvert \Ehat_{\Pbottom} - \frac{1}{\betahat_{\APbottom}} \,
+\smash{\underbrace{\sqrt{\Ehat_{\Pbottom}^{2} - m_{\Pbottom}^{2}}}_{= \betahat_{\Pbottom} \, \Ehat_{\Pbottom}}} \,
+\smash{\underbrace{\vecehat_{\Pbottom} \cdot \vecehat_{\APbottom}}_{\defL \cos\sphericalangle(\vecehat_{\Pbottom},\vecehat_{\APbottom})}} \right\rvert}
+ = \frac{1}{\left\lvert \Ehat_{\Pbottom} \, \left( 1 - \frac{\betahat_{\Pbottom}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vecehat_{\Pbottom},\vecehat_{\APbottom}) \right) \right\rvert} \, .
 \label{eq:bEn_Hbb3}
 \end{eqnarray}
 
+\vspace*{1em} % add a bit of vertical spacing
 
 \subsubsection{Energy of $\Pnu$ produced in $\PW \to \ellnu$ decay}
 \label{sec:appendix_nuEn_Wlnu}
@@ -193,9 +194,9 @@ which has the solution:
 \begin{eqnarray}
 \Ehat_{\nuStar}
  & = & \frac{\Delta_{m_{\PHiggs}}}{a - b} 
- = \frac{m_{\PHiggs}^{2} - m_{\ellnuellStar}^{2}}{2 \, \left( \Ehat_{\ellnuellStar} 
+ = \frac{m_{\PHiggs}^{2} - m_{\ellnuellStar}^{2}}{2 \, \Big( \Ehat_{\ellnuellStar}
 - \underbrace{\sqrt{\Ehat_{\ellnuellStar}^{2} - m_{\ellnuellStar}^{2}}}_{= \betahat_{\ellnuellStar} \, \Ehat_{\ellnuellStar}} \,
- \underbrace{\vecehat_{\ellnuellStar} \cdot \vecehat_{\nuStar}}_{\defL \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar})} \right)} \nonumber \\
+ \underbrace{\vecehat_{\ellnuellStar} \cdot \vecehat_{\nuStar}}_{\defL \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar})} \Big)} \nonumber \\
  & = & \frac{m_{\PHiggs}^{2} - m_{\ellnuellStar}^{2}}{2 \, \Ehat_{\ellnuellStar} \, 
 \left( 1 - \betahat_{\ellnuellStar} \, \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar}) \right)} \, ,
 \label{eq:nuEn_Hww2}
@@ -211,10 +212,9 @@ The derivative of the RHS of Eq.~(\ref{eq:nuEn_Hww1}) with respect to $\Ehat_{\n
  & = &\frac{1}{|a - b|} 
   = \frac{1}{\Ehat_{\ellnuellStar} - \underbrace{\sqrt{\Ehat_{\ellnuellStar}^{2} - m_{\ellnuellStar}^{2}}}_{= \betahat_{\ellnuellStar} \, \Ehat_{\ellnuellStar}} \, 
 \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar})} \nonumber \\
- & = & \frac{1}{\Ehat_{\ellnuellStar} \left( 1 - \betahat_{\ellnuellStar} \, \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar}) \right)} \, . 
+ & = & \frac{1}{\Ehat_{\ellnuellStar} \left( 1 - \betahat_{\ellnuellStar} \, \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar}) \right)} \, .
 \label{eq:nuEn_Hww3}
 \end{eqnarray}
-
 
 \subsubsection{Energy of $\Pbottom$  ($\APbottom$) produced in $\Ptop \to \Pbottom\PW^{+} \to \Pbottom\ellPlusnu$ ($\APtop \to \APbottom\PW^{-} \to \APbottom\ellMinusnu$) decay}
 \label{sec:appendix_bEn_top}
@@ -252,12 +252,12 @@ We discard the solution of lower energy and consider the solution of higher ener
 The derivative of the RHS of Eq.~(\ref{eq:bEn_top1}) with respect to $\Ehat_{\Pbottom}$ yields:
 \begin{eqnarray}
 \frac{1}{|g^{\prime}(\Ehat_{\Pbottom})|} 
- & = & \frac{1}{\lvert a - \frac{b \, \Ehat_{\Pbottom}}{\underbrace{\sqrt{\Ehat_{\Pbottom}^{2} - m_{\Pbottom}^{2}}}_{= \beta_{\Pbottom} \, \Ehat_{\Pbottom}}} \rvert} 
-  = \frac{1}{\lvert a - \frac{1}{\betahat_{\Pbottom}} \, b \rvert}
-  = \frac{1}{\lvert \Ehat_{\ellPlusnu} - \frac{1}{\betahat_{\Pbottom}} \, 
-\underbrace{\sqrt{\Ehat_{\ellPlusnu}^{2} - m_{\PW}^{2}}}_{= \betahat_{\ellPlusnu} \, \Ehat_{\ellPlusnu}} \, 
-\underbrace{\vecehat_{\ellPlusnu} \cdot \vecehat_{\Pbottom}}_{\defL \cos\sphericalangle(\vecehat_{\ellPlusnu},\vecehat_{\Pbottom})} \rvert} \nonumber \\
- & = & \frac{1}{\lvert \Ehat_{\ellPlusnu} \, \left( 1 - \frac{\betahat_{\ellPlusnu}}{\betahat_{\Pbottom}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vecehat_{\Pbottom}) \right) \rvert} \, .
+ & = & \frac{1}{\Bigg\lvert a - \frac{b \, \Ehat_{\Pbottom}}{\underbrace{\sqrt{\Ehat_{\Pbottom}^{2} - m_{\Pbottom}^{2}}}_{= \beta_{\Pbottom} \, \Ehat_{\Pbottom}}} \Bigg\rvert}
+  = \frac{1}{\left\lvert a - \frac{1}{\betahat_{\Pbottom}} \, b \right\rvert}
+  = \frac{1}{\left\lvert \Ehat_{\ellPlusnu} - \frac{1}{\betahat_{\Pbottom}} \,
+\smash{\underbrace{\sqrt{\Ehat_{\ellPlusnu}^{2} - m_{\PW}^{2}}}_{= \betahat_{\ellPlusnu} \, \Ehat_{\ellPlusnu}}} \,
+\smash{\underbrace{\vecehat_{\ellPlusnu} \cdot \vecehat_{\Pbottom}}_{\defL \cos\sphericalangle(\vecehat_{\ellPlusnu},\vecehat_{\Pbottom})}} \right\rvert} \nonumber \\
+ & = & \frac{1}{\left\lvert \Ehat_{\ellPlusnu} \, \left( 1 - \frac{\betahat_{\ellPlusnu}}{\betahat_{\Pbottom}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vecehat_{\Pbottom}) \right) \right\rvert} \, .
 \label{eq:bEn_top3}
 \end{eqnarray}
 
