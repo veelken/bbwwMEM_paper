@@ -34,7 +34,7 @@ The PDs $w_{i}(\vecy|\vecyhat)$ are given by the integral:
 w_{i}(\vecy|\vecyhat) = & \frac{\Omega(\vecy)}{\sigma \cdot \mathcal{A}} \, \int \, d\xhat_{a} \, d\xhat_{b} \,
   d\Phi_{n} \, \frac{f(\xhat_{a}) \, f(\xhat_{b})}{2 \, \xhat_{a} \, \xhat_{b} \, s} \, (2\pi)^{4} \,
   \delta\left( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{i}^{n} \Ehat_{(i)} \right) \nonumber \\
- & \quad \cdot \, \delta^{3}( \xhat_{a} \, \vecphat^{a} + \xhat_{b} \, \vecphat^{b} - \sum_{i}^{n} \vecphat^{(i)}) \, 
+ & \quad \cdot \, \delta^{3}\left( \xhat_{a} \, \vecphat^{a} + \xhat_{b} \, \vecphat^{b} - \sum_{i}^{n} \vecphat^{(i)}\right) \, 
   \vert \mathcal{M}_{i}(\vecyhat) \vert^{2} \, W(\vecy|\vecyhat) \, \epsilon(\vecyhat) \, .
 \label{eq:mem1}
 \end{align}
@@ -112,8 +112,8 @@ w_{i}(\vecy|\vecyhat)
  = & \frac{1}{2^{24} \, \pi^{18} \, \sigma \, E_{\Plepton^{+}} \, E_{\Plepton^{-}}} \, \int \, d\xhat_{a} \, d\xhat_{b} \,
 \frac{d\Ehat_{\Pbottom}}{\Ehat_{\Pbottom}} \, \frac{d\Ehat_{\APbottom}}{\Ehat_{\APbottom}} \, \frac{d^{3}\vecphat_{\Pnu}}{\Ehat_{\Pnu}} \, \frac{d^{3}\vecphat_{\APnu}}{\Ehat_{\APnu}} \,
 \frac{f(\xhat_{a}) \, f(\xhat_{b})}{2 \, \xhat_{a} \, \xhat_{b} \, s} \nonumber \\
- & \quad \cdot \, (2 \, \pi)^{4} \, \delta( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{i}^{6} \Ehat_{(i)}) \, 
-\delta^{3}( \xhat_{a} \, \vecphat^{a} + \xhat_{b} \, \vecphat^{b} - \sum_{i}^{6} \vecphat^{(i)}) \nonumber \\
+ & \quad \cdot \, (2 \, \pi)^{4} \, \delta\left( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{i}^{6} \Ehat_{(i)}\right) \, 
+\delta^{3}\left( \xhat_{a} \, \vecphat^{a} + \xhat_{b} \, \vecphat^{b} - \sum_{i}^{6} \vecphat^{(i)}\right) \nonumber \\
  & \quad \cdot \, \vert \mathcal{M}_{i}(\vecphat) \vert^{2} \, \frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}^{2}}{\beta_{\Pbottom} \, E_{\Pbottom}^{2}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
 \frac{\betahat_{\APbottom} \, \Ehat_{\APbottom}^{2}}{\beta_{\APbottom} \, E_{\APbottom}^{2}} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \nonumber \\
  = & \frac{1}{2^{21} \, \pi^{14} \, \sigma \, E_{\Plepton^{+}} \, E_{\Plepton^{-}} \, E_{\Pbottom} \, E_{\APbottom}} \, \int \, d\xhat_{a} \, d\xhat_{b} \,
