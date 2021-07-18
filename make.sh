@@ -5,10 +5,17 @@ if [[ "$1" = "clean" ]]; then
   exit 0
 fi
 
-pdflatex bbwwMEM.tex
+# run:
+# NONSTOP=1 ./make.sh
+# in order to disable interactive prompts
+if [ "$NONSTOP" = 1 ]; then
+  PDFLATEX_ARGS="-interaction=nonstopmode"
+fi
+
+pdflatex $PDFLATEX_ARGS bbwwMEM.tex
 bibtex bbwwMEM
-pdflatex bbwwMEM.tex
-pdflatex bbwwMEM.tex
+pdflatex $PDFLATEX_ARGS bbwwMEM.tex
+pdflatex $PDFLATEX_ARGS bbwwMEM.tex
 
 # convert to grayscale
 if [[ -f bbwwMEM.pdf ]] && [[ "$1" = "grayscale" ]]; then
