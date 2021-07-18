@@ -2,15 +2,27 @@
 \def\verPAPER{2}
 \def\ver{1}
 
+\def\lineNumbersEnabled{true}
+\def\lineNumbersDisabled{false}
+\def\showLineNumbers{true}
+
 \ifx\ver\verPreprint
 \documentclass[a4paper,english,11pt]{article}
 \usepackage[bindingoffset=0.5cm,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,footskip=1.0cm]{geometry}
-\usepackage{lineno,hepnames,bm,multirow,amssymb,authblk,graphicx,newclude,xspace,hyperref,feynmp}
+\usepackage{hepnames,bm,multirow,amssymb,authblk,graphicx,newclude,xspace,hyperref}
 \fi
 \ifx\ver\verPAPER
 \documentclass[1p]{elsarticle}
-\usepackage{lineno,hyperref,hepnames,bm,multirow,amssymb,xspace,feynmp}
+\usepackage{hyperref,hepnames,bm,multirow,amssymb,xspace}
 \fi
+
+\ifx\showLineNumbers\lineNumbersEnabled
+\usepackage{lineno}
+\newenvironment{linenowrapper}{\begin{linenomath*}}{\end{linenomath*}}
+\else
+\newenvironment{linenowrapper}{}{} % dummy
+\fi
+
 
 % for Feynman diagrams
 \DeclareGraphicsRule{.1}{mps}{*}{}
@@ -176,7 +188,9 @@ We find that our work has the potential to reduce the $\ttbar$ background by thr
 
 \clearpage
 
+\ifx\showLineNumbers\lineNumbersEnabled
 \linenumbers
+\fi
 
 
 %\begingroup

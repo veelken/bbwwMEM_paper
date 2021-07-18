@@ -38,17 +38,21 @@ and of the matrix $V$ in Eq.~(\ref{eq:TF_hadRecoil}).
 Our choice of the TF is motivated by the resolutions achieved by the ATLAS and CMS experiments at the LHC~\cite{Aaboud:2017aca,PRF-14-001,Aaboud:2018tkc,JME-17-001}.
 For the function $W(E|\Ehat)$, which models the energy resolution of $\Pbottom$-jets,
 we choose a normal distribution:
+\begin{linenowrapper}
 \begin{equation}
 W(E|\Ehat) = \frac{1}{\sqrt{2 \pi \sigma_{\Pbottom}^{2}}} \, e^{-\frac{(E - \Ehat)^{2}}{2 \, \sigma_{\Pbottom}^{2}}} \, ,
 \label{eq:resolution_b}
 \end{equation}
+\end{linenowrapper}
 with a standard deviation $\sigma_{\Pbottom}$ of $\sigma_{\Pbottom} = 100\% \cdot \sqrt{\Ehat}$.
 Concerning the resolution on the hadronic recoil,
 we assume that the components $\pX^{\rho}$ and $\pY^{\rho}$ are each measured with a resolution of $\sigma_{\rho} = 10$~\GeV:
+\begin{linenowrapper}
 \begin{equation}
 V = \sigma_{\rho}^{2} \cdot I_{2} \, .
 \label{eq:resolution_rho}
 \end{equation}
+\end{linenowrapper}
 Distributions in the LR $P(\vecy)$, computed for simulated $\dihiggs$ signal and $\ttbar$ background events on MC-truth level, are shown in Fig.~\ref{fig:memLR_and_ROC_unsmeared}.
 Signal events are characterized by high values of $P(\vecy)$, while background events typically have low values.
 The figure also presents the ``receiver-operating-characteristic'' (ROC) curve~\cite{ROCcurve} that corresponds to the shown distribution in $P(\vecy)$.
