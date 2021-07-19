@@ -22,35 +22,47 @@ into Eq.~(\ref{eq:mem_background}) for the $\ttbar$ background hypothesis, respe
 We assume that the directions of electrons, muons, and $\Pbottom$-jets
 as well as the energies of electrons and muons are measured with negligible experimental resolution.
 Our assumption implies that the TF for electrons and muons is given by:
+\begin{linenowrapper}
 \begin{equation}
 W_{\Plepton}(\vecp|\vecphat) = f(E,\theta,\phi) \, \delta(E - \Ehat) \cdot \delta(\theta - \thetahat) \cdot \delta(\phi - \phihat) \, ,
 \label{eq:TF_ell}
 \end{equation}
+\end{linenowrapper}
 while the TF for $\Pbottom$-jets is given by:
+\begin{linenowrapper}
 \begin{equation}
 W(\vecp|\vecphat) = f(E,\theta,\phi) \, W(E|\Ehat) \, \delta(\theta - \thetahat) \cdot \delta(\phi - \phihat) \, ,
 \label{eq:TF_b}
 \end{equation}
+\end{linenowrapper}
 where $E$ denotes the energy, $\theta$ the polar angle, and $\phi$ the azimuthal angle of the electron, muon, or $\Pbottom$-jet.
 The function $W(E|\Ehat)$ quantifies the experimental resolution with which the energy of $\Pbottom$-jets is measured.
 We choose the function $W(E|\Ehat)$ such that it satisfies the following normalization condition:
+\begin{linenowrapper}
 \begin{equation*}
 \int \, dE \, W(E|\Ehat) \equiv 1.
 \end{equation*}
+\end{linenowrapper}
 The function $f(E,\theta,\phi)$ ensures that the TF satisfy the normalization condition 
+\begin{linenowrapper}
 \begin{equation*}
 \int \, d^{3}\vecp \, \Omega(\vecp) \, W(\vecp|\vecphat) = 1 \, .
 \end{equation*}
+\end{linenowrapper}
 We only consider those events, which pass the event selection criteria, \ie for which $\Omega(\vecp)$ is equal to one.
 With $d^{3}\vecp = \beta \, E^{2} \, \sin\theta \, dE \, d\theta \, d\phi$, it follows that:
+\begin{linenowrapper}
 \begin{equation*}
 1 \equiv \int \, dE \, d\theta \, d\phi \, \beta \, E^{2} \, \sin\theta \, f(E, \theta, \phi) \, W(E|\Ehat) \, \delta(\theta - \thetahat) \cdot \delta(\phi - \phihat) \, ,
 \end{equation*}
+\end{linenowrapper}
 which implies:
+\begin{linenowrapper}
 \begin{equation}
 f(E,\theta,\phi) = \frac{1}{\beta \, E^{2} \, \sin\theta} \, .
 \label{eq:TF_f}
 \end{equation}
+\end{linenowrapper}
 Eq.~(\ref{eq:TF_f}) holds for electrons and muons as well as for $\Pbottom$-jets.
 
 
@@ -63,6 +75,7 @@ unless the numeric integration is restricted to those narrow slices in the $6$-p
 We achieve the desired restriction by inserting suitable $\delta$-functions into the integrand on the RHS of Eq.~(\ref{eq:mem3}).
 In order to avoid that the insertion of the $\delta$-functions changes the value of the integral,
 we formally insert a factor of $1$, which we write as:
+\begin{linenowrapper}
 \begin{eqnarray}
 1 \equiv \textrm{BW} \, \cdot \, \textrm{BW}^{-1} 
  & = & \frac{\pi}{m_{\X} \, \Gamma_{\X}} \, \delta( E_{\X}^{2} - |\vecp_{\X}|^{2} - m_{\X}^{2} ) \cdot 
@@ -70,6 +83,7 @@ we formally insert a factor of $1$, which we write as:
  & = & \pi \, m_{\X} \, \Gamma_{\X} \, \delta( E_{\X}^{2} - |\vecp_{\X}|^{2} - m_{\X}^{2} ) \, ,
 \label{eq:deltaFunc}
 \end{eqnarray}
+\end{linenowrapper}
 where we have used the narrow-width approximation to replace the first $\textrm{BW}$ propagator by a $\delta$-function.
 The symbol $\X$ in Eq.~(\ref{eq:deltaFunc}) refers to the on-shell particle, of mass $m_{\X}$ and width $\Gamma_{\X}$, which imposes the mass constraint.
 
@@ -77,19 +91,22 @@ We insert Eq.~(\ref{eq:deltaFunc}) into the integrand on the RHS of Eq.~(\ref{eq
 and then use the $\delta$-function $\delta( E_{\X}^{2} - |\vecp_{\X}|^{2} - m_{\X}^{2} )$ 
 to eliminate the integration over $\Ehat$ for one of the daughter particles that the particle $\X$ decays into.
 The $\delta$-function rule:
+\begin{linenowrapper}
 \begin{equation} 
 \delta\left( g(x) \right) = \frac{1}{|g^{\prime}(x_{0})|} \, \delta( x - x_{0} ) 
 \label{eq:deltaFuncRule}
 \end{equation}
-yields a factor of $|g^{\prime}(x_{0})|^{-1} \defL \lvert \frac{\partial g}{\partial x} \rvert_{x = x_{0}}$, 
+\end{linenowrapper}
+yields a factor of $|g^{\prime}(x_{0})|^{-1} \defL \left\lvert \frac{\partial g}{\partial x} \right\rvert_{x = x_{0}}$,
 which we account for when eliminating the integration over $\Ehat$.
 The symbol $x_{0}$ denotes the root of $g(x)$. 
 
 
-\subsubsection{Energy of $\APbottom$ produced in $\PHiggs \to \Pbottom\APbottom$ decay}
+\subsubsection{Energy of \texorpdfstring{$\APbottom$}{bbar} produced in \texorpdfstring{$\PHiggs \to \Pbottom\APbottom$}{H->bbar} decay}
 \label{sec:appendix_bEn_Hbb}
 
 The condition that the mass of the $2$-particle system of $\Pbottom$ plus $\APbottom$ quark equals $m_{\PHiggs}$ implies that:
+\begin{linenowrapper}
 \begin{eqnarray}
 m_{\PHiggs}^{2} \equiv m_{\Pbottom\APbottom}^{2} 
  & = & ( \Ehat_{\Pbottom} + \Ehat_{\APbottom} )^{2} - ( \vecphat_{\Pbottom} + \vecphat_{\APbottom} )^{2} \nonumber \\
@@ -105,6 +122,7 @@ m_{\PHiggs}^{2} \equiv m_{\Pbottom\APbottom}^{2}
   \defR g(\Ehat_{\APbottom}) \, ,
 \label{eq:bEn_Hbb1}
 \end{eqnarray}
+\end{linenowrapper}
 where the symbol $\vecehat_{\Pbottom}$ denotes a unit vector in direction of the $\Pbottom$ quark
 and the symbol $\APbottom$ a unit vector in direction of the $\APbottom$ quark.
 Eq.~(\ref{eq:bEn_Hbb1}) has two solutions:
@@ -120,22 +138,26 @@ We discard the solution of lower energy and consider the solution of higher ener
 \ie we take the solution corresponding to the $+$ sign in Eq.~(\ref{eq:bEn_Hbb2}).
 
 The derivative of the RHS of Eq.~(\ref{eq:bEn_Hbb1}) with respect to $\Ehat_{\APbottom}$ amounts to:
+\begin{linenowrapper}
 \begin{eqnarray}
 \frac{1}{|g^{\prime}(\Ehat_{\APbottom})|} 
-& = & \frac{1}{\lvert a - \frac{b \, \Ehat_{\APbottom}}{\underbrace{\sqrt{\Ehat_{\APbottom}^{2} - m_{\Pbottom}^{2}}}_{= \beta_{\APbottom} \, \Ehat_{\APbottom}}} \rvert} 
- = \frac{1}{\lvert a - \frac{1}{\betahat_{\APbottom}} \, b \rvert} \nonumber \\
-& = & \frac{1}{\lvert \Ehat_{\Pbottom} - \frac{1}{\betahat_{\APbottom}} \, 
-\underbrace{\sqrt{\Ehat_{\Pbottom}^{2} - m_{\Pbottom}^{2}}}_{= \betahat_{\Pbottom} \, \Ehat_{\Pbottom}} \, 
-\underbrace{\vecehat_{\Pbottom} \cdot \vecehat_{\APbottom}}_{\defL \cos\sphericalangle(\vecehat_{\Pbottom},\vecehat_{\APbottom})} \rvert} 
- = \frac{1}{\lvert \Ehat_{\Pbottom} \, \left( 1 - \frac{\betahat_{\Pbottom}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vecehat_{\Pbottom},\vecehat_{\APbottom}) \right) \rvert} \, .
+& = & \frac{1}{\Bigg\lvert a - \frac{b \, \Ehat_{\APbottom}}{\underbrace{\sqrt{\Ehat_{\APbottom}^{2} - m_{\Pbottom}^{2}}}_{= \beta_{\APbottom} \, \Ehat_{\APbottom}}} \Bigg\rvert}
+ = \frac{1}{\left\lvert a - \frac{1}{\betahat_{\APbottom}} \, b \right\rvert} \nonumber \\
+& = & \frac{1}{\left\lvert \Ehat_{\Pbottom} - \frac{1}{\betahat_{\APbottom}} \,
+\smash{\underbrace{\sqrt{\Ehat_{\Pbottom}^{2} - m_{\Pbottom}^{2}}}_{= \betahat_{\Pbottom} \, \Ehat_{\Pbottom}}} \,
+\smash{\underbrace{\vecehat_{\Pbottom} \cdot \vecehat_{\APbottom}}_{\defL \cos\sphericalangle(\vecehat_{\Pbottom},\vecehat_{\APbottom})}} \right\rvert}
+ = \frac{1}{\left\lvert \Ehat_{\Pbottom} \, \left( 1 - \frac{\betahat_{\Pbottom}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vecehat_{\Pbottom},\vecehat_{\APbottom}) \right) \right\rvert} \, .
 \label{eq:bEn_Hbb3}
 \end{eqnarray}
+\end{linenowrapper}
 
+\vspace*{1em} % add a bit of vertical spacing
 
-\subsubsection{Energy of $\Pnu$ produced in $\PW \to \ellnu$ decay}
+\subsubsection{Energy of \texorpdfstring{$\Pnu$}{v} produced in \texorpdfstring{$\PW \to \ellnu$}{W->lnu} decay}
 \label{sec:appendix_nuEn_Wlnu}
 
 The condition that the mass of the $2$-particle system of $\Plepton$ plus $\Pnu$ equals $m_{\PW}$ implies that:
+\begin{linenowrapper}
 \begin{eqnarray}
 m_{\PW}^{2} \equiv m_{\Plepton\Pnu}^{2} 
  & = & ( \Ehat_{\Plepton} + \Ehat_{\Pnu} )^{2} - ( \vecphat_{\Plepton} + \vecphat_{\Pnu} )^{2} \nonumber \\
@@ -153,6 +175,7 @@ m_{\PW}^{2} \equiv m_{\Plepton\Pnu}^{2}
   \defR g(\Ehat_{\Pnu}) \, ,
 \label{eq:nuEn_Wlnu1}
 \end{eqnarray}
+\end{linenowrapper}
 which has the solution:
 \begin{equation}
 \Ehat_{\Pnu} = \frac{m_{\PW}^{2}}{4 \, \Ehat_{\Plepton} \, \sin^{2}\left(\frac{\sphericalangle(\vecehat_{\Plepton},\vecehat_{\Pnu})}{2}\right)} \, .
@@ -162,17 +185,20 @@ The symbol $\sphericalangle(\vecehat_{\Plepton},\vecehat_{\Pnu})$ refers to the 
 %Our result for $\Ehat_{\Pnu}$, given by Eq.~(\ref{eq:nuEn_Wlnu2}), is in agreement with the result given in Eq.~(54) of Ref.~\cite{CMS_AN_2013_313}.
 
 The derivative of the RHS of Eq.~(\ref{eq:nuEn_Wlnu1}) with respect to $\Ehat_{\Pnu}$ yields:
+\begin{linenowrapper}
 \begin{equation}
 \frac{1}{|g^{\prime}(\Ehat_{\Pnu})|} 
  = \frac{1}{4 \, \Ehat_{\Plepton} \, \sin^{2}\left(\frac{\sphericalangle(\vecehat_{\Plepton},\vecehat_{\Pnu})}{2}\right)} \, . 
 \label{eq:nuEn_Wlnu3}
 \end{equation}
+\end{linenowrapper}
 
-\subsubsection{Energy of $\Pnu^{\ast}$ produced in $\PHiggs \to \PW\PW^{\ast} \to \ellnu \, \ellnuStar$ decay}
+\subsubsection{Energy of \texorpdfstring{$\Pnu^{\ast}$}{v*} produced in \texorpdfstring{$\PHiggs \to \PW\PW^{\ast} \to \ellnu \, \ellnuStar$}{H->WW*->lvl*v*} decay}
 \label{sec:appendix_nuEn_Hww}
 
 As mentioned previously, we denote by $\Plepton^{\ast}$ and $\Pnu^{\ast}$ the charged lepton and the neutrino that originate from the decay of the off-shell $\PW$ boson.
 The condition that the mass of the $4$-particle system of $\Plepton$, $\Pnu$, $\Plepton^{\ast}$, and $\Pnu^{\ast}$ equals $m_{\PHiggs}$ implies that:
+\begin{linenowrapper}
 \begin{eqnarray}
 m_{\PHiggs}^{2} \equiv m_{\ellnuellnuStar}^{2} 
  & = & ( \underbrace{\Ehat_{\Plepton} + \Ehat_{\Pnu} + \Ehat_{\ellStar}}_{\defL \Ehat_{\ellnuellStar}} + \Ehat_{\nuStar} )^{2} 
@@ -189,37 +215,42 @@ m_{\PHiggs}^{2} \equiv m_{\ellnuellnuStar}^{2}
   \defR g(\Ehat_{\nuStar}) \, ,
 \label{eq:nuEn_Hww1}
 \end{eqnarray}
+\end{linenowrapper}
 which has the solution:
+\begin{linenowrapper}
 \begin{eqnarray}
 \Ehat_{\nuStar}
  & = & \frac{\Delta_{m_{\PHiggs}}}{a - b} 
- = \frac{m_{\PHiggs}^{2} - m_{\ellnuellStar}^{2}}{2 \, \left( \Ehat_{\ellnuellStar} 
+ = \frac{m_{\PHiggs}^{2} - m_{\ellnuellStar}^{2}}{2 \, \Big( \Ehat_{\ellnuellStar}
 - \underbrace{\sqrt{\Ehat_{\ellnuellStar}^{2} - m_{\ellnuellStar}^{2}}}_{= \betahat_{\ellnuellStar} \, \Ehat_{\ellnuellStar}} \,
- \underbrace{\vecehat_{\ellnuellStar} \cdot \vecehat_{\nuStar}}_{\defL \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar})} \right)} \nonumber \\
+ \underbrace{\vecehat_{\ellnuellStar} \cdot \vecehat_{\nuStar}}_{\defL \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar})} \Big)} \nonumber \\
  & = & \frac{m_{\PHiggs}^{2} - m_{\ellnuellStar}^{2}}{2 \, \Ehat_{\ellnuellStar} \, 
 \left( 1 - \betahat_{\ellnuellStar} \, \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar}) \right)} \, ,
 \label{eq:nuEn_Hww2}
 \end{eqnarray}
+\end{linenowrapper}
 where, for the purpose of shortening the nomenclature, we denote by the symbols $\Ehat_{\ellnuellStar}$ and $\vecphat_{\ellnuellStar}$ the energy and the momentum
 of the $3$-particle system comprised of the neutrino originating from the decay of the on-shell $\PW$ boson and of the two charged leptons,
 by $\vecehat_{\ellnuellStar}$ a unit vector in direction of $\vecphat_{\ellnuellStar}$,
 and by $m_{\ellnuellStar}$ the mass of this $3$-particle system.
 
 The derivative of the RHS of Eq.~(\ref{eq:nuEn_Hww1}) with respect to $\Ehat_{\nuStar}$ amounts to:
+\begin{linenowrapper}
 \begin{eqnarray}
 \frac{1}{|g^{\prime}(\Ehat_{\nuStar})|} 
  & = &\frac{1}{|a - b|} 
   = \frac{1}{\Ehat_{\ellnuellStar} - \underbrace{\sqrt{\Ehat_{\ellnuellStar}^{2} - m_{\ellnuellStar}^{2}}}_{= \betahat_{\ellnuellStar} \, \Ehat_{\ellnuellStar}} \, 
 \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar})} \nonumber \\
- & = & \frac{1}{\Ehat_{\ellnuellStar} \left( 1 - \betahat_{\ellnuellStar} \, \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar}) \right)} \, . 
+ & = & \frac{1}{\Ehat_{\ellnuellStar} \left( 1 - \betahat_{\ellnuellStar} \, \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar}) \right)} \, .
 \label{eq:nuEn_Hww3}
 \end{eqnarray}
+\end{linenowrapper}
 
-
-\subsubsection{Energy of $\Pbottom$  ($\APbottom$) produced in $\Ptop \to \Pbottom\PW^{+} \to \Pbottom\ellPlusnu$ ($\APtop \to \APbottom\PW^{-} \to \APbottom\ellMinusnu$) decay}
+\subsubsection{Energy of \texorpdfstring{$\Pbottom$}{b}  (\texorpdfstring{$\APbottom$}{bbar}) produced in \texorpdfstring{$\Ptop \to \Pbottom\PW^{+} \to \Pbottom\ellPlusnu$}{t->bW+->bl+v} (\texorpdfstring{$\APtop \to \APbottom\PW^{-} \to \APbottom\ellMinusnu$}{tbar->bbarW- ->bbarl-vbar}) decay}
 \label{sec:appendix_bEn_top}
 
 The condition that the mass of of the $3$-particle system comprised of the $\Pbottom$ quark, the charged anti-lepton, and the neutrino equals $m_{\Ptop}$ implies that:
+\begin{linenowrapper}
 \begin{eqnarray}
 m_{\Ptop}^{2} \equiv m_{\Pbottom\ellPlusnu}^{2} 
  & = & ( \Ehat_{\Pbottom} + \underbrace{\Ehat_{\ellPlus} + \Ehat_{\Pnu}}_{\defL \Ehat_{\ellPlusnu}} )^{2} 
@@ -235,31 +266,36 @@ m_{\Ptop}^{2} \equiv m_{\Pbottom\ellPlusnu}^{2}
   \defR g(\Ehat_{\Pbottom}) \, ,
 \label{eq:bEn_top1}
 \end{eqnarray}
+\end{linenowrapper}
 where we denote the energy of the system of the charged anti-lepton and of the neutrino by the symbol $\Ehat_{\ellPlusnu}$ 
 and the momentum of this system by the symbol $\vecphat_{\ellPlusnu}$.
 The symbol $\vecehat_{\ellPlusnu}$ denotes a unit vector in direction of $\vecphat_{\ellPlusnu}$.
 The mass of this system equals $m_{\PW}$, as the $\PW$ boson produced in the decay $\Ptop \to \Pbottom\PW^{+}$ is on-shell.
 Eq.~(\ref{eq:bEn_top1}) has two solutions:
+\begin{linenowrapper}
 \begin{equation}
 \Ehat_{\Pbottom} = \frac{a \, \Delta_{m_{\Ptop}} \pm |b| \, \sqrt{\Delta_{m_{\Ptop}}^{2} - (a^{2} - b^{2}) \, m_{\Pbottom}^{2}}}{a^{2} - b^{2}} \, .
 \label{eq:bEn_top2}
 \end{equation}
+\end{linenowrapper}
 %The result for $\Ehat_{\Pbottom}$ is in agreement with the result given in Eq.~(55) of Ref.~\cite{CMS_AN_2013_313}.
 %Following Ref.~\cite{CMS_AN_2013_313}, we discard the solution of lower energy and consider the solution of higher energy only, 
 We discard the solution of lower energy and consider the solution of higher energy only,
 \ie we take the solution corresponding to the $+$ sign in Eq.~(\ref{eq:bEn_top2}).
 
 The derivative of the RHS of Eq.~(\ref{eq:bEn_top1}) with respect to $\Ehat_{\Pbottom}$ yields:
+\begin{linenowrapper}
 \begin{eqnarray}
 \frac{1}{|g^{\prime}(\Ehat_{\Pbottom})|} 
- & = & \frac{1}{\lvert a - \frac{b \, \Ehat_{\Pbottom}}{\underbrace{\sqrt{\Ehat_{\Pbottom}^{2} - m_{\Pbottom}^{2}}}_{= \beta_{\Pbottom} \, \Ehat_{\Pbottom}}} \rvert} 
-  = \frac{1}{\lvert a - \frac{1}{\betahat_{\Pbottom}} \, b \rvert}
-  = \frac{1}{\lvert \Ehat_{\ellPlusnu} - \frac{1}{\betahat_{\Pbottom}} \, 
-\underbrace{\sqrt{\Ehat_{\ellPlusnu}^{2} - m_{\PW}^{2}}}_{= \betahat_{\ellPlusnu} \, \Ehat_{\ellPlusnu}} \, 
-\underbrace{\vecehat_{\ellPlusnu} \cdot \vecehat_{\Pbottom}}_{\defL \cos\sphericalangle(\vecehat_{\ellPlusnu},\vecehat_{\Pbottom})} \rvert} \nonumber \\
- & = & \frac{1}{\lvert \Ehat_{\ellPlusnu} \, \left( 1 - \frac{\betahat_{\ellPlusnu}}{\betahat_{\Pbottom}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vecehat_{\Pbottom}) \right) \rvert} \, .
+ & = & \frac{1}{\Bigg\lvert a - \frac{b \, \Ehat_{\Pbottom}}{\underbrace{\sqrt{\Ehat_{\Pbottom}^{2} - m_{\Pbottom}^{2}}}_{= \beta_{\Pbottom} \, \Ehat_{\Pbottom}}} \Bigg\rvert}
+  = \frac{1}{\left\lvert a - \frac{1}{\betahat_{\Pbottom}} \, b \right\rvert}
+  = \frac{1}{\left\lvert \Ehat_{\ellPlusnu} - \frac{1}{\betahat_{\Pbottom}} \,
+\smash{\underbrace{\sqrt{\Ehat_{\ellPlusnu}^{2} - m_{\PW}^{2}}}_{= \betahat_{\ellPlusnu} \, \Ehat_{\ellPlusnu}}} \,
+\smash{\underbrace{\vecehat_{\ellPlusnu} \cdot \vecehat_{\Pbottom}}_{\defL \cos\sphericalangle(\vecehat_{\ellPlusnu},\vecehat_{\Pbottom})}} \right\rvert} \nonumber \\
+ & = & \frac{1}{\left\lvert \Ehat_{\ellPlusnu} \, \left( 1 - \frac{\betahat_{\ellPlusnu}}{\betahat_{\Pbottom}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vecehat_{\Pbottom}) \right) \right\rvert} \, .
 \label{eq:bEn_top3}
 \end{eqnarray}
+\end{linenowrapper}
 
 The corresponding expressions for the case of $\APbottom$ quark, charged lepton, and anti-neutrino are identical to Eqs.~(\ref{eq:bEn_top2}) and~(\ref{eq:bEn_top3}),
 except that the symbol $\Pbottom$ is replaced by $\APbottom$ and the symbols $\ellPlus$ and $\Pnu$ are replaced by $\ellMinus$ and $\APnu$.
