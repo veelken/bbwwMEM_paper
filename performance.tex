@@ -3,7 +3,7 @@
 
 We study the performance of the MEM in terms of the separation achieved between the $\dihiggs$ signal and the $\ttbar$ background
 in terms of the LR $P(\vecy)$ given by Eq.~(\ref{eq:memLR}).
-We first study the events on MC-truth level.
+We first study the events assuming that all measured observables $\vecy$ are equal to their true values.
 This represents the case of an optimal experimental resolution and establishes the ideal performance that one can hope to achieve using the MEM.
 We then study the effect of realistic experimental resolutions on the energy of $\Pbottom$-jets and on the momenta $\pX$ and $\pY$ of the hadronic recoil.
 The case that one of the two reconstructed $\Pbottom$-jets is due to the misidentification of a light-quark or gluon jet,
@@ -20,8 +20,10 @@ The decision to use LO ME is motivated by the need to reduce the computing-time 
 the discussion of which concludes the section on the performance of the MEM.
 
 The separation between the $\dihiggs$ signal and the $\ttbar$ background is studied using samples of signal and background events produced by Monte Carlo (MC) simulation.
+About fifty thousand $\dihiggs$ signal and about one million $\ttbar$ background events are used for this study.
+Separate samples of events have been simulated at LO and at NLO accuracy in pQCD.
 All $\dihiggs$ samples and the $\ttbar$ background sample simulated at LO accuracy in pQCD are produced with the program MadGraph\_aMCatNLO 2.2.2,
-while the $\ttbar$ background sample simulated at NLO accuracy in pQCD is produced using the program POWHEG v2~\cite{POWHEG1,POWHEG2,POWHEG3}.
+while the $\ttbar$ background sample simulated at NLO accuracy in pQCD is produced using the program POWHEG v2~\cite{POWHEG1,POWHEG2,POWHEG3,POWHEGTTBAR1,POWHEGTTBAR2,POWHEGHH1,POWHEGHH2}.
 The NNPDF3.0 LO set of PDF is used for the simulation of the LO samples and the NNPDF3.0 NLO set for the NLO samples~\cite{NNPDF1,NNPDF2,NNPDF3}.
 Parton shower and hadronization processes are modeled using the program PYTHIA with the tune CP5~\cite{PYTHIA_CP5tune_CMS}.
 All events are generated for proton-proton collisions at $\sqrt{s} = 13$~\TeV center-of-mass energy.
