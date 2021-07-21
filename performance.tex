@@ -3,25 +3,10 @@
 
 We study the performance of the MEM in terms of the separation achieved between the $\dihiggs$ signal and the $\ttbar$ background
 in terms of the LR $P(\vecy)$ given by Eq.~(\ref{eq:memLR}).
-We first study the events assuming that all measured observables $\vecy$ are equal to their true values.
-This represents the case of an optimal experimental resolution and establishes the ideal performance that one can hope to achieve using the MEM.
-We then study the effect of realistic experimental resolutions on the energy of $\Pbottom$-jets and on the momenta $\pX$ and $\pY$ of the hadronic recoil.
-The case that one of the two reconstructed $\Pbottom$-jets is due to the misidentification of a light-quark or gluon jet,
-while one of the true $\Pbottom$-jets fails to get reconstructed, is studied next.
-The misidentification of a light-quark or gluon jet turns out to be the dominant experimental effect,
-which limits the performance of the MEM.
-We present an approach to mitigate the resulting loss in performance.
-Finally, we study the effect of using LO ME when computing the weights $w_{0}(\vecy|\vecyhat)$ and $w_{1}(\vecy|\vecyhat)$ 
-for, respectively, the $\dihiggs$ signal and the $\ttbar$ background in Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background}).
-The effect of using LO ME is quantified by comparing the performance of the MEM on samples of signal and background events simulated at LO and simulated at NLO accuracy
-in perturbative quantum chromodynamics (pQCD).
-We find that the effect of using LO ME on the performance of the MEM is small.
-The decision to use LO ME is motivated by the need to reduce the computing-time requirements of the MEM,
-the discussion of which concludes the section on the performance of the MEM.
-
-The separation between the $\dihiggs$ signal and the $\ttbar$ background is studied using samples of signal and background events produced by Monte Carlo (MC) simulation.
-About fifty thousand $\dihiggs$ signal and about one million $\ttbar$ background events are used for this study.
-Separate samples of events have been simulated at LO and at NLO accuracy in pQCD.
+The separation is studied using samples of signal and background events produced by Monte Carlo (MC) simulation.
+We study the separation for events simulated at LO and at NLO accuracy in pQCD.
+The LO and NLO $\dihiggs$ signal samples each contain about fifty thousand events
+and the LO and NLO $\ttbar$ background samples each contain about one million events.
 All $\dihiggs$ samples and the $\ttbar$ background sample simulated at LO accuracy in pQCD are produced with the program MadGraph\_aMCatNLO 2.2.2,
 while the $\ttbar$ background sample simulated at NLO accuracy in pQCD is produced using the program POWHEG v2~\cite{POWHEG1,POWHEG2,POWHEG3,POWHEGTTBAR1,POWHEGTTBAR2,POWHEGHH1,POWHEGHH2}.
 The NNPDF3.0 LO set of PDF is used for the simulation of the LO samples and the NNPDF3.0 NLO set for the NLO samples~\cite{NNPDF1,NNPDF2,NNPDF3}.
@@ -30,6 +15,30 @@ All events are generated for proton-proton collisions at $\sqrt{s} = 13$~\TeV ce
 Events in which the electrons or muons originate from $\Pgt$ lepton decays,
 \ie from the decay chains $\PW^{+} \to \Pgt^{+}\Pnu_{\Pgt} \to \Plepton^{+}\Pnu_{\Plepton}\APnu_{\Pgt}\Pnu_{\Pgt}$ or 
 $\PW^{-} \to \Pgt^{-}\APnu_{\Pgt} \to \Plepton^{-}\APnu_{\Plepton}\Pnu_{\Pgt}\APnu_{\Pgt}$, are discarded.
+
+We first study the events on MC-truth level, assuming that all measured observables $\vecy$ are equal to their true values.
+This represents the case of an optimal experimental resolution and establishes the ideal performance that one can hope to achieve using the MEM.
+We then study the effect of realistic experimental resolutions on the energy of $\Pbottom$-jets and on the momenta $\pX$ and $\pY$ of the hadronic recoil.
+The case that one of the two reconstructed $\Pbottom$-jets is due to the misidentification of a light-quark or gluon jet,
+while one of the true $\Pbottom$-jets fails to get reconstructed, is studied next.
+The misidentification of a light-quark or gluon jet turns out to be the dominant experimental effect,
+which limits the performance of the MEM.
+We present an approach to mitigate the resulting loss in performance.
+Next, we estimate the effect of using LO ME when computing the weights $w_{0}(\vecy|\vecyhat)$ and $w_{1}(\vecy|\vecyhat)$ 
+by means of Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background}).
+Unfortunately, we cannot compare the performance of the MEM
+for the case of using ME generated at LO versus ME generated at NLO in Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background}) directly,
+because the program MadGraph\_aMCatNLO does not support the generation of code for NLO ME at presents
+and also because the usage of NLO ME in the MEM would increase the computing-time requirements by $1$-$2$ orders of magnitude.
+Instead, we use ME generated at LO accuracy in Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background}) 
+and compare the resulting performance in separating the $\dihiggs$ signal from the $\ttbar$ background
+for MC samples simulated at LO and at NLO accuracy in pQCD.
+The NLO samples are expected to provide the more accurate modelling of real data and the LO samples are taken as a more or less precise approximation.
+We take the difference in performance achieved by the MEM on the MC samples simulated at LO and at NLO accuracy
+as an estimate for the loss in discrimination power that results from our choice of using LO ME and ignoring the effects of higher orders in the MEM.
+The difference in performance is found to be rather small.
+We conclude the section on the performance of the MEM with a discussion of the computing-time requirements of the MEM.
+As we will discuss in more detail in Section~\ref{sec:computing_time_requirements}, the demand in computing time is challenging already when using ME generated at LO accuracy.
 
 
 \subsection{Optimal experimental resolution}
@@ -84,10 +93,6 @@ For a signal efficiency of $35\%$, the $\ttbar$ background is reduced by three o
 We will allude to this signal efficiency and background rejection in the following,
 when quantifying the effect of the experimental resolution on the energy of $\Pbottom$-jets and on the hadronic recoil,
 as well as of the misidentification of light-quark and gluon jets as $\Pbottom$-jets.
-
-%Of course data analyses of $\dihiggs$ production performed by the ATLAS and CMS collaborations
-%may choose not to cut on the LR $P(\vecy)$,
-%but instead perform a maximum-likelihood fit of the whole distribution in $P(\vecy)$~\cite{ATL-PHYS-PUB-2011-011}.
 
 
 \subsection{Effect of experimental resolution on \texorpdfstring{$\Pbottom$}{b}-jets and hadronic recoil}
@@ -243,10 +248,6 @@ in case a light-quark or gluon jet is misidentified as $\Pbottom$-jet.
 This represents an increase in the $\ttbar$ background rate by about two orders of magnitude,
 compared to the case that both $\Pbottom$-jets are genuine $\Pbottom$-jets.
 
-%More detailed studies with the full detector simulation and with the effect of pileup included in the simulation
-%are needed in order to more accurately quantify the loss in MEM performance arising from the misidentification of light-quark and gluon jets as $\Pbottom$-jets.
-%These studies are beyond the scope of this paper.
-
 
 \subsection{Mitigation of \texorpdfstring{$\Pbottom$}{b}-jet misidentification effect}
 
@@ -301,16 +302,13 @@ that other, subdominant, backgrounds can be included in the training of the ML a
 
 \subsection{Effect of leading-order matrix elements}
 
-We quantify the effect of using LO ME by comparing the separation between the $\dihiggs$ signal and the $\ttbar$ background
-for signal and background events simulated at LO and at NLO accuracy in pQCD.
-The results are shown in Fig.~\ref{fig:memLR_LO_vs_NLO}.
+The performance achieved in separating the $\dihiggs$ signal from the $\ttbar$ background
+for MC samples simulated at LO and at NLO accuracy is shown in Fig.~\ref{fig:memLR_LO_vs_NLO}.
 The signal and background events are studied on MC-truth level, assuming an optimal experimental resolution,
 and are selected by requiring that both $\Pbottom$-jets are genuine $\Pbottom$-jets.
 The corresponding ROC curve is presented in Fig.~\ref{fig:ROC_LO_vs_NLO}.
 The usage of LO ME causes a moderate loss in the separation of the $\dihiggs$ signal from the $\ttbar$ background,
 amounting to a few percent loss in signal efficiency (for the same background rate).
-This loss in performance seems acceptable to us, given that the computing-time requirements are significantly lower when using LO ME
-compared to using ME of higher order.
 
 \begin{figure}
 \setlength{\unitlength}{1mm}
@@ -351,6 +349,7 @@ compared to using ME of higher order.
 
 
 \subsection{Computing-time requirements of the MEM}
+\label{sec:computing_time_requirements}
 
 One remaining issue in practical applications of the MEM may be the computing time requirements.
 Experimental analyses will usually need to evaluate the integrals given by Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background})
@@ -368,8 +367,3 @@ Another alternative is to take advantage of the parallelizability of multidimens
 Speedup factors of order $100$, compared to using a single core of a general-purpose central processing unit (CPU) 
 such as the $2.30$~GHz Intel\TReg~Xeon\TReg~E5-2695V3 processor that we used for the studies presented in this paper,
 are reported in the literature for performing numeric integrations on GPUs~\cite{Hagiwara:2009aq,Hagiwara:2009cy,Kanzaki:2010ym,Hagiwara:2013oka,Schouten:2014yza,Grasseau:2015vfa}.
-
-%Using ME of orders higher than LO in the MEM seems prohibitive to us.
-%When using ME generated at NLO accuracy in pQCD with the program MadGraph\_aMCatNLO 2.3.3 for the $\dihiggs$ signal and the $\ttbar$ background,
-%the computing time increases by about a factor $XXX$, from one to about $XXX$ minutes per event,
-%using a single core of a $2.30$~GHz Intel\TReg~Xeon\TReg~E5-2695V3 processor.
