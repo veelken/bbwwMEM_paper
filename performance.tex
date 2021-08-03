@@ -7,8 +7,8 @@ The separation is studied using samples of signal and background events produced
 We study the separation for events simulated at LO and at NLO accuracy in pQCD.
 The LO and NLO $\dihiggs$ signal samples each contain about fifty thousand events
 and the LO and NLO $\ttbar$ background samples each contain about one million events.
-All $\dihiggs$ samples and the $\ttbar$ background sample simulated at LO accuracy in pQCD are produced with the program MadGraph\_aMCatNLO 2.2.2,
-while the $\ttbar$ background sample simulated at NLO accuracy in pQCD is produced using the program POWHEG v2~\cite{POWHEG1,POWHEG2,POWHEG3,POWHEGTTBAR1,POWHEGTTBAR2,POWHEGHH1,POWHEGHH2}.
+All samples simulated at LO accuracy in pQCD are produced with the program MadGraph\_aMCatNLO 2.2.2,
+while the samples simulated at NLO accuracy in pQCD are produced using the program POWHEG v2~\cite{POWHEG1,POWHEG2,POWHEG3,POWHEGTTBAR1,POWHEGTTBAR2,POWHEGHH1,POWHEGHH2}.
 The NNPDF3.0 LO set of PDF is used for the simulation of the LO samples and the NNPDF3.0 NLO set for the NLO samples~\cite{NNPDF1,NNPDF2,NNPDF3}.
 Parton shower and hadronization processes are modeled using the program PYTHIA with the tune CP5~\cite{PYTHIA_CP5tune_CMS}.
 All events are generated for proton-proton collisions at $\sqrt{s} = 13$~\TeV center-of-mass energy.
@@ -254,9 +254,21 @@ compared to the case that both $\Pbottom$-jets are genuine $\Pbottom$-jets.
 The degradation in the separation of the $\dihiggs$ signal from the $\ttbar$ background can be mitigated 
 by marginalizing the expressions for the PDs $w_{0}(\vecy|\vecyhat)$ and $w_{1}(\vecy|\vecyhat)$ in Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background}),
 assuming that one of the two true $\Pbottom$-jets failed to get reconstructed.
-Marginalization means to integrate the RHS of these expressions over either the variables $E_{\Pbottom}$, $\theta_{\Pbottom}$, and $\phi_{\Pbottom}$ 
-or over the variables $E_{\APbottom}$, $\theta_{\APbottom}$, and $\phi_{\APbottom}$,
-corresponding to the reconstructed energy, polar, and azimuthal angle of either the $\Pbottom$ or the $\APbottom$ quark.
+Marginalization means that the $\Pbottom$-jet variables $E_{\Pbottom}$, $\theta_{\Pbottom}$, and $\phi_{\Pbottom}$
+are no longer used in the RHS of these expressions but instead integrated over:
+\begin{linenowrapper}
+\begin{equation*}
+w_{i,\textrm{m}}(\vecy'|\vecyhat) = \int \, dE_{\Pbottom} \, d\theta_{\Pbottom} \, d\phi_{\Pbottom} w_{i,\textrm{m}}(\vecy|\vecyhat) \, ,
+\end{equation*}
+\end{linenowrapper}
+where we have added a subscript $m$ to denote the marginalized PDs and the vector $\vecy'$ equals the vector $\vecy$,
+except that the variables $E_{\Pbottom}$, $\theta_{\Pbottom}$, and $\phi_{\Pbottom}$ are absent in the vector $\vecy'$.
+Since we do not know whether the jet corresponding to the $\Pbottom$ quark or the one corresponding to the $\APbottom$ quark is the misidentified jet,
+we perform the marginalization once with respect to the variables $E_{\Pbottom}$, $\theta_{\Pbottom}$, and $\phi_{\Pbottom}$ 
+and once with respect to the variables $E_{\APbottom}$, $\theta_{\APbottom}$, and $\phi_{\APbottom}$ and take the sum.
+The computing time required to evaluate the marginalized PDs $w_{0,\textrm{m}}(\vecy'|\vecyhat)$ and $w_{1,\textrm{m}}(\vecy'|\vecyhat)$
+is similar to the time required to compute the un-marginalized PDs $w_{0}(\vecy'|\vecyhat)$ and $w_{1}(\vecy'|\vecyhat)$,
+except for the factor two increase that results from the need to perform the marginalization with respect to the $\Pbottom$ and with respect to the $\APbottom$ quark.
 The distributions in the marginalized LR $P_{\textrm{m}}(\vecy)$ obtained for the $\dihiggs$ signal as well as for the $\ttbar$ background 
 and the corresponding ROC curve is shown in Fig.~\ref{fig:memLR_and_ROC_missingBJet}.
 Marginalization reduces the amount of kinematic information, which is utilized for separating the signal from the background,
