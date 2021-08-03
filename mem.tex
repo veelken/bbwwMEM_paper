@@ -1,9 +1,9 @@
 \section{The Matrix element method}
 \label{sec:mem}
 
-The MEM computes probability densities (PDs) $w_{i}(\vecy|\vecyhat)$
+The MEM computes probability densities (PDs) $w_{i}(\vecy)$
 for obtaining the measured observables $\vecy$, assuming that the event has been produced by the process $i$.
-The PDs $w_{i}(\vecy|\vecyhat)$ are interpreted as quantifying the compatibility of the measured observables $\vecy$
+The PDs $w_{i}(\vecy)$ are interpreted as quantifying the compatibility of the measured observables $\vecy$
 with the signal ($i=0$) and background ($i=1$) hypothesis.
 In the analysis of $\PHiggs\PHiggs$ production in the decay channel 
 $\PHiggs\PHiggs \to \Pbottom\APbottom\PW\PW^{\ast} \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$
@@ -18,13 +18,13 @@ As already mentioned, $\PHiggs\PHiggs \to \Pbottom\APbottom\PW\PW^{\ast} \to \Pb
 contain the same number of $\Pbottom$-jets, charged leptons, and neutrinos as the dominant background,
 arising from $\ttbar \to \Pbottom\PW\APbottom\PW \to \Pbottom\ellPlusnu \, \APbottom\ellMinusnu$.
 The separation of the $\PHiggs\PHiggs$ signal from the irreducible $\ttbar$ background is based on the difference in event kinematics,
-causing the PD $w_{0}(\vecy|\vecyhat)$ to be in general higher when evaluated on signal events
-and lower when evaluated on background events, and vice versa for the PD $w_{1}(\vecy|\vecyhat)$.
-Given the PDs $w_{0}(\vecy|\vecyhat)$ and $w_{1}(\vecy|\vecyhat)$ for the signal and background hypotheses,
+causing the PD $w_{0}(\vecy)$ to be in general higher when evaluated on signal events
+and lower when evaluated on background events, and vice versa for the PD $w_{1}(\vecy)$.
+Given the PDs $w_{0}(\vecy)$ and $w_{1}(\vecy)$ for the signal and background hypotheses,
 the Neyman-Pearson lemma~\cite{Neyman:1937uhy} postulates that the likelihood ratio (LR):
 \begin{linenowrapper}
 \begin{equation}
-P(\vecy) = \frac{w_{0}(\vecy|\vecyhat)}{w_{0}(\vecy|\vecyhat) + w_{1}(\vecy|\vecyhat)}
+P(\vecy) = \frac{w_{0}(\vecy)}{w_{0}(\vecy) + w_{1}(\vecy)}
 \label{eq:memLR}
 \end{equation}
 \end{linenowrapper}
@@ -32,10 +32,10 @@ provides the optimal separation of the $\PHiggs\PHiggs$ signal from the irreduci
 
 Different nomenclatures and conventions for the MEM exist in the literature.
 In this note, we follow the nomenclature and conventions introduced in Ref.~\cite{Volobouev:2011vb}.
-The PDs $w_{i}(\vecy|\vecyhat)$ are given by the integral:
+The PDs $w_{i}(\vecy)$ are given by the integral:
 \begin{linenowrapper}
 \begin{align}
-w_{i}(\vecy|\vecyhat) = & \frac{\Omega(\vecy)}{\sigma_{i} \cdot \mathcal{A}_{i}} \, \int \, d\xhat_{a} \, d\xhat_{b} \,
+w_{i}(\vecy) = & \frac{\Omega(\vecy)}{\sigma_{i} \cdot \mathcal{A}_{i}} \, \int \, d\xhat_{a} \, d\xhat_{b} \,
   d\Phi_{n} \, \frac{f(\xhat_{a}) \, f(\xhat_{b})}{2 \, \xhat_{a} \, \xhat_{b} \, s} \, (2\pi)^{4} \,
   \delta\left( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{k}^{n} \Ehat_{(k)} \right) \nonumber \\
  & \quad \cdot \, \delta^{3}\left( \xhat_{a} \, \vecphat^{a} + \xhat_{b} \, \vecphat^{b} - \sum_{k}^{n} \vecphat^{(k)}\right) \, 
@@ -76,8 +76,8 @@ while $\sigma_{i}$ denotes the cross section of process $i$.
 The subscript $i$ of the symbols $\sigma_{i}$, $\mathcal{A}_{i}$, and $\epsilon_{i}$ 
 emphasize that the cross section, acceptance, and efficiency differ between the signal and the background hypothesis.
 Division of the right-hand-side (RHS) of Eq.~(\ref{eq:mem1}) by the product $\sigma_{i} \cdot \mathcal{A}_{i}$
-ensures that $w_{i}(\vecy|\vecyhat)$ has the correct normalization required for a probability density, 
-\ie $\int \, d\vecy \, w_{i}(\vecy|\vecyhat) = 1$,
+ensures that $w_{i}(\vecy)$ has the correct normalization required for a probability density, 
+\ie $\int \, d\vecy \, w_{i}(\vecy) = 1$,
 provided that the TF satisfy the normalization condition
 $\int \, d\vecy \, \Omega(\vecy) \, W(\vecy|\vecyhat) = 1$
 for every $\vecy$.
@@ -122,7 +122,7 @@ With these assumptions and upon inserting the expressions for the TF given by Eq
 into Eq.~(\ref{eq:PS_inPolarCoordinates}), we obtain:
 \begin{linenowrapper}
 \begin{align}
-w_{i}(\vecy|\vecyhat) 
+w_{i}(\vecy) 
  = & \frac{1}{2^{24} \, \pi^{18} \, \sigma_{i} \, E_{\Plepton^{+}} \, E_{\Plepton^{-}}} \, \int \, d\xhat_{a} \, d\xhat_{b} \,
 \frac{d\Ehat_{\Pbottom}}{\Ehat_{\Pbottom}} \, \frac{d\Ehat_{\APbottom}}{\Ehat_{\APbottom}} \, \frac{d^{3}\vecphat_{\Pnu}}{\Ehat_{\Pnu}} \, \frac{d^{3}\vecphat_{\APnu}}{\Ehat_{\APnu}} \,
 \frac{f(\xhat_{a}) \, f(\xhat_{b})}{2 \, \xhat_{a} \, \xhat_{b} \, s} \nonumber \\
@@ -232,10 +232,10 @@ Eliminating the energy and longitudinal momentum components of the four-dimensio
 $\delta( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{k}^{6} \Ehat_{(k)}) \cdot \delta( \xhat_{a} \, \pZhat^{a} + \xhat_{b} \, \pZhat^{b} - \sum_{k}^{6} \pZhat^{(k)}) \cdot \delta( \pXhat^{\rho} + \sum_{k}^{6} \pXhat^{(k)}) \cdot \delta( \pYhat^{\rho} + \sum_{k}^{6} \pYhat^{(k)})$
 by means of Eq.~(\ref{eq:Bjorkenx})
 and replacing its transverse momentum components by the TF $W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} )$ for the hadronic recoil $\rho$,
-the expression for the PD $w_{i}(\vecy|\vecyhat)$ becomes:
+the expression for the PD $w_{i}(\vecy)$ becomes:
 \begin{linenowrapper}
 \begin{align}
-w_{i}(\vecy|\vecyhat) 
+w_{i}(\vecy) 
  = & \frac{1}{2^{21} \, \pi^{14} \, \sigma_{i} \, E_{\Plepton^{+}} \, E_{\Plepton^{-}} \, E_{\Pbottom} \, E_{\APbottom}} \, \int \, 
 d\Ehat_{\Pbottom} \, d\Ehat_{\APbottom} \, \frac{d^{3}\vecphat_{\Pnu}}{\Ehat_{\Pnu}} \, \frac{d^{3}\vecphat_{\APnu}}{\Ehat_{\APnu}} \,
 \frac{f(\xhat_{a}) \, f(\xhat_{b})}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
@@ -253,7 +253,7 @@ d\Ehat_{\Pbottom} \, d\Ehat_{\APbottom} \, d\Ehat_{\Pnu} \, d\thetahat_{\Pnu} \,
 \label{eq:mem3}
 \end{align}
 \end{linenowrapper}
-The expression in Eq.~(\ref{eq:mem3}) concludes our discussion of analytic transformations of the expressions for the PD $w_{i}(\vecy|\vecyhat)$ 
+The expression in Eq.~(\ref{eq:mem3}) concludes our discussion of analytic transformations of the expressions for the PD $w_{i}(\vecy)$ 
 that are common to the signal as well as to the background hypothesis.
 A few more analytic transformations need to be performed to handle the presence of Breit-Wigner (BW) propagators in the ME $\mathcal{M}_{i}(\vecphat)$,
 as the presence of these propagators represent an obstacle for the numeric integration of Eq.~(\ref{eq:mem3}).
@@ -273,9 +273,9 @@ while those specific to the background hypothesis are presented in Section~\ref{
 
 Finally, the numeric integration is performed using the VAMP algorithm~\cite{VAMP}, a variant of the popular VEGAS algorithm~\cite{VEGAS},
 which has been optimized for the case of integrating multimodal functions, typically appearing in the integration of ME over regions in PS.
-We use $2500$ evaluations of the integrand when computing the PD $w_{0}(\vecy|\vecyhat)$ for the signal hypothesis 
-and $25000$ evaluations of the integrand for the computation of the PD $w_{1}(\vecy|\vecyhat)$ for the background hypothesis.
-The number of evaluations has been chosen such that the computation of $w_{0}(\vecy|\vecyhat)$ and $w_{1}(\vecy|\vecyhat)$ take approximately the same time
+We use $2500$ evaluations of the integrand when computing the PD $w_{0}(\vecy)$ for the signal hypothesis 
+and $25000$ evaluations of the integrand for the computation of the PD $w_{1}(\vecy)$ for the background hypothesis.
+The number of evaluations has been chosen such that the computation of $w_{0}(\vecy)$ and $w_{1}(\vecy)$ take approximately the same time
 and the computation of the likelihood ratio $P(\vecy)$ takes about one minute per event,
 using a single core of a $2.30$~GHz Intel\TReg~Xeon\TReg~E5-2695V3 processor.
 
@@ -284,7 +284,7 @@ using a single core of a $2.30$~GHz Intel\TReg~Xeon\TReg~E5-2695V3 processor.
 \label{sec:mem_signal}
 
 When evaluating the integrand in Eq.~(\ref{eq:mem3}) for the signal hypothesis,
-only those points in the $6$-particle PS provide a sizeable contribution to the value of the integral $w_{0}(\vecy|\vecyhat)$
+only those points in the $6$-particle PS provide a sizeable contribution to the value of the integral $w_{0}(\vecy)$
 which satisfy the following conditions:
 \begin{itemize}
 \item The mass of the $2$-particle system comprised of the two $\Pbottom$ quarks equals $m_{\PHiggs} = 125.1$~\GeV~\cite{HIG-14-042}.
@@ -301,10 +301,10 @@ We denote the charged lepton and the neutrino originating from the decay of the 
 The charged lepton and the neutrino that are referred to without asterisks are subject to the $\PW$ mass constraint.
 
 After solving for the $\delta$-functions analytically, as detailed in Sections~\ref{sec:appendix_bEn_Hbb}, ~\ref{sec:appendix_nuEn_Wlnu}, and~\ref{sec:appendix_nuEn_Hww} of the appendix,
-the resulting expression for the PD $w_{0}(\vecy|\vecyhat)$ for the signal hypothesis reads:
+the resulting expression for the PD $w_{0}(\vecy)$ for the signal hypothesis reads:
 \begin{linenowrapper}
 \begin{align}
-w_{0}(\vecy|\vecyhat) 
+w_{0}(\vecy) 
  = & \frac{(m_{\PHiggs} \, \Gamma_{\PHiggs})^{2} \, m_{\PW} \, \Gamma_{\PW}}{2^{21} \, \pi^{14} \, \sigma_{0} \, E_{\Plepton} \, E_{\ellStar} \, E_{\Pbottom} \, E_{\APbottom}} \, \int \,
 d\Ehat_{\Pbottom} \, d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\nuStar} \, d\phihat_{\nuStar}  \nonumber \\
  & \quad \cdot \, \underbrace{\betahat_{\Pnu}}_{= 1} \, \underbrace{\Ehat_{\Pnu} \, \sin\thetahat_{\Pnu}}_{= \pThat^{\Pnu}} \, 
@@ -363,7 +363,7 @@ the charged lepton and the neutrino produced in the decay of the on-shell $\PW$ 
 There is one further aspect, which needs to be taken into account when computing the compatibility of a given event with the signal hypothesis,
 and that is that there exists a fourfold ambiguity in associating the two measured $\Pbottom$-jets to the $\Pbottom$ and $\APbottom$ quarks 
 and in associating the two measured charged leptons to the on-shell and off-shell $\PW$ bosons.
-We deal with the fourfold ambiguity by evaluating the integral $w_{0}(\vecy|\vecyhat)$ given by Eq.~(\ref{eq:mem_signal}) four times,
+We deal with the fourfold ambiguity by evaluating the integral $w_{0}(\vecy)$ given by Eq.~(\ref{eq:mem_signal}) four times,
 once for each of the four possible associations of measured $\Pbottom$-jets to the $\Pbottom$ and $\APbottom$ quarks and of the measured charged leptons to the on-shell and off-shell $\PW$ bosons,
 and using the average of these four values when evaluating the LR in Eq.~(\ref{eq:memLR}).
 
@@ -372,7 +372,7 @@ and using the average of these four values when evaluating the LR in Eq.~(\ref{e
 \label{sec:mem_background}
 
 In $\ttbar \to \Pbottom\PW\APbottom\PW \to \Pbottom\ellPlusnu \, \APbottom\ellMinusnu$ background events,
-both $\PW$ bosons are on-shell. Sizeable contributions to the value of the integral $w_{1}(\vecy|\vecyhat)$ are obtained only
+both $\PW$ bosons are on-shell. Sizeable contributions to the value of the integral $w_{1}(\vecy)$ are obtained only
 for those points $\vecphat$ in the $6$-particle PS for which:
 \begin{itemize}
 \item The masses of the $\ellPlusnu$ as well as of the $\ellMinusnu$ system are equal to $m_{\PW} = 80.4$~\GeV~\cite{PDG}.
@@ -387,10 +387,10 @@ and the second $\delta$-function of the type given by Eq.~(\ref{eq:bEn_top1}) by
 to indicate that they refer to the anti-neutrino and to the anti-bottom quark, which are produced in the decay of the anti-top quark.
 
 After solving for the $\delta$-functions analytically, following Sections~\ref{sec:appendix_nuEn_Wlnu} and~\ref{sec:appendix_bEn_top} of the appendix,
-we obtain the following expression for the integral $w_{1}(\vecy|\vecyhat)$ for the background hypothesis:
+we obtain the following expression for the integral $w_{1}(\vecy)$ for the background hypothesis:
 \begin{linenowrapper}
 \begin{align}
-w_{1}(\vecy|\vecyhat) 
+w_{1}(\vecy) 
  = & \frac{(m_{\Ptop} \, \Gamma_{\Ptop})^{2} \, (m_{\PW} \, \Gamma_{\PW})^{2}}{2^{21} \, \pi^{14} \, \sigma_{1} \, E_{\Plepton^{+}} \, E_{\Plepton^{-}} \, E_{\Pbottom} \, E_{\APbottom}} \, \int \,
 d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\APnu} \, d\phihat_{\APnu}  \nonumber \\
  & \quad \cdot \, \underbrace{\betahat_{\Pnu}}_{= 1} \, \underbrace{\Ehat_{\Pnu} \, \sin\thetahat_{\Pnu}}_{= \pThat^{\Pnu}} \, 
@@ -450,7 +450,7 @@ which are integrated numerically: $\thetahat_{\Pnu}$, $\phihat_{\Pnu}$, $\thetah
 
 When evaluating the compatibility of a given event with the background hypothesis,
 there exists a twofold ambiguity in associating the two measured $\Pbottom$-jets to the $\Pbottom$ and $\APbottom$ quarks.
-We deal with this ambiguity by evaluating the integral $w_{1}(\vecy|\vecyhat)$ given by Eq.~(\ref{eq:mem_signal}) two times,
+We deal with this ambiguity by evaluating the integral $w_{1}(\vecy)$ given by Eq.~(\ref{eq:mem_signal}) two times,
 corresponding to the two possible associations of the measured $\Pbottom$-jets to the $\Pbottom$ and $\APbottom$ quarks.
 In contrast to the signal hypothesis,
 there is no ambiguity in associating the two measured leptons to the two $\PW$ bosons,
