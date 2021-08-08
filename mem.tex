@@ -314,7 +314,7 @@ d\Ehat_{\Pbottom} \, d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\nuStar
 \frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}}{\beta_{\Pbottom} \, E_{\Pbottom}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
 \frac{\betahat_{\APbottom} \, \Ehat_{\APbottom}}{\beta_{\APbottom} \, E_{\APbottom}} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \,
 W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
- & \quad \cdot \, \frac{1}{\Ehat_{\Pbottom} \, \left( 1 - \frac{\betahat_{\Pbottom}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vece_{\Pbottom},\vece_{\APbottom}) \right)} \nonumber \\
+ & \quad \cdot \, \frac{1}{\Ehat_{\Pbottom} \, \left\lvert 1 - \frac{\betahat_{\Pbottom}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vece_{\Pbottom},\vece_{\APbottom}) \right\rvert} \nonumber \\
  & \quad \cdot \, \frac{1}{4 \, E_{\Plepton} \, \sin^{2}\left(\frac{\sphericalangle(\vece_{\Plepton},\vecehat_{\Pnu})}{2}\right)} \,
 \frac{1}{\Ehat_{\ellnuellStar} \left( 1 - \betahat_{\ellnuellStar} \, \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar}) \right)} \nonumber \\
  = & \frac{(m_{\PHiggs} \, \Gamma_{\PHiggs})^{2} \, m_{\PW} \, \Gamma_{\PW}}{2^{23} \, \pi^{14} \, \sigma_{0} \, s \, 
@@ -326,7 +326,7 @@ d\Ehat_{\Pbottom} \, d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\nuStar
 \betahat_{\Pbottom} \, \Ehat_{\Pbottom} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
 \betahat_{\APbottom} \, \Ehat_{\APbottom} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \,
 W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
- & \quad \cdot \, \frac{1}{\Ehat_{\Pbottom} \, \left( 1 - \frac{\betahat_{\Pbottom}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vece_{\Pbottom},\vece_{\APbottom}) \right)} \nonumber \\
+ & \quad \cdot \, \frac{1}{\Ehat_{\Pbottom} \, \left\lvert 1 - \frac{\betahat_{\Pbottom}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vece_{\Pbottom},\vece_{\APbottom}) \right\rvert} \nonumber \\
  & \quad \cdot \, \frac{1}{\sin^{2}\left(\frac{\sphericalangle(\vece_{\Plepton},\vecehat_{\Pnu})}{2}\right)} \,
 \frac{1}{\Ehat_{\ellnuellStar} \left( 1 - \betahat_{\ellnuellStar} \, \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar}) \right)} \, ,
 \label{eq:mem_signal}
@@ -402,8 +402,8 @@ d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\APnu} \, d\phihat_{\APnu}  
 W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
  & \quad \cdot \, \frac{1}{4 \, E_{\Plepton^{+}} \, \sin^{2}\left(\frac{\sphericalangle(\vece_{\ellPlus},\vecehat_{\Pnu})}{2}\right)} \, 
 \frac{1}{4 \, E_{\Plepton^{-}} \, \sin^{2}\left(\frac{\sphericalangle(\vece_{\ellMinus},\vecehat_{\APnu})}{2}\right)} \nonumber \\
- & \quad \cdot \, \frac{1}{\Ehat_{\ellPlusnu} \, \left( 1 - \frac{\betahat_{\ellPlusnu}}{\betahat_{\Pbottom}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vece_{\Pbottom}) \right)} \,
-\frac{1}{\Ehat_{\ellMinusnu} \, \left( 1 - \frac{\betahat_{\ellMinusnu}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vecehat_{\ellMinusnu},\vece_{\APbottom}) \right)} \nonumber \\
+ & \quad \cdot \, \frac{1}{\Ehat_{\ellPlusnu} \, \left\lvert 1 - \frac{\betahat_{\ellPlusnu}}{\betahat_{\Pbottom}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vece_{\Pbottom}) \right\rvert} \,
+\frac{1}{\Ehat_{\ellMinusnu} \, \left\lvert 1 - \frac{\betahat_{\ellMinusnu}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vecehat_{\ellMinusnu},\vece_{\APbottom}) \right\rvert} \nonumber \\
  = & \frac{(m_{\Ptop} \, \Gamma_{\Ptop})^{2} \, (m_{\PW} \, \Gamma_{\PW})^{2}}{2^{25} \, \pi^{14} \, \sigma_{1} \, s \, 
   E_{\Plepton^{+}}^{2} \, E_{\Plepton^{-}}^{2} \, \beta_{\Pbottom} \, E_{\Pbottom}^{2} \, \beta_{\APbottom} \, E_{\APbottom}^{2}} \, \int \,
 d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\APnu} \, d\phihat_{\APnu}  \nonumber \\
@@ -415,8 +415,8 @@ d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\APnu} \, d\phihat_{\APnu}  
 W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
  & \quad \cdot \, \frac{1}{\sin^{2}\left(\frac{\sphericalangle(\vece_{\ellPlus},\vecehat_{\Pnu})}{2}\right)} \, 
 \frac{1}{\sin^{2}\left(\frac{\sphericalangle(\vece_{\ellMinus},\vecehat_{\APnu})}{2}\right)} \nonumber \\
- & \quad \cdot \, \frac{1}{\Ehat_{\ellPlusnu} \, \left( 1 - \frac{\betahat_{\ellPlusnu}}{\betahat_{\Pbottom}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vece_{\Pbottom}) \right)} \,
-\frac{1}{\Ehat_{\ellMinusnu} \, \left( 1 - \frac{\betahat_{\ellMinusnu}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vecehat_{\ellMinusnu},\vece_{\APbottom}) \right)} \, ,
+ & \quad \cdot \, \frac{1}{\Ehat_{\ellPlusnu} \, \left\lvert 1 - \frac{\betahat_{\ellPlusnu}}{\betahat_{\Pbottom}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vece_{\Pbottom}) \right\rvert} \,
+\frac{1}{\Ehat_{\ellMinusnu} \, \left\lvert 1 - \frac{\betahat_{\ellMinusnu}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vecehat_{\ellMinusnu},\vece_{\APbottom}) \right\rvert} \, ,
 \label{eq:mem_background}
 \end{align}
 \end{linenowrapper}
