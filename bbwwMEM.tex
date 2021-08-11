@@ -4,7 +4,8 @@
 
 \def\lineNumbersEnabled{true}
 \def\lineNumbersDisabled{false}
-\def\showLineNumbers{true}
+%\def\showLineNumbers{true}
+\def\showLineNumbers{false}
 
 \ifx\ver\verPreprint
 \documentclass[a4paper,english,11pt]{article}
@@ -68,17 +69,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 %% Custom latex macros
 %%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\virt}{\ensuremath{^{\ast}}}
 \renewcommand{\Plepton}{\ensuremath{\ell}}
-\newcommand{\ellStar}{\ensuremath{\ell^{\ast}}}
-\newcommand{\nuStar}{\ensuremath{\Pnu^{\ast}}}
+\newcommand{\ellStar}{\ensuremath{\ell\virt}}
+\newcommand{\nuStar}{\ensuremath{\Pnu\virt}}
 \newcommand{\ellMinus}{\ensuremath{\Plepton^{-}}\xspace}
 \newcommand{\ellPlus}{\ensuremath{\Plepton^{+}}\xspace}
 \newcommand{\ellnu}{\ensuremath{\Plepton\Pnu}\xspace}
-\newcommand{\ellnuStar}{\ensuremath{\Plepton^{\ast}\Pnu^{\ast}}\xspace}
+\newcommand{\ellnuStar}{\ensuremath{\Plepton\virt\Pnu\virt}\xspace}
 \newcommand{\ellMinusnu}{\ensuremath{\Plepton^{-}\APnu}\xspace}
 \newcommand{\ellPlusnu}{\ensuremath{\Plepton^{+}\Pnu}\xspace}
-\newcommand{\ellnuellnuStar}{\ensuremath{\Plepton\Pnu\Plepton^{\ast}\Pnu^{\ast}}\xspace}
-\newcommand{\ellnuellStar}{\ensuremath{\Plepton\Pnu\Plepton^{\ast}}\xspace}
+\newcommand{\ellnuellnuStar}{\ensuremath{\Plepton\Pnu\Plepton\virt\Pnu\virt}\xspace}
+\newcommand{\ellnuellStar}{\ensuremath{\Plepton\Pnu\Plepton\virt}\xspace}
 \newcommand{\dihiggs}{\ensuremath{\PHiggs\PHiggs}}
 \renewcommand{\Pbottom}{\ensuremath{\Pqb}}
 \renewcommand{\APbottom}{\ensuremath{\APqb}}
