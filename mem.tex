@@ -46,16 +46,22 @@ w_{i}(\vecy) = & \frac{\Omega(\vecy)}{\sigma_{i} \cdot \mathcal{A}_{i}} \, \int 
 The symbol $\vert \mathcal{M}_{i}(\vecyhat) \vert^{2}$ denotes the squared modulus of the matrix element (ME),
 averaged over helicity states,
 for either the signal ($i=0$) or for the background ($i=1$) hypothesis.
-We use ME generated at LO accuracy with the program MadGraph\_aMCatNLO 2.3.3~\cite{MadGraph_aMCatNLO} for the signal as well as for the background hypothesis.
-Our choice of using LO ME is motivated by the observation that using ME generated at NLO accuracy in pQCD
-would increase the computing-time requirements of the MEM by one to two orders of magnitude. 
-As we will discuss in more detail in Section~\ref{sec:computing_time_requirements}, the demand in computing time is challenging already when using ME generated at LO accuracy.
+We use ME generated at LO accuracy with the program $\textsc{MadGraph\_aMCatNLO}$ $2.3.3$~\cite{MadGraph_aMCatNLO} for the signal as well as for the background hypothesis.
+The ME for the signal hypothesis is generated using the infinite top quark mass approximation, referred to as Higgs Effective Field Theory (HEFT) in the literature~\cite{Grinstein:2007iv}.
+In the HEFT, the top quark degrees of freedom are integrated out,
+replacing the top quark loops in the triangle and box diagrams shown in Fig.~\ref{fig:ggHH_FeynmanDiagram} by point-like effective couplings of, respectively, 
+two gluons to one Higgs boson and two gluons to two Higgs bosons.
+The point-like effective couplings are specified via a Universal $\textsc{FeynRules}$ Output (UFO) model file~\cite{Degrande:2011ua,Hespel:2014sla} given to $\textsc{MadGraph\_aMCatNLO}$.
+The usage of the infinite top quark mass approximation is necessary, because at present the program $\textsc{MadGraph\_aMCatNLO}$ does not support the generation of ME code for processes involving loops.
+%Our choice of using LO ME is motivated by the observation that using ME generated at NLO accuracy in pQCD
+%would increase the computing-time requirements of the MEM by one to two orders of magnitude. 
+%As we will discuss in more detail in Section~\ref{sec:computing_time_requirements}, the demand in computing time is challenging already when using ME generated at LO accuracy.
 
 The symbols $\Ehat_{a}$ and $\Ehat_{b}$ ($\vecphat^{a}$ and $\vecphat^{b}$) denote the energies (momenta) of the two colliding protons,
 $\sqrt{s}$ their center-of-mass energy,
 $\xhat_{a}$ and $\xhat_{b}$ the Bjorken scaling variables~\cite{Bjorkenx},
 and $f(\xhat_{a})$ and $f(\xhat_{b})$ the corresponding parton distribution functions (PDFs).
-We use the MSTW 2008 LO PDF set~\cite{MSTW} to evaluate $f(\xhat_{a})$ and $f(\xhat_{b})$.
+We use the \textrm{MSTW} 2008 LO PDF set~\cite{MSTW} to evaluate $f(\xhat_{a})$ and $f(\xhat_{b})$.
 We denote by $n$ the number of particles in the final state,
 and by $\vecp^{(k)}$ ($\vecphat^{(k)}$) the measured (true) momentum of the $k$-th final state particle. 
 The $\delta$-functions $\delta( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{k}^{n} \Ehat_{(k)})$

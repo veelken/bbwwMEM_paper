@@ -7,10 +7,10 @@ The separation is studied using samples of signal and background events produced
 We study the separation for events simulated at LO and at NLO accuracy in pQCD.
 The LO and NLO $\dihiggs$ signal samples each contain about fifty thousand events
 and the LO and NLO $\ttbar$ background samples each contain about one million events.
-All samples simulated at LO accuracy in pQCD are produced with the program MadGraph\_aMCatNLO 2.2.2,
-while the samples simulated at NLO accuracy in pQCD are produced using the program POWHEG v2~\cite{POWHEG1,POWHEG2,POWHEG3,POWHEGTTBAR1,POWHEGTTBAR2,POWHEGHH1,POWHEGHH2}.
-The NNPDF3.0 LO set of PDF is used for the simulation of the LO samples and the NNPDF3.0 NLO set for the NLO samples~\cite{NNPDF1,NNPDF2,NNPDF3}.
-Parton shower and hadronization processes are modeled using the program PYTHIA with the tune CP5~\cite{PYTHIA_CP5tune_CMS}.
+All samples simulated at LO accuracy in pQCD are produced with the program $\textsc{MadGraph\_aMCatNLO}$ $2.2.2$,
+while the samples simulated at NLO accuracy in pQCD are produced using the program $\textsc{POWHEG}$ $v2$~\cite{POWHEG1,POWHEG2,POWHEG3,POWHEGTTBAR1,POWHEGTTBAR2,POWHEGHH1,POWHEGHH2}.
+The \textrm{NNPDF3.0} LO set of PDF is used for the simulation of the LO samples and the \textrm{NNPDF3.0} NLO set for the NLO samples~\cite{NNPDF1,NNPDF2,NNPDF3}.
+Parton shower and hadronization processes are modeled using the program $\textsc{PYTHIA}$ $v8.2$~\cite{Sjostrand:2014zea} with the tune \textrm{CP5}~\cite{Sirunyan:2019dfx}.
 All events are generated for proton-proton collisions at $\sqrt{s} = 13$~\TeV center-of-mass energy.
 Events in which the electrons or muons originate from $\Pgt$ lepton decays,
 \ie from the decay chains $\PW^{+} \to \Pgt^{+}\Pnu_{\Pgt} \to \Plepton^{+}\Pnu_{\Plepton}\APnu_{\Pgt}\Pnu_{\Pgt}$ or 
@@ -28,7 +28,7 @@ Next, we estimate the effect of using LO ME when computing the weights $w_{0}(\v
 by means of Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background}).
 Unfortunately, we cannot compare the performance of the MEM
 for the case of using ME generated at LO versus ME generated at NLO in Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background}) directly,
-because the program MadGraph\_aMCatNLO does not support the generation of code for NLO ME at present
+because the program $\textsc{MadGraph\_aMCatNLO}$ does not support the generation of code for NLO ME at present
 and also because the usage of NLO ME in the MEM would increase the computing-time requirements by $1$-$2$ orders of magnitude.
 Instead, we use ME generated at LO accuracy in Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background}) 
 and compare the resulting performance in separating the $\dihiggs$ signal from the $\ttbar$ background
