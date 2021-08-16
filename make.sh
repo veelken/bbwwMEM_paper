@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ "$1" = "clean" ]]; then
-  rm -fv bbwwMEM.bbl bbwwMEM.blg bbwwMEM.aux bbwwMEM.out bbwwMEM.log bbwwMEM.pdf bbwwMEM_grayscale.pdf
+  rm -fv bbwwMEM.bbl bbwwMEM.blg bbwwMEM.aux bbwwMEM.out bbwwMEM.log bbwwMEM.spl bbwwMEM.pdf bbwwMEM_grayscale.pdf
   exit 0
 fi
 
