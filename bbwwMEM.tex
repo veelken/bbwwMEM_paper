@@ -10,17 +10,17 @@
 \ifx\ver\verPreprint
 \documentclass[a4paper,english,11pt]{article}
 \usepackage[bindingoffset=0.5cm,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,footskip=1.0cm]{geometry}
-\usepackage{authblk,graphicx,newclude,cite}
+\usepackage{authblk,graphicx,cite}
 \fi
 \ifx\ver\verPAPER
 \documentclass[review]{elsarticle}
-\usepackage{newclude}
 \fi
 \usepackage{hepnames,bm,multirow,amssymb,xspace,hyperref}
 
 \ifx\showLineNumbers\lineNumbersEnabled
 \usepackage{lineno}
 \newenvironment{linenowrapper}{\begin{linenomath*}}{\end{linenomath*}}
+\modulolinenumbers[5]
 \else
 \newenvironment{linenowrapper}{}{} % dummy
 \fi
@@ -28,10 +28,6 @@
 % for Feynman diagrams
 \DeclareGraphicsRule{.1}{mps}{*}{}
 \unitlength = 1mm
-
-\ifx\ver\verPAPER
-\modulolinenumbers[5]
-\fi
 
 \usepackage{soul}
 \usepackage[dvipsnames]{xcolor}
@@ -199,14 +195,14 @@ We find that our work has the potential to reduce the $\ttbar$ background by thr
 \linenumbers
 \fi
 
-\include*{introduction}
-\include*{mem}
-\include*{performance}
-\include*{summary}
+\input{introduction}
+\input{mem}
+\input{performance}
+\input{summary}
 
-\include*{acknowledgements}
+\input{acknowledgements}
 
-\include*{appendix}
+\input{appendix}
 
 \section*{References}
 \bibliography{bbwwMEM}
