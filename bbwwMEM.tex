@@ -1,6 +1,6 @@
 \def\verPreprint{1}
 \def\verPAPER{2}
-\def\ver{1}
+\def\ver{2}
 
 \def\lineNumbersEnabled{true}
 \def\lineNumbersDisabled{false}
@@ -14,6 +14,7 @@
 \fi
 \ifx\ver\verPAPER
 \documentclass[1p]{elsarticle}
+\usepackage{newclude}
 \fi
 \usepackage{hepnames,bm,multirow,amssymb,xspace,hyperref}
 
@@ -161,14 +162,11 @@
 %% Group authors per affiliation:
 
 \ifx\ver\verPreprint
-%\author[1]{Alexandra Carvalho}
 \author[1]{Karl Ehat\"aht}
 \author[1]{Christian Veelken}
 \affil[1]{National Institute for Chemical Physics and Biophysics, 10143 Tallinn, Estonia}
 \fi
 \ifx\ver\verPAPER
-%\author[tallinn]{Alexandra Carvalho}
-%\ead{alexandra.oliveira@cern.ch}
 \author[tallinn]{Karl Ehat\"aht}
 \ead{karl.ehataht@cern.ch}
 \author[tallinn]{Christian Veelken}
@@ -203,8 +201,6 @@ We find that our work has the potential to reduce the $\ttbar$ background by thr
 \include*{introduction}
 \include*{mem}
 \include*{performance}
-%\include*{bsm}
-%\include*{usage}
 \include*{summary}
 
 \include*{acknowledgements}
