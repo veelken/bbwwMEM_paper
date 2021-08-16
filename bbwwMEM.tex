@@ -4,8 +4,8 @@
 
 \def\lineNumbersEnabled{true}
 \def\lineNumbersDisabled{false}
-%\def\showLineNumbers{true}
-\def\showLineNumbers{false}
+\def\showLineNumbers{true}
+%\def\showLineNumbers{false}
 
 \ifx\ver\verPreprint
 \documentclass[a4paper,english,11pt]{article}
@@ -13,7 +13,7 @@
 \usepackage{authblk,graphicx,newclude,cite}
 \fi
 \ifx\ver\verPAPER
-\documentclass[1p]{elsarticle}
+\documentclass[review]{elsarticle}
 \usepackage{newclude}
 \fi
 \usepackage{hepnames,bm,multirow,amssymb,xspace,hyperref}
@@ -25,12 +25,14 @@
 \newenvironment{linenowrapper}{}{} % dummy
 \fi
 
-
 % for Feynman diagrams
 \DeclareGraphicsRule{.1}{mps}{*}{}
 \unitlength = 1mm
 
-%\modulolinenumbers[5]
+\ifx\ver\verPAPER
+\modulolinenumbers[5]
+\fi
+
 \usepackage{soul}
 \usepackage[dvipsnames]{xcolor}
 %%\journal{Journal of \LaTeX\ Templates}
@@ -189,15 +191,14 @@ We find that our work has the potential to reduce the $\ttbar$ background by thr
 \end{frontmatter}
 \fi
 
+\ifx\ver\verPreprint
 \clearpage
+\fi
 
 \ifx\showLineNumbers\lineNumbersEnabled
 \linenumbers
 \fi
 
-
-%\begingroup
-%\let\clearpage\relax
 \include*{introduction}
 \include*{mem}
 \include*{performance}
@@ -207,7 +208,7 @@ We find that our work has the potential to reduce the $\ttbar$ background by thr
 
 \include*{appendix}
 
+\section*{References}
 \bibliography{bbwwMEM}
-%\endgroup
 
 \end{document}
