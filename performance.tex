@@ -72,6 +72,7 @@ and is obtained by varying the threshold of a cut on $P(\vecy)$ and plotting the
 For a signal efficiency of $35\%$, the $\ttbar$ background is reduced by three orders of magnitude.
 
 \begin{figure}
+\ifx\ver\verPreprint
 \setlength{\unitlength}{1mm}
 \begin{center}
 \begin{picture}(160,67)(0,0)
@@ -81,6 +82,12 @@ For a signal efficiency of $35\%$, the $\ttbar$ background is reduced by three o
  {plots/hh_bbwwMEM_dilepton_ROC_unsmeared.pdf}}}
 \end{picture}
 \end{center}
+\fi
+\ifx\ver\verPAPER
+\centering
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_signal_vs_background_memLR_unsmeared.pdf}
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_ROC_unsmeared.pdf}
+\fi
 \caption{
   Left: Distribution in the LR $P(\vecy)$ given by Eq.~(\ref{eq:memLR}), obtained for $\dihiggs$ signal and for $\ttbar$ background events.
   Right: Graph of background rate versus signal efficiency (``ROC curve''), obtained by applying a cut on the distribution shown on the left
@@ -109,6 +116,7 @@ As one can see in the figure, the experimental resolutions have only a small eff
 relative to the performance achieved on MC-truth level.
 
 \begin{figure}
+\ifx\ver\verPreprint
 \setlength{\unitlength}{1mm}
 \begin{center}
 \begin{picture}(160,78)(0,0)
@@ -118,6 +126,12 @@ relative to the performance achieved on MC-truth level.
  {plots/hh_bbwwMEM_dilepton_effectOfSmearing_memLR_background.pdf}}}
 \end{picture}
 \end{center}
+\fi
+\ifx\ver\verPAPER
+\centering
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_effectOfSmearing_memLR_signal.pdf}
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_effectOfSmearing_memLR_background.pdf}
+\fi
 \caption{
   Effect of the experimental resolutions on the energy of $\Pbottom$-jets (``$E_{\Pbottom}$ smearing'') and on the hadronic recoil (``$\rho$ smearing'') 
   on the distribution in the LR $P(\vecy)$ obtained for simulated $\dihiggs$ signal (left) and $\ttbar$ background (right) events.
@@ -126,6 +140,7 @@ relative to the performance achieved on MC-truth level.
 \end{figure}
 
 \begin{figure}
+\ifx\ver\verPreprint
 \setlength{\unitlength}{1mm}
 \begin{center}
 \begin{picture}(160,78)(0,0)
@@ -133,6 +148,11 @@ relative to the performance achieved on MC-truth level.
  {plots/hh_bbwwMEM_dilepton_effectOfSmearing_ROC.pdf}}}
 \end{picture}
 \end{center}
+\fi
+\ifx\ver\verPAPER
+\centering
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_effectOfSmearing_ROC.pdf}
+\fi
 \caption{
   Effect of the experimental resolutions on the energy of $\Pbottom$-jets (``$E_{\Pbottom}$ smearing'') and on the hadronic recoil (``$\rho$ smearing'') 
   on the ROC curve. 
@@ -167,6 +187,7 @@ resulting in a sizeable loss in performance of the MEM, whenever a light-quark o
 The loss in performance can be seen clearly in the ROC curve, which is shown in Fig.~\ref{fig:ROC_fakeBJet}.
 
 \begin{figure}
+\ifx\ver\verPreprint
 \setlength{\unitlength}{1mm}
 \begin{center}
 \begin{picture}(160,66)(0,0)
@@ -176,6 +197,12 @@ The loss in performance can be seen clearly in the ROC curve, which is shown in 
  {plots/hh_bbwwMEM_dilepton_effectOfFakes_2histograms_memLR_background.pdf}}}
 \end{picture}
 \end{center}
+\fi
+\ifx\ver\verPAPER
+\centering
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_effectOfFakes_2histograms_memLR_signal.pdf}
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_effectOfFakes_2histograms_memLR_background.pdf}
+\fi
 \caption{
   Effect of misidentifying a light-quark or gluon jet (``fake'') as $\Pbottom$-jet
   on the distribution in the LR $P(\vecy)$ obtained for simulated $\dihiggs$ signal (left) and $\ttbar$ background (right) events.
@@ -184,6 +211,7 @@ The loss in performance can be seen clearly in the ROC curve, which is shown in 
 \end{figure}
 
 \begin{figure}
+\ifx\ver\verPreprint
 \setlength{\unitlength}{1mm}
 \begin{center}
 \begin{picture}(160,67)(0,0)
@@ -191,6 +219,11 @@ The loss in performance can be seen clearly in the ROC curve, which is shown in 
  {plots/hh_bbwwMEM_dilepton_effectOfFakes_2graphs_ROC.pdf}}}
 \end{picture}
 \end{center}
+\fi
+\ifx\ver\verPAPER
+\centering
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_effectOfFakes_2graphs_ROC.pdf}
+\fi
 \caption{
   Effect of misidentifying a light-quark or gluon jet (``fake'') as $\Pbottom$-jet
   on the ROC curve.
@@ -222,6 +255,7 @@ in case a light-quark or gluon jet gets misidentified as $\Pbottom$-jet,
 which diminish the value of the integrand.
 
 \begin{figure}
+\ifx\ver\verPreprint
 \setlength{\unitlength}{1mm}
 \begin{center}
 \begin{picture}(160,144)(0,0)
@@ -235,6 +269,15 @@ which diminish the value of the integrand.
  {plots/hh_bbwwMEM_dilepton_effectOfFakes_2histograms_probB_background.pdf}}}
 \end{picture}
 \end{center}
+\fi
+\ifx\ver\verPAPER
+\centering
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_effectOfFakes_2histograms_probS_signal.pdf}
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_effectOfFakes_2histograms_probB_signal.pdf}
+\hspace{0.04\textwidth}
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_effectOfFakes_2histograms_probS_background.pdf}
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_effectOfFakes_2histograms_probB_background.pdf}
+\fi
 \caption{
   Effect of misidentifying a light-quark or gluon jet (``fake'') as $\Pbottom$-jet candidate
   on the distribution in the probability densities $w_{0}(\vecy)$ (left) and $w_{1}(\vecy)$ (right)
@@ -277,6 +320,7 @@ but also makes the distributions less susceptible to the case that one of the tr
 and a light-quark or gluon jet is misidentified as $\Pbottom$-jet.
 
 \begin{figure}
+\ifx\ver\verPreprint
 \setlength{\unitlength}{1mm}
 \begin{center}
 \begin{picture}(160,66)(0,0)
@@ -286,6 +330,12 @@ and a light-quark or gluon jet is misidentified as $\Pbottom$-jet.
  {plots/hh_bbwwMEM_dilepton_effectOfFakes_ROC_missingBJet.pdf}}}
 \end{picture}
 \end{center}
+\fi
+\ifx\ver\verPAPER
+\centering
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_effectOfFakes_memLR_missingBJet.pdf}
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_effectOfFakes_ROC_missingBJet.pdf}
+\fi
 \caption{
   Left: Distribution in the marginalized LR $P_{\textrm{m}}(\vecy)$, obtained for $\dihiggs$ signal and for $\ttbar$ background events.
   Right: Graph of background rate versus signal efficiency (``ROC curve''), obtained by applying a cut on the distribution shown on the left
@@ -323,6 +373,7 @@ The usage of LO ME causes a moderate loss in the separation of the $\dihiggs$ si
 amounting to a few percent loss in signal efficiency (for the same background rate).
 
 \begin{figure}
+\ifx\ver\verPreprint
 \setlength{\unitlength}{1mm}
 \begin{center}
 \begin{picture}(160,78)(0,0)
@@ -332,6 +383,12 @@ amounting to a few percent loss in signal efficiency (for the same background ra
  {plots/hh_bbwwMEM_dilepton_lo_vs_nlo_memLR_background.pdf}}}
 \end{picture}
 \end{center}
+\fi
+\ifx\ver\verPAPER
+\centering
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_lo_vs_nlo_memLR_signal.pdf}
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_lo_vs_nlo_memLR_background.pdf}
+\fi
 \caption{
   Distribution in the LR $P(\vecy)$ 
   for $\dihiggs$ signal (left) and $\ttbar$ background (right) events
@@ -343,6 +400,7 @@ amounting to a few percent loss in signal efficiency (for the same background ra
 \end{figure}
 
 \begin{figure}
+\ifx\ver\verPreprint
 \setlength{\unitlength}{1mm}
 \begin{center}
 \begin{picture}(160,67)(0,0)
@@ -350,6 +408,11 @@ amounting to a few percent loss in signal efficiency (for the same background ra
  {plots/hh_bbwwMEM_dilepton_lo_vs_nlo_ROC.pdf}}}
 \end{picture}
 \end{center}
+\fi
+\ifx\ver\verPAPER
+\centering
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_lo_vs_nlo_ROC.pdf}
+\fi
 \caption{
   Separation between the $\dihiggs$ signal and the $\ttbar$ background 
   for events simulated at LO and at NLO accuracy in pQCD.
