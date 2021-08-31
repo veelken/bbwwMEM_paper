@@ -21,7 +21,7 @@ The separation of the $\PHiggs\PHiggs$ signal from the irreducible $\ttbar$ back
 causing the PD $w_{0}(\vecy)$ to be in general higher when evaluated on signal events
 and lower when evaluated on background events, and vice versa for the PD $w_{1}(\vecy)$.
 Given the PDs $w_{0}(\vecy)$ and $w_{1}(\vecy)$ for the signal and background hypotheses,
-the Neyman-Pearson lemma~\cite{Neyman:1937uhy} postulates that the likelihood ratio (LR):
+the Neyman-Pearson lemma~\cite{Neyman:1933wgr} postulates that the likelihood ratio (LR):
 \begin{linenowrapper}
 \begin{equation}
 P(\vecy) = \frac{w_{0}(\vecy)}{w_{0}(\vecy) + w_{1}(\vecy)}
@@ -60,7 +60,7 @@ The usage of the infinite top quark mass approximation is necessary, because at 
 The symbols $\Ehat_{a}$ and $\Ehat_{b}$ ($\vecphat^{a}$ and $\vecphat^{b}$) denote the energies (momenta) of the two colliding protons,
 $\sqrt{s}$ their center-of-mass energy,
 $\xhat_{a}$ and $\xhat_{b}$ the Bjorken scaling variables~\cite{Bjorkenx},
-and $f(\xhat_{a}, Q)$ and $f(\xhat_{b}, Q)$ the corresponding parton distribution functions (PDFs).
+and $f(\xhat_{a}, Q)$ and $f(\xhat_{b}, Q)$ the corresponding parton distribution functions (PDFs)~\cite{LHAPDF}.
 Besides their dependence on the Bjorken scaling variables, 
 the PDFs depend on a scale parameter $Q$.
 We use the \textrm{MSTW} 2008 LO PDF set~\cite{MSTW} to evaluate $f(\xhat_{a}, Q)$ and $f(\xhat_{b}, Q)$
@@ -336,7 +336,7 @@ d\Ehat_{\Pbottom} \, d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\nuStar
 \betahat_{\Pbottom} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
 \betahat_{\APbottom} \, \Ehat_{\APbottom} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \,
 W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
- & \quad \cdot \, \frac{1}{\left\lvert 1 - \frac{\betahat_{\Pbottom}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vece_{\Pbottom},\vece_{\APbottom}) \right\rvert} \nonumber \\
+ & \quad \cdot \, \left\lvert 1 - \frac{\betahat_{\Pbottom}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vece_{\Pbottom},\vece_{\APbottom}) \right\rvert^{-1} \nonumber \\
  & \quad \cdot \, \frac{1}{\sin^{2}\left(\frac{\sphericalangle(\vece_{\Plepton},\vecehat_{\Pnu})}{2}\right)} \,
 \frac{1}{\Ehat_{\ellnuellStar} \left( 1 - \betahat_{\ellnuellStar} \, \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar}) \right)} \, ,
 \label{eq:mem_signal}
