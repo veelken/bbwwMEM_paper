@@ -36,7 +36,7 @@ The PDs $w_{i}(\vecy)$ are given by the integral:
 \begin{linenowrapper}
 \begin{align}
 w_{i}(\vecy) = & \frac{\Omega(\vecy)}{\sigma_{i} \cdot \mathcal{A}_{i}} \, \int \, d\xhat_{a} \, d\xhat_{b} \,
-  d\Phi_{n} \, \frac{f(\xhat_{a}) \, f(\xhat_{b})}{2 \, \xhat_{a} \, \xhat_{b} \, s} \, (2\pi)^{4} \,
+  d\Phi_{n} \, \frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{2 \, \xhat_{a} \, \xhat_{b} \, s} \, (2\pi)^{4} \,
   \delta\left( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{k}^{n} \Ehat_{(k)} \right) \nonumber \\
  & \quad \cdot \, \delta^{3}\left( \xhat_{a} \, \vecphat^{a} + \xhat_{b} \, \vecphat^{b} - \sum_{k}^{n} \vecphat^{(k)}\right) \, 
   \vert \mathcal{M}_{i}(\vecyhat) \vert^{2} \, W(\vecy|\vecyhat) \, \epsilon_{i}(\vecyhat) \, .
@@ -60,8 +60,12 @@ The usage of the infinite top quark mass approximation is necessary, because at 
 The symbols $\Ehat_{a}$ and $\Ehat_{b}$ ($\vecphat^{a}$ and $\vecphat^{b}$) denote the energies (momenta) of the two colliding protons,
 $\sqrt{s}$ their center-of-mass energy,
 $\xhat_{a}$ and $\xhat_{b}$ the Bjorken scaling variables~\cite{Bjorkenx},
-and $f(\xhat_{a})$ and $f(\xhat_{b})$ the corresponding parton distribution functions (PDFs).
-We use the \textrm{MSTW} 2008 LO PDF set~\cite{MSTW} to evaluate $f(\xhat_{a})$ and $f(\xhat_{b})$.
+and $f(\xhat_{a}, Q)$ and $f(\xhat_{b}, Q)$ the corresponding parton distribution functions (PDFs).
+Besides their dependence on the Bjorken scaling variables, 
+the PDFs depend on a scale parameter $Q$.
+We use the \textrm{MSTW} 2008 LO PDF set~\cite{MSTW} to evaluate $f(\xhat_{a}, Q)$ and $f(\xhat_{b}, Q)$
+and set the scale $Q$ to half the mass of the $\PHiggs\PHiggs$ system and to twice the value of the top quark mass
+when computing the PD $w_{0}(\vecy)$ and $w_{1}(\vecy)$ for the signal and background hypothesis, respectively.
 We denote by $n$ the number of particles in the final state,
 and by $\vecp^{(k)}$ ($\vecphat^{(k)}$) the measured (true) momentum of the $k$-th final state particle. 
 The $\delta$-functions $\delta( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{k}^{n} \Ehat_{(k)})$
@@ -131,14 +135,14 @@ into Eq.~(\ref{eq:PS_inPolarCoordinates}), we obtain:
 w_{i}(\vecy) 
  = & \frac{1}{2^{24} \, \pi^{18} \, \sigma_{i} \, E_{\Plepton^{+}} \, E_{\Plepton^{-}}} \, \int \, d\xhat_{a} \, d\xhat_{b} \,
 \frac{d\Ehat_{\Pbottom}}{\Ehat_{\Pbottom}} \, \frac{d\Ehat_{\APbottom}}{\Ehat_{\APbottom}} \, \frac{d^{3}\vecphat_{\Pnu}}{\Ehat_{\Pnu}} \, \frac{d^{3}\vecphat_{\APnu}}{\Ehat_{\APnu}} \,
-\frac{f(\xhat_{a}) \, f(\xhat_{b})}{2 \, \xhat_{a} \, \xhat_{b} \, s} \nonumber \\
+\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{2 \, \xhat_{a} \, \xhat_{b} \, s} \nonumber \\
  & \quad \cdot \, (2 \, \pi)^{4} \, \delta\left( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{k}^{6} \Ehat_{(k)}\right) \, 
 \delta^{3}\left( \xhat_{a} \, \vecphat^{a} + \xhat_{b} \, \vecphat^{b} - \sum_{k}^{6} \vecphat^{(k)}\right) \nonumber \\
  & \quad \cdot \, \vert \mathcal{M}_{i}(\vecphat) \vert^{2} \, \frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}^{2}}{\beta_{\Pbottom} \, E_{\Pbottom}^{2}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
 \frac{\betahat_{\APbottom} \, \Ehat_{\APbottom}^{2}}{\beta_{\APbottom} \, E_{\APbottom}^{2}} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \nonumber \\
  = & \frac{1}{2^{21} \, \pi^{14} \, \sigma_{i} \, E_{\Plepton^{+}} \, E_{\Plepton^{-}} \, E_{\Pbottom} \, E_{\APbottom}} \, \int \, d\xhat_{a} \, d\xhat_{b} \,
 d\Ehat_{\Pbottom} \, d\Ehat_{\APbottom} \, \frac{d^{3}\vecphat_{\Pnu}}{\Ehat_{\Pnu}} \, \frac{d^{3}\vecphat_{\APnu}}{\Ehat_{\APnu}} \,
-\frac{f(\xhat_{a}) \, f(\xhat_{b})}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
+\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
  & \quad \cdot \, \delta\left( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{k}^{6} \Ehat_{(k)}\right) \,
 \delta^{3}\left( \xhat_{a} \, \vecphat^{a} + \xhat_{b} \, \vecphat^{b} - \sum_{k}^{6} \vecphat^{(k)}\right) \nonumber \\
  & \quad \cdot \, \vert \mathcal{M}_{i}(\vecphat) \vert^{2}\, \frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}}{\beta_{\Pbottom} \, E_{\Pbottom}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
@@ -244,7 +248,7 @@ the expression for the PD $w_{i}(\vecy)$ becomes:
 w_{i}(\vecy) 
  = & \frac{1}{2^{21} \, \pi^{14} \, \sigma_{i} \, E_{\Plepton^{+}} \, E_{\Plepton^{-}} \, E_{\Pbottom} \, E_{\APbottom}} \, \int \, 
 d\Ehat_{\Pbottom} \, d\Ehat_{\APbottom} \, \frac{d^{3}\vecphat_{\Pnu}}{\Ehat_{\Pnu}} \, \frac{d^{3}\vecphat_{\APnu}}{\Ehat_{\APnu}} \,
-\frac{f(\xhat_{a}) \, f(\xhat_{b})}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
+\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
  & \quad \cdot \, \vert \mathcal{M}_{i}(\vecphat) \vert^{2} \, 
 \frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}}{\beta_{\Pbottom} \, E_{\Pbottom}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
 \frac{\betahat_{\APbottom} \, \Ehat_{\APbottom}}{\beta_{\APbottom} \, E_{\APbottom}} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \, W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
@@ -252,7 +256,7 @@ d\Ehat_{\Pbottom} \, d\Ehat_{\APbottom} \, \frac{d^{3}\vecphat_{\Pnu}}{\Ehat_{\P
 d\Ehat_{\Pbottom} \, d\Ehat_{\APbottom} \, d\Ehat_{\Pnu} \, d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\Ehat_{\APnu} \, d\thetahat_{\APnu} \, d\phihat_{\APnu} \nonumber \\
  & \quad \cdot \, \betahat_{\Pnu} \, \Ehat_{\Pnu} \, \sin\thetahat_{\Pnu} \, 
 \betahat_{\APnu} \, \Ehat_{\APnu} \, \sin\thetahat_{\APnu} \, 
-\frac{f(\xhat_{a}) \, f(\xhat_{b})}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
+\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
  & \quad \cdot \, \vert \mathcal{M}_{i}(\vecphat) \vert^{2} \, 
 \frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}}{\beta_{\Pbottom} \, E_{\Pbottom}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
 \frac{\betahat_{\APbottom} \, \Ehat_{\APbottom}}{\beta_{\APbottom} \, E_{\APbottom}} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \, W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \, .
@@ -315,7 +319,7 @@ w_{0}(\vecy)
 d\Ehat_{\Pbottom} \, d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\nuStar} \, d\phihat_{\nuStar}  \nonumber \\
  & \quad \cdot \, \underbrace{\betahat_{\Pnu}}_{= 1} \, \underbrace{\Ehat_{\Pnu} \, \sin\thetahat_{\Pnu}}_{= \pThat^{\Pnu}} \, 
   \underbrace{\betahat_{\nuStar}}_{= 1} \, \underbrace{\Ehat_{\nuStar} \, \sin\thetahat_{\nuStar}}_{= \pThat^{\nuStar}} \, 
-\frac{f(\xhat_{a}) \, f(\xhat_{b})}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
+\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
  & \quad \cdot \, \vert \mathcal{M}_{0}(\vecphat) \vert^{2} \, 
 \frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}}{\beta_{\Pbottom} \, E_{\Pbottom}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
 \frac{\betahat_{\APbottom} \, \Ehat_{\APbottom}}{\beta_{\APbottom} \, E_{\APbottom}} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \,
@@ -327,7 +331,7 @@ W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
   E_{\Plepton}^{2} \, E_{\ellStar} \, \beta_{\Pbottom} \, E_{\Pbottom}^{2} \, \beta_{\APbottom} \, E_{\APbottom}^{2}} \, \int \,
 d\Ehat_{\Pbottom} \, d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\nuStar} \, d\phihat_{\nuStar} \nonumber \\
  & \quad \cdot \, \pThat^{\Pnu} \, \pThat^{\nuStar} \, 
-\frac{f(\xhat_{a}) \, f(\xhat_{b})}{\xhat_{a} \, \xhat_{b}} \nonumber \\
+\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{\xhat_{a} \, \xhat_{b}} \nonumber \\
  & \quad \cdot \, \vert \mathcal{M}_{0}(\vecphat) \vert^{2} \, 
 \betahat_{\Pbottom} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
 \betahat_{\APbottom} \, \Ehat_{\APbottom} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \,
@@ -401,7 +405,7 @@ w_{1}(\vecy)
 d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\APnu} \, d\phihat_{\APnu}  \nonumber \\
  & \quad \cdot \, \underbrace{\betahat_{\Pnu}}_{= 1} \, \underbrace{\Ehat_{\Pnu} \, \sin\thetahat_{\Pnu}}_{= \pThat^{\Pnu}} \, 
   \underbrace{\betahat_{\APnu}}_{= 1} \, \underbrace{\Ehat_{\APnu} \, \sin\thetahat_{\APnu}}_{= \pThat^{\APnu}} \, 
-\frac{f(\xhat_{a}) \, f(\xhat_{b})}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
+\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
  & \quad \cdot \, \vert \mathcal{M}_{1}(\vecphat) \vert^{2} \, 
 \frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}}{\beta_{\Pbottom} \, E_{\Pbottom}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
 \frac{\betahat_{\APbottom} \, \Ehat_{\APbottom}}{\beta_{\APbottom} \, E_{\APbottom}} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \,
@@ -414,7 +418,7 @@ W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
   E_{\Plepton^{+}}^{2} \, E_{\Plepton^{-}}^{2} \, \beta_{\Pbottom} \, E_{\Pbottom}^{2} \, \beta_{\APbottom} \, E_{\APbottom}^{2}} \, \int \,
 d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\APnu} \, d\phihat_{\APnu}  \nonumber \\
  & \quad \cdot \, \pThat^{\Pnu} \, \pThat^{\APnu} \,
-\frac{f(\xhat_{a}) \, f(\xhat_{b})}{\xhat_{a} \, \xhat_{b}} \nonumber \\
+\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{\xhat_{a} \, \xhat_{b}} \nonumber \\
  & \quad \cdot \, \vert \mathcal{M}_{1}(\vecphat) \vert^{2} \, 
 \betahat_{\Pbottom} \, \Ehat_{\Pbottom} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
 \betahat_{\APbottom} \, \Ehat_{\APbottom} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \,
