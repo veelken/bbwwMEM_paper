@@ -50,7 +50,7 @@ We use ME generated at LO accuracy with the program $\textsc{MadGraph\_aMCatNLO}
 The ME for the signal hypothesis is generated using the infinite top quark mass approximation, referred to as Higgs Effective Field Theory (HEFT) in the literature~\cite{Grinstein:2007iv}.
 In the HEFT, the top quark degrees of freedom are integrated out,
 replacing the top quark loops in the triangle and box diagrams shown in Fig.~\ref{fig:ggHH_FeynmanDiagram} by point-like effective couplings of, respectively, 
-two gluons to one Higgs boson and two gluons to two Higgs bosons.
+two gluons to one $\PHiggs$ boson and two gluons to two $\PHiggs$ bosons.
 The point-like effective couplings are specified via a Universal $\textsc{FeynRules}$ Output (UFO) model file~\cite{Degrande:2011ua,Hespel:2014sla} given to $\textsc{MadGraph\_aMCatNLO}$.
 The usage of the infinite top quark mass approximation is necessary, because at present the program $\textsc{MadGraph\_aMCatNLO}$ does not support the generation of ME code for processes involving loops.
 %Our choice of using LO ME is motivated by the observation that using ME generated at NLO accuracy in pQCD
@@ -90,7 +90,7 @@ ensures that $w_{i}(\vecy)$ has the correct normalization required for a probabi
 \ie $\int \, d\vecy \, w_{i}(\vecy) = 1$,
 provided that the TF satisfy the normalization condition
 $\int \, d\vecy \, \Omega(\vecy) \, W(\vecy|\vecyhat) = 1$
-for every $\vecy$.
+for every $\vecyhat$.
 
 The symbol $d\Phi_{n} = \prod_{k}^{n} \, \frac{d^{3}\vecphat^{(k)}}{(2\pi)^{3} \, 2 \Ehat_{(k)}}$ 
 represents the differential $n$-particle PS element.
@@ -364,7 +364,7 @@ b & = & \underbrace{\sqrt{\Ehat_{\Pbottom}^{2} - m_{\Pbottom}^{2}}}_{= \betahat_
 The integral on the RHS of Eq.~(\ref{eq:mem_signal}) is ready to be evaluated by numeric integration. 
 The integral extends over the $5$ variables
  $\Ehat_{\Pbottom}$, $\thetahat_{\Pnu}$, $\phihat_{\Pnu}$, $\thetahat_{\nuStar}$, and $\phihat_{\nuStar}$.
-The symbol $\vecehat_{k}$ ($\vece_{k}$) refer to unit vectors in direction of (measured) particle $k$,
+The symbol $\vecehat_{k}$ ($\vece_{k}$) refers to unit vectors in direction of (measured) particle $k$,
 and the symbol $\sphericalangle(\vecehat_{k},\vecehat_{k'})$ denotes the angle between the directions of particles $k$ and $k'$.
 This notation includes the case that the ``particles'' $k$ and $k'$ are systems of multiple particles,
 \eg $\vecehat_{\ellnuellStar}$ denotes the direction of the momentum vector of the $3$-particle system composed of
