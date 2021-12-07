@@ -47,8 +47,8 @@ The symbol $\vert \mathcal{M}_{i}(\vecyhat) \vert^{2}$ denotes the squared modul
 averaged over helicity states,
 for either the signal ($i=0$) or for the background ($i=1$) hypothesis.
 We use ME generated at LO accuracy with the program $\textsc{MadGraph\_aMCatNLO}$ $2.3.3$~\cite{MadGraph_aMCatNLO} for the signal as well as for the background hypothesis.
-The ME for the signal hypothesis is generated using the infinite top quark mass approximation, referred to as Higgs Effective Field Theory (HEFT) in the literature~\cite{Grinstein:2007iv}.
-In the HEFT, the top quark degrees of freedom are integrated out,
+The ME for the signal hypothesis is generated using the infinite top quark mass approximation~\cite{Grinstein:2007iv}.
+In this approximation, the top quark degrees of freedom are integrated out,
 replacing the top quark loops in the triangle and box diagrams shown in Fig.~\ref{fig:ggHH_FeynmanDiagram} by point-like effective couplings of, respectively, 
 two gluons to one $\PHiggs$ boson and two gluons to two $\PHiggs$ bosons.
 The point-like effective couplings are specified via a Universal $\textsc{FeynRules}$ Output (UFO) model file~\cite{Degrande:2011ua,Hespel:2014sla} given to $\textsc{MadGraph\_aMCatNLO}$.
@@ -133,13 +133,13 @@ into Eq.~(\ref{eq:PS_inPolarCoordinates}), we obtain:
 \begin{linenowrapper}
 \begin{align}
 w_{i}(\vecy) 
- = & \frac{1}{2^{24} \, \pi^{18} \, \sigma_{i} \, E_{\Plepton^{+}} \, E_{\Plepton^{-}}} \, \int \, d\xhat_{a} \, d\xhat_{b} \,
-\frac{d\Ehat_{\Pbottom}}{\Ehat_{\Pbottom}} \, \frac{d\Ehat_{\APbottom}}{\Ehat_{\APbottom}} \, \frac{d^{3}\vecphat_{\Pnu}}{\Ehat_{\Pnu}} \, \frac{d^{3}\vecphat_{\APnu}}{\Ehat_{\APnu}} \,
-\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{2 \, \xhat_{a} \, \xhat_{b} \, s} \nonumber \\
- & \quad \cdot \, (2 \, \pi)^{4} \, \delta\left( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{k}^{6} \Ehat_{(k)}\right) \, 
-\delta^{3}\left( \xhat_{a} \, \vecphat^{a} + \xhat_{b} \, \vecphat^{b} - \sum_{k}^{6} \vecphat^{(k)}\right) \nonumber \\
- & \quad \cdot \, \vert \mathcal{M}_{i}(\vecphat) \vert^{2} \, \frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}^{2}}{\beta_{\Pbottom} \, E_{\Pbottom}^{2}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
-\frac{\betahat_{\APbottom} \, \Ehat_{\APbottom}^{2}}{\beta_{\APbottom} \, E_{\APbottom}^{2}} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \nonumber \\
+% = & \frac{1}{2^{24} \, \pi^{18} \, \sigma_{i} \, E_{\Plepton^{+}} \, E_{\Plepton^{-}}} \, \int \, d\xhat_{a} \, d\xhat_{b} \,
+%\frac{d\Ehat_{\Pbottom}}{\Ehat_{\Pbottom}} \, \frac{d\Ehat_{\APbottom}}{\Ehat_{\APbottom}} \, \frac{d^{3}\vecphat_{\Pnu}}{\Ehat_{\Pnu}} \, \frac{d^{3}\vecphat_{\APnu}}{\Ehat_{\APnu}} \,
+%\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{2 \, \xhat_{a} \, \xhat_{b} \, s} \nonumber \\
+% & \quad \cdot \, (2 \, \pi)^{4} \, \delta\left( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{k}^{6} \Ehat_{(k)}\right) \, 
+%\delta^{3}\left( \xhat_{a} \, \vecphat^{a} + \xhat_{b} \, \vecphat^{b} - \sum_{k}^{6} \vecphat^{(k)}\right) \nonumber \\
+% & \quad \cdot \, \vert \mathcal{M}_{i}(\vecphat) \vert^{2} \, \frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}^{2}}{\beta_{\Pbottom} \, E_{\Pbottom}^{2}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
+%\frac{\betahat_{\APbottom} \, \Ehat_{\APbottom}^{2}}{\beta_{\APbottom} \, E_{\APbottom}^{2}} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \nonumber \\
  = & \frac{1}{2^{21} \, \pi^{14} \, \sigma_{i} \, E_{\Plepton^{+}} \, E_{\Plepton^{-}} \, E_{\Pbottom} \, E_{\APbottom}} \, \int \, d\xhat_{a} \, d\xhat_{b} \,
 d\Ehat_{\Pbottom} \, d\Ehat_{\APbottom} \, \frac{d^{3}\vecphat_{\Pnu}}{\Ehat_{\Pnu}} \, \frac{d^{3}\vecphat_{\APnu}}{\Ehat_{\APnu}} \,
 \frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
@@ -165,8 +165,8 @@ and solve for the Bjorken scaling variables $\xhat_{a}$ and $\xhat_{b}$ as funct
 This yields:
 \begin{linenowrapper}
 \begin{equation}
-\xhat_{a} = \frac{1}{\sqrt{s}} \, \sum_{k}^{6} \Ehat_{(k)} + \pZhat^{(k)} \quad \mbox{ and } \quad
-\xhat_{b} = \frac{1}{\sqrt{s}} \, \sum_{k}^{6} \Ehat_{(k)} - \pZhat^{(k)} \, .
+\xhat_{a} = \frac{1}{\sqrt{s}} \, \sum_{k}^{6} \left( \Ehat_{(k)} + \pZhat^{(k)} \right) \quad \mbox{ and } \quad
+\xhat_{b} = \frac{1}{\sqrt{s}} \, \sum_{k}^{6} \left( \Ehat_{(k)} - \pZhat^{(k)} \right) \, .
 \label{eq:Bjorkenx}
 \end{equation}
 \end{linenowrapper}
@@ -174,7 +174,7 @@ This yields:
 For the purpose of eliminating the transverse momentum components of the four-dimensional $\delta$-function,
 we follow the approach of Ref.~\cite{SVfitMEM}.
 The approach is based on introducing the ``hadronic recoil'', denoted by the symbol $\rho$, as a means to account for QCD radiation,
-which causes additional jets to be produced besides the two $\Pbottom$-jets originating from the decay of the $\PHiggs$ boson (in signal events) 
+which causes additional jets to be produced besides the two $\Pbottom$-jets that originate from the decay of the $\PHiggs$ boson (in signal events) 
 or from the decay of the two top quarks (in background events).
 As detailed in Ref.~\cite{Alwall:2010cq}, significant amounts of QCD radiation, in particular initial-state radiation (ISR),
 are a typical feature of most signal and background processes at the LHC.
@@ -242,16 +242,16 @@ Eliminating the energy and longitudinal momentum components of the four-dimensio
 $\delta( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{k}^{6} \Ehat_{(k)}) \cdot \delta( \xhat_{a} \, \pZhat^{a} + \xhat_{b} \, \pZhat^{b} - \sum_{k}^{6} \pZhat^{(k)}) \cdot \delta( \pXhat^{\rho} + \sum_{k}^{6} \pXhat^{(k)}) \cdot \delta( \pYhat^{\rho} + \sum_{k}^{6} \pYhat^{(k)})$
 by means of Eq.~(\ref{eq:Bjorkenx})
 and replacing its transverse momentum components by the TF $W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} )$ for the hadronic recoil $\rho$,
-the expression for the PD $w_{i}(\vecy)$ becomes:
+the expression for the PD $w_{i}(\vecy)$ in Eq.~(\ref{eq:mem2}) becomes:
 \begin{linenowrapper}
 \begin{align}
 w_{i}(\vecy) 
- = & \frac{1}{2^{21} \, \pi^{14} \, \sigma_{i} \, E_{\Plepton^{+}} \, E_{\Plepton^{-}} \, E_{\Pbottom} \, E_{\APbottom}} \, \int \, 
-d\Ehat_{\Pbottom} \, d\Ehat_{\APbottom} \, \frac{d^{3}\vecphat_{\Pnu}}{\Ehat_{\Pnu}} \, \frac{d^{3}\vecphat_{\APnu}}{\Ehat_{\APnu}} \,
-\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
- & \quad \cdot \, \vert \mathcal{M}_{i}(\vecphat) \vert^{2} \, 
-\frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}}{\beta_{\Pbottom} \, E_{\Pbottom}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
-\frac{\betahat_{\APbottom} \, \Ehat_{\APbottom}}{\beta_{\APbottom} \, E_{\APbottom}} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \, W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
+% = & \frac{1}{2^{21} \, \pi^{14} \, \sigma_{i} \, E_{\Plepton^{+}} \, E_{\Plepton^{-}} \, E_{\Pbottom} \, E_{\APbottom}} \, \int \, 
+%d\Ehat_{\Pbottom} \, d\Ehat_{\APbottom} \, \frac{d^{3}\vecphat_{\Pnu}}{\Ehat_{\Pnu}} \, \frac{d^{3}\vecphat_{\APnu}}{\Ehat_{\APnu}} \,
+%\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
+% & \quad \cdot \, \vert \mathcal{M}_{i}(\vecphat) \vert^{2} \, 
+%\frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}}{\beta_{\Pbottom} \, E_{\Pbottom}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
+%\frac{\betahat_{\APbottom} \, \Ehat_{\APbottom}}{\beta_{\APbottom} \, E_{\APbottom}} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \, W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
  = & \frac{1}{2^{21} \, \pi^{14} \, \sigma_{i} \, E_{\Plepton^{+}} \, E_{\Plepton^{-}} \, E_{\Pbottom} \, E_{\APbottom}} \, \int \, 
 d\Ehat_{\Pbottom} \, d\Ehat_{\APbottom} \, d\Ehat_{\Pnu} \, d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\Ehat_{\APnu} \, d\thetahat_{\APnu} \, d\phihat_{\APnu} \nonumber \\
  & \quad \cdot \, \betahat_{\Pnu} \, \Ehat_{\Pnu} \, \sin\thetahat_{\Pnu} \, 
@@ -265,9 +265,10 @@ d\Ehat_{\Pbottom} \, d\Ehat_{\APbottom} \, d\Ehat_{\Pnu} \, d\thetahat_{\Pnu} \,
 \end{linenowrapper}
 The expression in Eq.~(\ref{eq:mem3}) concludes our discussion of analytic transformations of the expressions for the PD $w_{i}(\vecy)$ 
 that are common to the signal as well as to the background hypothesis.
+
 A few more analytic transformations need to be performed to handle the presence of Breit-Wigner (BW) propagators in the ME $\mathcal{M}_{i}(\vecphat)$,
 as the presence of these propagators represent an obstacle for the numeric integration of Eq.~(\ref{eq:mem3}).
-The effect of the BW propagators is that only narrow slices in the $6$-particle PS yield sizeable contribution to the integral,
+The effect of the BW propagators is that only narrow slices in the $6$-particle PS yield sizeable contributions to the integral,
 namely the regions where the $6$ final state particles satisfy certain mass constraints.
 The mass constraints arise from the presence of on-shell $\PHiggs$ bosons, $\PW$ bosons, and top quarks in the decay chains
 $\PHiggs\PHiggs \to \Pbottom\APbottom\PW\PW\virt \to \Pbottom\APbottom \, \ellPlusnu\ellMinusnu$ and
@@ -282,7 +283,7 @@ The transformations that are specific to the signal hypothesis are detailed in S
 while those specific to the background hypothesis are presented in Section~\ref{sec:mem_background}.
 
 Finally, the numeric integration is performed using the VAMP algorithm~\cite{VAMP}, a variant of the popular VEGAS algorithm~\cite{VEGAS},
-which has been optimized for the case of integrating multimodal functions, typically appearing in the integration of ME over regions in PS.
+which has been optimized for the case of integrating multimodal functions that typically appear in the integration of ME over regions in PS.
 We use $2500$ evaluations of the integrand when computing the PD $w_{0}(\vecy)$ for the signal hypothesis 
 and $25000$ evaluations of the integrand for the computation of the PD $w_{1}(\vecy)$ for the background hypothesis.
 The number of evaluations has been chosen such that the computation of $w_{0}(\vecy)$ and $w_{1}(\vecy)$ take approximately the same time
@@ -315,18 +316,18 @@ the resulting expression for the PD $w_{0}(\vecy)$ of the signal hypothesis read
 \begin{linenowrapper}
 \begin{align}
 w_{0}(\vecy) 
- = & \frac{(m_{\PHiggs} \, \Gamma_{\PHiggs})^{2} \, m_{\PW} \, \Gamma_{\PW}}{2^{21} \, \pi^{14} \, \sigma_{0} \, E_{\Plepton} \, E_{\ellStar} \, E_{\Pbottom} \, E_{\APbottom}} \, \int \,
-d\Ehat_{\Pbottom} \, d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\nuStar} \, d\phihat_{\nuStar}  \nonumber \\
- & \quad \cdot \, \underbrace{\betahat_{\Pnu}}_{= 1} \, \underbrace{\Ehat_{\Pnu} \, \sin\thetahat_{\Pnu}}_{= \pThat^{\Pnu}} \, 
-  \underbrace{\betahat_{\nuStar}}_{= 1} \, \underbrace{\Ehat_{\nuStar} \, \sin\thetahat_{\nuStar}}_{= \pThat^{\nuStar}} \, 
-\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
- & \quad \cdot \, \vert \mathcal{M}_{0}(\vecphat) \vert^{2} \, 
-\frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}}{\beta_{\Pbottom} \, E_{\Pbottom}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
-\frac{\betahat_{\APbottom} \, \Ehat_{\APbottom}}{\beta_{\APbottom} \, E_{\APbottom}} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \,
-W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
- & \quad \cdot \, \frac{1}{\Ehat_{\Pbottom} \, \left\lvert 1 - \frac{\betahat_{\Pbottom}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vece_{\Pbottom},\vece_{\APbottom}) \right\rvert} \nonumber \\
- & \quad \cdot \, \frac{1}{4 \, E_{\Plepton} \, \sin^{2}\left(\frac{\sphericalangle(\vece_{\Plepton},\vecehat_{\Pnu})}{2}\right)} \,
-\frac{1}{\Ehat_{\ellnuellStar} \left( 1 - \betahat_{\ellnuellStar} \, \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar}) \right)} \nonumber \\
+% = & \frac{(m_{\PHiggs} \, \Gamma_{\PHiggs})^{2} \, m_{\PW} \, \Gamma_{\PW}}{2^{21} \, \pi^{14} \, \sigma_{0} \, E_{\Plepton} \, E_{\ellStar} \, E_{\Pbottom} \, E_{\APbottom}} \, \int \,
+%d\Ehat_{\Pbottom} \, d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\nuStar} \, d\phihat_{\nuStar}  \nonumber \\
+% & \quad \cdot \, \underbrace{\betahat_{\Pnu}}_{= 1} \, \underbrace{\Ehat_{\Pnu} \, \sin\thetahat_{\Pnu}}_{= \pThat^{\Pnu}} \, 
+%  \underbrace{\betahat_{\nuStar}}_{= 1} \, \underbrace{\Ehat_{\nuStar} \, \sin\thetahat_{\nuStar}}_{= \pThat^{\nuStar}} \, 
+%\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
+% & \quad \cdot \, \vert \mathcal{M}_{0}(\vecphat) \vert^{2} \, 
+%\frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}}{\beta_{\Pbottom} \, E_{\Pbottom}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
+%\frac{\betahat_{\APbottom} \, \Ehat_{\APbottom}}{\beta_{\APbottom} \, E_{\APbottom}} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \,
+%W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
+% & \quad \cdot \, \frac{1}{\Ehat_{\Pbottom} \, \left\lvert 1 - \frac{\betahat_{\Pbottom}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vece_{\Pbottom},\vece_{\APbottom}) \right\rvert} \nonumber \\
+% & \quad \cdot \, \frac{1}{4 \, E_{\Plepton} \, \sin^{2}\left(\frac{\sphericalangle(\vece_{\Plepton},\vecehat_{\Pnu})}{2}\right)} \,
+%\frac{1}{\Ehat_{\ellnuellStar} \left( 1 - \betahat_{\ellnuellStar} \, \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar}) \right)} \nonumber \\
  = & \frac{(m_{\PHiggs} \, \Gamma_{\PHiggs})^{2} \, m_{\PW} \, \Gamma_{\PW}}{2^{23} \, \pi^{14} \, \sigma_{0} \, s \, 
   E_{\Plepton}^{2} \, E_{\ellStar} \, \beta_{\Pbottom} \, E_{\Pbottom}^{2} \, \beta_{\APbottom} \, E_{\APbottom}^{2}} \, \int \,
 d\Ehat_{\Pbottom} \, d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\nuStar} \, d\phihat_{\nuStar} \nonumber \\
@@ -337,8 +338,10 @@ d\Ehat_{\Pbottom} \, d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\nuStar
 \betahat_{\APbottom} \, \Ehat_{\APbottom} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \,
 W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
  & \quad \cdot \, \left\lvert 1 - \frac{\betahat_{\Pbottom}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vece_{\Pbottom},\vece_{\APbottom}) \right\rvert^{-1} \nonumber \\
- & \quad \cdot \, \frac{1}{\sin^{2}\left(\frac{\sphericalangle(\vece_{\Plepton},\vecehat_{\Pnu})}{2}\right)} \,
-\frac{1}{\Ehat_{\ellnuellStar} \left( 1 - \betahat_{\ellnuellStar} \, \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar}) \right)} \, ,
+% & \quad \cdot \, \frac{1}{\sin^{2}\left(\frac{\sphericalangle(\vece_{\Plepton},\vecehat_{\Pnu})}{2}\right)} \,
+%\frac{1}{\Ehat_{\ellnuellStar} \left( 1 - \betahat_{\ellnuellStar} \, \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar}) \right)} \, ,
+ & \quad \cdot \, \left( \sin^{2}\left(\frac{\sphericalangle(\vece_{\Plepton},\vecehat_{\Pnu})}{2}\right)} \,
+\frac{1}{\Ehat_{\ellnuellStar} \left( 1 - \betahat_{\ellnuellStar} \, \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar}) \right) \right)^{-1} \, ,
 \label{eq:mem_signal}
 \end{align}
 \end{linenowrapper}
@@ -349,6 +352,7 @@ with:
 \Ehat_{\Pnu} & = & \frac{m_{\PW}^{2}}{4 \, \Ehat_{\Plepton} \, \sin^{2}\left(\frac{\sphericalangle(\vece_{\Plepton},\vecehat_{\Pnu})}{2}\right)} \nonumber \\
 \Ehat_{\nuStar} & = & \frac{m_{\PHiggs}^{2} - m_{\ellnuellStar}^{2}}{2 \, \Ehat_{\ellnuellStar} \, 
  \left( 1 - \betahat_{\ellnuellStar} \, \cos\sphericalangle(\vecehat_{\ellnuellStar},\vecehat_{\nuStar}) \right)} \, ,
+\label{eq:mem_signal_defs}
 \end{eqnarray}
 \end{linenowrapper}
 where:
@@ -356,19 +360,24 @@ where:
 \begin{eqnarray}
 \Delta_{m_{\PHiggs}} & = & \frac{m_{\PHiggs}^{2}}{2} - m_{\Pbottom}^{2} \nonumber \\
 a & = & \Ehat_{\Pbottom} \nonumber \\
-b & = & \underbrace{\sqrt{\Ehat_{\Pbottom}^{2} - m_{\Pbottom}^{2}}}_{= \betahat_{\Pbottom} \, \Ehat_{\Pbottom}} \, 
- \underbrace{\vece_{\Pbottom} \cdot \vece_{\APbottom}}_{= \cos\sphericalangle(\vece_{\Pbottom},\vece_{\APbottom})} \, 
-= \, \betahat_{\Pbottom} \, \Ehat_{\Pbottom} \, \cos\sphericalangle(\vece_{\Pbottom},\vece_{\APbottom}) \, .
+%b & = & \underbrace{\sqrt{\Ehat_{\Pbottom}^{2} - m_{\Pbottom}^{2}}}_{= \betahat_{\Pbottom} \, \Ehat_{\Pbottom}} \, 
+% \underbrace{\vece_{\Pbottom} \cdot \vece_{\APbottom}}_{= \cos\sphericalangle(\vece_{\Pbottom},\vece_{\APbottom})} \, 
+%= \, \betahat_{\Pbottom} \, \Ehat_{\Pbottom} \, \cos\sphericalangle(\vece_{\Pbottom},\vece_{\APbottom}) \, .
+b & = & \betahat_{\Pbottom} \, \Ehat_{\Pbottom} \, \cos\sphericalangle(\vece_{\Pbottom},\vece_{\APbottom}) \, .
 \end{eqnarray}
 \end{linenowrapper}
 The integral on the RHS of Eq.~(\ref{eq:mem_signal}) is ready to be evaluated by numeric integration. 
 The integral extends over the $5$ variables
  $\Ehat_{\Pbottom}$, $\thetahat_{\Pnu}$, $\phihat_{\Pnu}$, $\thetahat_{\nuStar}$, and $\phihat_{\nuStar}$.
-The symbol $\vecehat_{k}$ ($\vece_{k}$) refers to unit vectors in direction of (measured) particle $k$,
+The symbol $\vece_{k}$ refers to a unit vector in direction of particle $k$,
 and the symbol $\sphericalangle(\vecehat_{k},\vecehat_{k'})$ denotes the angle between the directions of particles $k$ and $k'$.
 This notation includes the case that the ``particles'' $k$ and $k'$ are systems of multiple particles,
 \eg $\vecehat_{\ellnuellStar}$ denotes the direction of the momentum vector of the $3$-particle system composed of
 the charged lepton and the neutrino produced in the decay of the on-shell $\PW$ boson and of the charged lepton produced in the decay of the off-shell $\PW$ boson.
+The hat in the symbol $\vecehat_{\ellnuellStar}$ indicates that this direction refers to the true momenta of the neutrinos,
+which are computed as function of the integration variables $\thetahat_{\Pnu}$, $\phihat_{\Pnu}$, $\thetahat_{\nuStar}$, $\phihat_{\nuStar}$ and Eq.~(\ref{eq:mem_signal_defs}).
+For the charged leptons and the $\Pbottom$-jets, the true direction is equal to the measured direction,
+as the direction of charged leptons and jets is measured with negligible experimental resolution.
 
 There is one further aspect, which needs to be taken into account when computing the compatibility of a given event with the signal hypothesis,
 and that is that there exists a fourfold ambiguity in associating the two measured $\Pbottom$-jets to the $\Pbottom$ and $\APbottom$ quarks 
@@ -394,26 +403,26 @@ two $\delta$-functions of the type $g(\Ehat_{\Pnu})$, given by Eq.~(\ref{eq:nuEn
 and two $\delta$-functions of the type $g(\Ehat_{\Pbottom})$, given by Eq.~(\ref{eq:bEn_top1}).
 We denote the second $\delta$-function of the type given by Eq.~(\ref{eq:nuEn_Wlnu1}) by the symbol $g(\Ehat_{\APnu})$
 and the second $\delta$-function of the type given by Eq.~(\ref{eq:bEn_top1}) by the symbol $g(\Ehat_{\APbottom})$
-to indicate that they refer to the anti-neutrino and to the anti-bottom quark, which are produced in the decay of the anti-top quark.
+to indicate that they refer to the anti-neutrino and to the anti-bottom quark, which both are produced in the decay of the anti-top quark.
 
 After solving for the $\delta$-functions analytically, following Sections~\ref{sec:appendix_nuEn_Wlnu} and~\ref{sec:appendix_bEn_top} of the appendix,
 we obtain the following expression for the integral $w_{1}(\vecy)$ for the background hypothesis:
 \begin{linenowrapper}
 \begin{align}
 w_{1}(\vecy) 
- = & \frac{(m_{\Ptop} \, \Gamma_{\Ptop})^{2} \, (m_{\PW} \, \Gamma_{\PW})^{2}}{2^{21} \, \pi^{14} \, \sigma_{1} \, E_{\Plepton^{+}} \, E_{\Plepton^{-}} \, E_{\Pbottom} \, E_{\APbottom}} \, \int \,
-d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\APnu} \, d\phihat_{\APnu}  \nonumber \\
- & \quad \cdot \, \underbrace{\betahat_{\Pnu}}_{= 1} \, \underbrace{\Ehat_{\Pnu} \, \sin\thetahat_{\Pnu}}_{= \pThat^{\Pnu}} \, 
-  \underbrace{\betahat_{\APnu}}_{= 1} \, \underbrace{\Ehat_{\APnu} \, \sin\thetahat_{\APnu}}_{= \pThat^{\APnu}} \, 
-\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
- & \quad \cdot \, \vert \mathcal{M}_{1}(\vecphat) \vert^{2} \, 
-\frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}}{\beta_{\Pbottom} \, E_{\Pbottom}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
-\frac{\betahat_{\APbottom} \, \Ehat_{\APbottom}}{\beta_{\APbottom} \, E_{\APbottom}} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \,
-W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
- & \quad \cdot \, \frac{1}{4 \, E_{\Plepton^{+}} \, \sin^{2}\left(\frac{\sphericalangle(\vece_{\ellPlus},\vecehat_{\Pnu})}{2}\right)} \, 
-\frac{1}{4 \, E_{\Plepton^{-}} \, \sin^{2}\left(\frac{\sphericalangle(\vece_{\ellMinus},\vecehat_{\APnu})}{2}\right)} \nonumber \\
- & \quad \cdot \, \frac{1}{\Ehat_{\ellPlusnu} \, \left\lvert 1 - \frac{\betahat_{\ellPlusnu}}{\betahat_{\Pbottom}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vece_{\Pbottom}) \right\rvert} \,
-\frac{1}{\Ehat_{\ellMinusnu} \, \left\lvert 1 - \frac{\betahat_{\ellMinusnu}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vecehat_{\ellMinusnu},\vece_{\APbottom}) \right\rvert} \nonumber \\
+% = & \frac{(m_{\Ptop} \, \Gamma_{\Ptop})^{2} \, (m_{\PW} \, \Gamma_{\PW})^{2}}{2^{21} \, \pi^{14} \, \sigma_{1} \, E_{\Plepton^{+}} \, E_{\Plepton^{-}} \, E_{\Pbottom} \, E_{\APbottom}} \, \int \,
+%d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\APnu} \, d\phihat_{\APnu}  \nonumber \\
+% & \quad \cdot \, \underbrace{\betahat_{\Pnu}}_{= 1} \, \underbrace{\Ehat_{\Pnu} \, \sin\thetahat_{\Pnu}}_{= \pThat^{\Pnu}} \, 
+%  \underbrace{\betahat_{\APnu}}_{= 1} \, \underbrace{\Ehat_{\APnu} \, \sin\thetahat_{\APnu}}_{= \pThat^{\APnu}} \, 
+%\frac{f(\xhat_{a}, Q) \, f(\xhat_{b}, Q)}{\xhat_{a} \, \xhat_{b} \, s} \nonumber \\
+% & \quad \cdot \, \vert \mathcal{M}_{1}(\vecphat) \vert^{2} \, 
+%\frac{\betahat_{\Pbottom} \, \Ehat_{\Pbottom}}{\beta_{\Pbottom} \, E_{\Pbottom}} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
+%\frac{\betahat_{\APbottom} \, \Ehat_{\APbottom}}{\beta_{\APbottom} \, E_{\APbottom}} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \,
+%W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
+% & \quad \cdot \, \frac{1}{4 \, E_{\Plepton^{+}} \, \sin^{2}\left(\frac{\sphericalangle(\vece_{\ellPlus},\vecehat_{\Pnu})}{2}\right)} \, 
+%\frac{1}{4 \, E_{\Plepton^{-}} \, \sin^{2}\left(\frac{\sphericalangle(\vece_{\ellMinus},\vecehat_{\APnu})}{2}\right)} \nonumber \\
+% & \quad \cdot \, \frac{1}{\Ehat_{\ellPlusnu} \, \left\lvert 1 - \frac{\betahat_{\ellPlusnu}}{\betahat_{\Pbottom}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vece_{\Pbottom}) \right\rvert} \,
+%\frac{1}{\Ehat_{\ellMinusnu} \, \left\lvert 1 - \frac{\betahat_{\ellMinusnu}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vecehat_{\ellMinusnu},\vece_{\APbottom}) \right\rvert} \nonumber \\
  = & \frac{(m_{\Ptop} \, \Gamma_{\Ptop})^{2} \, (m_{\PW} \, \Gamma_{\PW})^{2}}{2^{25} \, \pi^{14} \, \sigma_{1} \, s \, 
   E_{\Plepton^{+}}^{2} \, E_{\Plepton^{-}}^{2} \, \beta_{\Pbottom} \, E_{\Pbottom}^{2} \, \beta_{\APbottom} \, E_{\APbottom}^{2}} \, \int \,
 d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\APnu} \, d\phihat_{\APnu}  \nonumber \\
@@ -423,10 +432,14 @@ d\thetahat_{\Pnu} \, d\phihat_{\Pnu} \, d\thetahat_{\APnu} \, d\phihat_{\APnu}  
 \betahat_{\Pbottom} \, \Ehat_{\Pbottom} \, W(E_{\Pbottom}|\Ehat_{\Pbottom}) \, 
 \betahat_{\APbottom} \, \Ehat_{\APbottom} \, W(E_{\APbottom}|\Ehat_{\APbottom}) \,
 W_{\rho}( \pX^{\rho},\pY^{\rho} | \pXhat^{\rho},\pYhat^{\rho} ) \nonumber \\
- & \quad \cdot \, \frac{1}{\sin^{2}\left(\frac{\sphericalangle(\vece_{\ellPlus},\vecehat_{\Pnu})}{2}\right)} \, 
-\frac{1}{\sin^{2}\left(\frac{\sphericalangle(\vece_{\ellMinus},\vecehat_{\APnu})}{2}\right)} \nonumber \\
- & \quad \cdot \, \frac{1}{\Ehat_{\ellPlusnu} \, \left\lvert 1 - \frac{\betahat_{\ellPlusnu}}{\betahat_{\Pbottom}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vece_{\Pbottom}) \right\rvert} \,
-\frac{1}{\Ehat_{\ellMinusnu} \, \left\lvert 1 - \frac{\betahat_{\ellMinusnu}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vecehat_{\ellMinusnu},\vece_{\APbottom}) \right\rvert} \, ,
+% & \quad \cdot \, \frac{1}{\sin^{2}\left(\frac{\sphericalangle(\vece_{\ellPlus},\vecehat_{\Pnu})}{2}\right)} \, 
+%\frac{1}{\sin^{2}\left(\frac{\sphericalangle(\vece_{\ellMinus},\vecehat_{\APnu})}{2}\right)} \nonumber \\
+% & \quad \cdot \, \frac{1}{\Ehat_{\ellPlusnu} \, \left\lvert 1 - \frac{\betahat_{\ellPlusnu}}{\betahat_{\Pbottom}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vece_{\Pbottom}) \right\rvert} \,
+%\frac{1}{\Ehat_{\ellMinusnu} \, \left\lvert 1 - \frac{\betahat_{\ellMinusnu}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vecehat_{\ellMinusnu},\vece_{\APbottom}) \right\rvert} \, ,
+ & \quad \cdot \, \left( \sin^{2}\left(\frac{\sphericalangle(\vece_{\ellPlus},\vecehat_{\Pnu})}{2}\right)} \, 
+\frac{1}{\sin^{2}\left(\frac{\sphericalangle(\vece_{\ellMinus},\vecehat_{\APnu})}{2}\right) \right)^{-1} \nonumber \\
+ & \quad \cdot \, \left( \Ehat_{\ellPlusnu} \, \left\lvert 1 - \frac{\betahat_{\ellPlusnu}}{\betahat_{\Pbottom}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vece_{\Pbottom}) \right\rvert} \,
+\frac{1}{\Ehat_{\ellMinusnu} \, \left\lvert 1 - \frac{\betahat_{\ellMinusnu}}{\betahat_{\APbottom}} \, \cos\sphericalangle(\vecehat_{\ellMinusnu},\vece_{\APbottom}) \right\rvert \right)^{-1} \, ,
 \label{eq:mem_background}
 \end{align}
 \end{linenowrapper}
@@ -439,6 +452,7 @@ with:
  + |b_{\APtop}| \, \sqrt{\Delta_{m_{\Ptop}}^{2} - (a_{\APtop}^{2} - b_{\APtop}^{2}) \, m_{\Pbottom}^{2}}}{a_{\APtop}^{2} - b_{\APtop}^{2}} \nonumber \\
 \Ehat_{\Pnu} & = & \frac{m_{\PW}^{2}}{4 \, \Ehat_{\ellPlus} \, \sin^{2}\left(\frac{\sphericalangle(\vece_{\ellPlus},\vecehat_{\Pnu})}{2}\right)} \nonumber \\
 \Ehat_{\APnu} & = & \frac{m_{\PW}^{2}}{4 \, \Ehat_{\ellMinus} \, \sin^{2}\left(\frac{\sphericalangle(\vece_{\ellMinus},\vecehat_{\APnu})}{2}\right)} \, ,
+\label{eq:mem_background_defs}
 \end{eqnarray}
 \end{linenowrapper}
 where:
@@ -446,17 +460,22 @@ where:
 \begin{eqnarray}
 \Delta_{m_{\Ptop}} & = & \frac{m_{\Ptop}^{2} - m_{\Pbottom}^{2} - m_{\PW}^{2}}{2} \nonumber \\
 a_{\Ptop} & = & \Ehat_{\ellPlusnu} \nonumber \\
-b_{\Ptop} & = & \sqrt{\Ehat_{\ellPlusnu}^{2} - m_{\PW}^{2}} \, 
- \underbrace{\vecehat_{\ellPlusnu} \cdot \vece_{\Pbottom}}_{= \cos\sphericalangle(\vecehat_{\ellPlusnu},\vece_{\Pbottom})} \, 
-= \, \sqrt{\Ehat_{\ellPlusnu}^{2} - m_{\PW}^{2}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vece_{\Pbottom}) \nonumber \\
+%b_{\Ptop} & = & \sqrt{\Ehat_{\ellPlusnu}^{2} - m_{\PW}^{2}} \, 
+% \underbrace{\vecehat_{\ellPlusnu} \cdot \vece_{\Pbottom}}_{= \cos\sphericalangle(\vecehat_{\ellPlusnu},\vece_{\Pbottom})} \, 
+%= \, \sqrt{\Ehat_{\ellPlusnu}^{2} - m_{\PW}^{2}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vece_{\Pbottom}) \nonumber \\
+b_{\Ptop} & = & \sqrt{\Ehat_{\ellPlusnu}^{2} - m_{\PW}^{2}} \, \cos\sphericalangle(\vecehat_{\ellPlusnu},\vece_{\Pbottom}) \nonumber \\
 a_{\APtop} & = & \Ehat_{\ellMinusnu} \nonumber \\
-b_{\APtop} & = & \sqrt{\Ehat_{\ellMinusnu}^{2} - m_{\PW}^{2}} \, 
- \underbrace{\vecehat_{\ellMinusnu} \cdot \vece_{\APbottom}}_{= \cos\sphericalangle(\vecehat_{\ellMinusnu},\vece_{\APbottom})} \,
-= \, \sqrt{\Ehat_{\ellMinusnu}^{2} - m_{\PW}^{2}} \, \cos\sphericalangle(\vecehat_{\ellMinusnu},\vece_{\APbottom}) \, .
+%b_{\APtop} & = & \sqrt{\Ehat_{\ellMinusnu}^{2} - m_{\PW}^{2}} \, 
+% \underbrace{\vecehat_{\ellMinusnu} \cdot \vece_{\APbottom}}_{= \cos\sphericalangle(\vecehat_{\ellMinusnu},\vece_{\APbottom})} \,
+%= \, \sqrt{\Ehat_{\ellMinusnu}^{2} - m_{\PW}^{2}} \, \cos\sphericalangle(\vecehat_{\ellMinusnu},\vece_{\APbottom}) \, .
+b_{\APtop} & = & \sqrt{\Ehat_{\ellMinusnu}^{2} - m_{\PW}^{2}} \, \cos\sphericalangle(\vecehat_{\ellMinusnu},\vece_{\APbottom}) \, .
 \end{eqnarray}
 \end{linenowrapper}
 The integral given by Eq.~(\ref{eq:mem_background}) extends over $4$ remaining variables,
 which are integrated numerically: $\thetahat_{\Pnu}$, $\phihat_{\Pnu}$, $\thetahat_{\APnu}$, and $\phihat_{\APnu}$.
+The symbol $\ellPlusnu$ ($\ellMinusnu$) refers to the true direction of the $\PW^{+}$ ($\PW^{-}$) boson,
+which are computed by summing the momenta of the lepton of positive (negative) charge and of the neutrino (anti-neutrino).
+The neutrino and anti-neutrino momenta are computed as function of the integration variables $\thetahat_{\Pnu}$, $\phihat_{\Pnu}$, $\thetahat_{\APnu}$, $\phihat_{\APnu}$ and Eq.~(\ref{eq:mem_background_defs}).
 
 When evaluating the compatibility of a given event with the background hypothesis,
 there exists a twofold ambiguity in associating the two measured $\Pbottom$-jets to the $\Pbottom$ and $\APbottom$ quarks.
