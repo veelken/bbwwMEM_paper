@@ -114,14 +114,20 @@ The hadronic recoil $\rho$ is not directly available in the $\textsc{DELPHES}$ s
 To determine the resolution on $\rho$, we compute the transverse momentum components of the hadronic recoil by means of Eq.~\ref{eq:hadRecoil_true} at MC-truth
 and by means of Eq.~\ref{eq:hadRecoil} at detector level.
 The resolutions on $\pX^{\rho}$ and $\pY^{\rho}$ amount to $XX.X$~\GeV for the $\dihiggs$ signal and to $XX.X$~\GeV for the $\ttbar$ background.
-We use:
+The resolution on the energy of $\Pbottom$-jets is small compared to the resolution on the hadronic recoil,
+which means that the resolution on the latter is dominated by the resolution on the $\vecMET$.
+This allows us to compare the resolutions on $\pX^{\rho}$ and $\pY^{\rho}$ in the $\textsc{DELPHES}$ simulation to published $\vecMET$ resolutions during LHC Run $2$.
+The $\vecMET$ resolution for simulated $\ttbar$ events in the ATLAS detector is shown in Fig.~9 of Ref.~\cite{ATLAS:2018txj} and amounts to $25$-$30$~\GeV,
+similar to what we find with $\textsc{DELPHES}$ for the CMS detector (we did not find numbers published by CMS for the $\vecMET$ resolution in $\ttbar$ events during LHC Run $2$).
+We assume that the resolutions on $\pX^{\rho}$ and $\pY^{\rho}$ are uncorrelated and the same for signal and background events.
+Thus, we use:
 \begin{linenowrapper}
 \begin{equation}
 V = \sigma_{\rho}^{2} \cdot I_{2} 
 \label{eq:resolution_rho}
 \end{equation}
 \end{linenowrapper}
-with $\sigma_{\rho} = XX.X$~\GeV for when computing the PDs $w_{0}(\vecy)$ and $w_{1}(\vecy)$ for $\dihiggs$ signal as well as for $\ttbar$ background events.
+with $\sigma_{\rho} = XX.X$~\GeV for when computing the PDs $w_{0}(\vecy)$ and $w_{1}(\vecy)$ for $\dihiggs$ signal and $\ttbar$ background events.
 
 With these TF, we can proceed to compute the PDs $w_{0}(\vecy)$ and $w_{1}(\vecy)$.
 Distributions in $w_{0}(\vecy)$ and $w_{1}(\vecy)$ for $\dihiggs$ signal and $\ttbar$ background events are shown in Fig.~\ref{fig:probS_and_probB}.
@@ -196,8 +202,9 @@ Fitting the peak of the distribution in $\mbb$ obtained after the jet calibratio
 with a normal distribution yields a mean of $117.7$~\GeV and a standard deviation of $19.6$~\GeV.
 Selecting events for which the mass $\mbb$ is within $1$ ($2$) standard deviations around the mean
 keeps $68.9\%$ ($86.9\%$) of the $\dihiggs$ signal and $22.1\%$ ($40.6\%$) of the $\ttbar$ background.
-Our conclusion from these numbers is that by exploiting the full difference in event kinematics between the $\dihiggs$ signal and the $\ttbar$ background with the MEM
-one can improve the separation of the $\dihiggs$ signal from the $\ttbar$ background significantly compared to a simple one-dimensional cuts on single observables.
+The mass $\mbb$ is presumably one of the most powerful single observable to separate the $\dihiggs$ signal from the $\ttbar$ background.
+The conclusion that we draw from the numbers quoted in this paragraph is that by exploiting the full difference in event kinematics between the $\dihiggs$ signal and the $\ttbar$ background with the MEM
+one can significantly improve the separation of the $\dihiggs$ signal from the $\ttbar$ background compared to imposing simple cuts on single observables.
 We remark that the misidentification of hadrons as leptons is not simulated in $\textsc{DELPHES}$ and hence not accounted for in the detector-level ROC curve shown in Fig.~\ref{fig:ROC}.
 We expect this have only a small effect on the ROC curve,
 as analysis of $\dihiggs$ production performed by the CMS collaboration in the decay channel $\Pbottom\APbottom\PW\PW\virt$ in LHC Run $2$
