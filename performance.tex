@@ -6,6 +6,8 @@ achieved by the LR $P(\vecy)$ given by Eq.~(\ref{eq:memLR}),
 using samples of signal and background events produced by Monte Carlo (MC) simulation.
 The samples are simulated at LO and at NLO accuracy in pQCD
 and are analyzed at MC-truth as well as at detector level.
+The former corresponds to the case of an ideal experimental resolution, 
+while the latter aims to simulate the experimental resolution achieved by the ATLAS and CMS detectors during LHC Run $2$.
 The LO and NLO $\dihiggs$ signal samples each contain about three hundred thousand events
 and the LO and NLO $\ttbar$ background samples each contain about five million events.
 All samples simulated at LO accuracy in pQCD are produced with the program $\textsc{MadGraph\_aMCatNLO}$ $2.2.2$,
@@ -16,7 +18,7 @@ All events are generated for proton-proton collisions at $\sqrt{s} = 13$~\TeV ce
 Events in which the electrons or muons originate from $\Pgt$ lepton decays,
 \ie from the decay chains $\PW^{+} \to \Pgt^{+}\Pnu_{\Pgt} \to \Plepton^{+}\Pnu_{\Plepton}\APnu_{\Pgt}\Pnu_{\Pgt}$ or 
 $\PW^{-} \to \Pgt^{-}\APnu_{\Pgt} \to \Plepton^{-}\APnu_{\Plepton}\Pnu_{\Pgt}\APnu_{\Pgt}$, are discarded.
-Detector effects are simulated using the $\textsc{DELPHES}$ fast-simulation package~\cite{deFavereau:2013fsa} with the card for the CMS detector.
+Detector effects are simulated using the program $\textsc{DELPHES}$ $v3.5.0$~\cite{deFavereau:2013fsa} with the card for the CMS detector.
 On average forty inelastic proton-proton interactions (pileup) are added to each simulated event
 in order to simulate the data-taking conditions during Run $2$ of the LHC.
 
@@ -35,7 +37,7 @@ while the second stage is applied to the generator-level jets and to those detec
 We refer to the latter jets as $\Pbottom$-jets.
 
 The simulated $\dihiggs$ signal and $\ttbar$ background events considered in this section are required to pass event selection criteria
-similar to the analysis of $\dihiggs$ production in the decay channel $\Pbottom\APbottom\PW\PW\virt$ performed by the CMS collaboration in LHC Run $2$~\cite{HIG-17-006}.
+similar to the analysis of $\dihiggs$ production in the channel $\dihiggs \to \Pbottom\APbottom\PW\PW\virt$ performed by the CMS collaboration in LHC Run $2$~\cite{HIG-17-006}.
 The events are required to contain two electrons or muons and two $\Pbottom$-jets.
 The leptons must be within the region $\abs{\eta} < 2.5$ if they are electrons and $\abs{\eta} < 2.4$ if they are muons, and are required to be isolated.
 Their isolation is computed by summing the $\pT$ of detector-level particle-flow objects that are within a cone of size
@@ -46,7 +48,9 @@ The lepton of higher $\pT$ is required to have $\pT > 25$~\GeV and the lepton of
 The $\pT$ thresholds applied to the leptons are motivated by trigger requirements.
 The $\Pbottom$-jets are required to satisfy the conditions $\pT > 25$~\GeV and $\abs{\eta} < 2.4$ and to be both tagged as $\Pbottom$-jets on detector level.
 The $\Pbottom$-tagging criteria implemented in the $\textsc{DELPHES}$ card for the CMS detector
-corresponds to the XXX working-point of the XXX $\Pbottom$-tagging algorithm published in Ref.~\cite{}.
+corresponds to the medium working-point of the ``combined secondary vertex'' $\Pbottom$-tagging algorithm published in Ref.~\cite{CMS:2012feb}.
+The algorithm identifies jets originating from the hadronization of a bottom quark with an efficiency of approximately $70\%$,
+for a misidentification rate for light-quark and gluon jets of about $1.5\%$~\cite{CMS:2012feb}.
 Events containing more than two $\Pbottom$-tagged jets of $\pT > 25$~\GeV and $\abs{\eta} < 2.4$ are vetoed.
 The latter condition rejects a negligible fraction of events, amounting to $X.X\%$ of the $\dihiggs$ signal and $X.X\%$ of the $\ttbar$ background,
 and avoids ambiguities in choosing the pair of $\Pbottom$-jets 
@@ -74,17 +78,17 @@ The calibration also reduces the relative width, defined as the root mean square
 \setlength{\unitlength}{1mm}
 \begin{center}
 \begin{picture}(160,67)(0,0)
-\put(-1.0, 1.0){\mbox{\includegraphics*[height=66mm]
- {plots/mbb_calibrated_vs_uncalibrated_signal.pdf}}}
-\put(80.0, 0.0){\mbox{\includegraphics*[height=67mm]
- {plots/mbb_calibrated_vs_uncalibrated_background.pdf}}}
+%\put(-1.0, 1.0){\mbox{\includegraphics*[height=66mm]
+% {plots/mbb_calibrated_vs_uncalibrated_signal.pdf}}}
+%\put(80.0, 0.0){\mbox{\includegraphics*[height=67mm]
+% {plots/mbb_calibrated_vs_uncalibrated_background.pdf}}}
 \end{picture}
 \end{center}
 \fi
 \ifx\ver\verPAPER
 \centering
-\includegraphics[width=0.48\textwidth]{plots/mbb_calibrated_vs_uncalibrated_signal.pdf}
-\includegraphics[width=0.48\textwidth]{plots/mbb_calibrated_vs_uncalibrated_background.pdf}
+%\includegraphics[width=0.48\textwidth]{plots/mbb_calibrated_vs_uncalibrated_signal.pdf}
+%\includegraphics[width=0.48\textwidth]{plots/mbb_calibrated_vs_uncalibrated_background.pdf}
 \fi
 \caption{
   Distribution in $\mbb$, the mass of the two detector-level jets that are tagged as $\Pbottom$-jets,
@@ -175,7 +179,7 @@ as well as of the misidentification of light quark or gluon jets as $\Pbottom$-j
 \caption{
   Distributions in the PDs $w_{0}(\vecy)$ (upper) and $w_{1}(\vecy)$ (lower), computed according to Eqs.~\ref{eq:mem_signal} and~\ref{eq:mem_background},
   for $\dihiggs$ signal (left) and $\ttbar$ background (right) events.
-  The weights are computed at MC-truth and at detector level.
+  The PDs are computed at MC-truth and at detector level.
 }
 \label{fig:probS_and_probB}
 \end{figure}
@@ -196,6 +200,9 @@ The main reason for the degradation in separating the $\dihiggs$ signal from the
 are signal events in which one of the bottom quarks originating from the $\PHiggs$ boson decay is not reconstructed as $\Pbottom$-jet at detector level
 and a light quark or gluon jet is misidentified as $\Pbottom$-jet instead.
 If this happens, the mass of the two detector-level jets that are reconstructed as $\Pbottom$-jets are often incompatible with $m_{\PHiggs}$.
+The presence of a BW propagator in the ME $\mathcal{M}_{0}(\vecphat)$ for the signal hypothesis,
+which enforces that the mass of the pair of $\Pbottom$-jets equals $m_{\PHiggs}$,
+introduces large ``pulls'' in the TF $W(E|\Ehat)$ for the $\Pbottom$-jet energy in this case, which diminish the value of the integrand.
 To better gauge the separation of the $\dihiggs$ signal from the $\ttbar$ background achieved by the LR $P(\vecy)$,
 we compute signal efficiencies and background rates that one would obtain by cutting on the mass $\mbb$ of the $\Pbottom$-jet pair, shown in Fig.~\ref{fig:mbb}, for comparison.
 Fitting the peak of the distribution in $\mbb$ obtained after the jet calibration is applied in $\dihiggs$ signal events
@@ -252,9 +259,93 @@ found the misidentification of hadrons as leptons to constitute only a small, if
 \fi
 \caption{
   Graphs of background rate versus signal efficiency (``ROC curve''), at MC-truth and at detector level,
-  obtained by applying a cut on the distributions in the LRs $P(\vecy)$ shown in Fig.~\ref{fig:memLR}.
+  obtained by applying a cut on the distributions in the likelihood ratios $P(\vecy)$ shown in Fig.~\ref{fig:memLR}.
 }
 \label{fig:ROC}
 \end{figure}
 
-We conclude this section with a discussion of LO vs NLO...
+We conclude this section with an estimate of the effect of using LO ME when computing the weights $w_{0}(\vecy)$ and $w_{1}(\vecy)$ 
+by means of Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background}) and of the computing-time requirements of the MEM.
+Unfortunately, we cannot compare the performance of the MEM
+for the case of using ME generated at LO versus ME generated at NLO in Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background}) directly,
+because the program $\textsc{MadGraph\_aMCatNLO}$ does not support the generation of code for NLO ME at present
+and also because the usage of NLO ME in the MEM would increase the computing-time requirements by $1$-$2$ orders of magnitude.
+Instead, we use ME generated at LO accuracy in Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background}) 
+and compare the resulting performance in separating the $\dihiggs$ signal from the $\ttbar$ background
+for MC samples simulated at LO and at NLO accuracy in pQCD.
+The NLO samples are expected to provide the more accurate modelling of real data and the LO samples are taken as a - more or less - precise approximation.
+We take the difference in performance achieved by the MEM on the MC samples simulated at LO and at NLO accuracy
+as an estimate for the loss in discrimination power that results from our choice of using LO ME and ignoring the effects of higher orders in the MEM.
+Distributions in the LR $P(\vecy)$ computed for $\dihiggs$ signal and $\ttbar$ background events simulated at LO and at NLO accuracy in pQCD 
+are shown in Fig.~\ref{fig:memLR_LO_vs_NLO}. The events are analyzed at MC-truth level.
+The corresponding ROC curve is presented in Fig.~\ref{fig:ROC_LO_vs_NLO}.
+The usage of LO ME causes a moderate loss in the separation of the $\dihiggs$ signal from the $\ttbar$ background,
+amounting to a few percent loss in signal efficiency (for the same background rate).
+We conclude from these figures that the usage of LO ME in the MEM represents a viable approximation.
+
+\begin{figure}
+\ifx\ver\verPreprint
+\setlength{\unitlength}{1mm}
+\begin{center}
+\begin{picture}(160,78)(0,0)
+\put(0.0, 0.0){\mbox{\includegraphics*[height=78mm]
+ {plots/lo_vs_nlo_memLR_signal.pdf}}}
+\put(81.0, 0.0){\mbox{\includegraphics*[height=78mm]
+ {plots/lo_vs_nlo_memLR_background.pdf}}}
+\end{picture}
+\end{center}
+\fi
+\ifx\ver\verPAPER
+\centering
+\includegraphics[width=0.48\textwidth]{plots/lo_vs_nlo_memLR_signal.pdf}
+\includegraphics[width=0.48\textwidth]{plots/lo_vs_nlo_memLR_background.pdf}
+\fi
+\caption{
+  Distribution in the LR $P(\vecy)$ 
+  for $\dihiggs$ signal (left) and $\ttbar$ background (right) events
+  simulated at LO and at NLO accuracy in pQCD.
+  The likelihood ratios are computed at MC-truth level.
+}
+\label{fig:memLR_LO_vs_NLO}
+\end{figure}
+
+\begin{figure}
+\ifx\ver\verPreprint
+\setlength{\unitlength}{1mm}
+\begin{center}
+\begin{picture}(160,67)(0,0)
+\put(39.5, 0.0){\mbox{\includegraphics*[height=67mm]
+ {plots/lo_vs_nlo_ROC.pdf}}}
+\end{picture}
+\end{center}
+\fi
+\ifx\ver\verPAPER
+\centering
+\includegraphics[width=0.48\textwidth]{plots/lo_vs_nlo_ROC.pdf}
+\fi
+\caption{
+  Separation between the $\dihiggs$ signal and the $\ttbar$ background 
+  for events simulated at LO and at NLO accuracy in pQCD.
+  The graphs of background rate versus signal efficiency shown in the figure
+  are obtained by applying a cut on the distributions in the likelihood ratios $P(\vecy)$ shown in Fig.~\ref{fig:memLR_LO_vs_NLO}.
+}
+\label{fig:ROC_LO_vs_NLO}
+\end{figure}
+
+The computing time required to evaluate the integrals given by Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background})
+may represent a challenge in practical applications of the MEM.
+Experimental analyses will usually need to evaluate these integrals
+multiple times for each event in order to assess the effect of systematic uncertainties.
+Taken together with the large cross section for $\ttbar$ production at the LHC,
+the integrals in Eqs.~(\ref{eq:mem_signal}) and~(\ref{eq:mem_background}) may need to be computed in the order of $100$ million times.
+Even with several thousands of computing jobs running in parallel,
+as it is nowadays commonplace for experimental data analyses performed at the LHC,
+the computation still requires a few weeks of nonstop computing time.
+Several possibilities to speed up the numeric integrations, which take most of the computing time in practical applications of the MEM,
+have been explored in the literature.
+One alternative is to use vector integrands to evaluate the likelihood ratio for all systematic uncertainties simultaneously~\cite{CUBA},
+taking advantage of the fact that the systematic uncertainties typically constitute small changes with respect to the nominal value.
+Another alternative is to take advantage of the parallelizability of multidimensional integration and perform the integration on graphics processing units (GPUs).
+Speedup factors of order $100$, compared to using a single core of a general-purpose central processing unit (CPU) 
+such as the $2.30$~GHz Intel\TReg~Xeon\TReg~E5-2695V3 processor that we used for the studies presented in this paper,
+are reported in the literature for performing numeric integrations on GPUs~\cite{Hagiwara:2009aq,Hagiwara:2009cy,Kanzaki:2010ym,Hagiwara:2013oka,Schouten:2014yza,Grasseau:2015vfa}.
