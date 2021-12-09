@@ -52,7 +52,7 @@ corresponds to the medium working-point of the ``combined secondary vertex'' $\P
 The algorithm identifies jets originating from the hadronization of a bottom quark with an efficiency of approximately $70\%$,
 for a misidentification rate for light-quark and gluon jets of about $1.5\%$~\cite{CMS:2012feb}.
 Events containing more than two $\Pbottom$-tagged jets of $\pT > 25$~\GeV and $\abs{\eta} < 2.4$ are vetoed.
-The latter condition rejects a negligible fraction of events, amounting to $X.X\%$ of the $\dihiggs$ signal and $X.X\%$ of the $\ttbar$ background,
+The latter condition rejects a small fraction of events, amounting to $7.7\%$ of the $\dihiggs$ signal and $5.1\%$ of the $\ttbar$ background,
 and avoids ambiguities in choosing the pair of $\Pbottom$-jets 
 when computing the PDs $w_{0}(\vecy)$ and $w_{1}(\vecy)$ according to Eqs.~\ref{eq:mem_signal} and~\ref{eq:mem_background}.
 The selection criteria are applied either to generator-level leptons and jets (when analyzing simulated events at MC-truth level) 
@@ -66,8 +66,8 @@ in $\dihiggs$ signal and $\ttbar$ background events that pass the selection crit
 Only events in which both detector-level jets are matched, within a cone of size $\delta R = 0.3$, 
 to bottom quarks that originate from either $\PHiggs$ boson or from top quark decays, are shown in the figure.
 According to the $\textsc{DELPHES}$ simulation, 
-$XX.X\%$ of $\dihiggs$ and $XX.X\%$ of $\ttbar$ events that pass the selection criteria described in the previous paragraph fulfill this matching condition,
-\ie in $X.X\%$ of selected $\dihiggs$ and $X.X\%$ of selected $\ttbar$ events one of the bottom quarks is not reconstructed as $\Pbottom$-jet at detector level
+$95.0\%$ of $\dihiggs$ and $96.4\%$ of $\ttbar$ events that pass the selection criteria described in the previous paragraph fulfill this matching condition,
+\ie in $5.0\%$ of selected $\dihiggs$ and $3.6\%$ of selected $\ttbar$ events one of the bottom quarks is not reconstructed as $\Pbottom$-jet at detector level
 and a light quark or gluon jet is misidentified as $\Pbottom$-jet instead.
 The figure shows that the jet calibration shifts the peak of the $\mbb$ distribution by about $20\%$.
 After calibration, the $\mbb$ distribution in $\dihiggs$ signal events peaks close to $125$~\GeV.
@@ -117,7 +117,7 @@ is justified by Fig.~5 of Ref.~\cite{JME-18-001}, which shows that the resolutio
 The hadronic recoil $\rho$ is not directly available in the $\textsc{DELPHES}$ simulation.
 To determine the resolution on $\rho$, we compute the transverse momentum components of the hadronic recoil by means of Eq.~\ref{eq:hadRecoil_true} at MC-truth
 and by means of Eq.~\ref{eq:hadRecoil} at detector level.
-The resolutions on $\pX^{\rho}$ and $\pY^{\rho}$ amount to $XX.X$~\GeV for the $\dihiggs$ signal and to $XX.X$~\GeV for the $\ttbar$ background.
+The resolutions on $\pX^{\rho}$ and $\pY^{\rho}$ amount to $32.4$~\GeV for the $\dihiggs$ signal and to $30.3$~\GeV for the $\ttbar$ background.
 The resolution on the energy of $\Pbottom$-jets is small compared to the resolution on the hadronic recoil,
 which means that the resolution on the latter is dominated by the resolution on the $\vecMET$.
 This allows us to compare the resolutions on $\pX^{\rho}$ and $\pY^{\rho}$ in the $\textsc{DELPHES}$ simulation to published $\vecMET$ resolutions during LHC Run $2$.
@@ -131,7 +131,7 @@ V = \sigma_{\rho}^{2} \cdot I_{2}
 \label{eq:resolution_rho}
 \end{equation}
 \end{linenowrapper}
-with $\sigma_{\rho} = XX.X$~\GeV for when computing the PDs $w_{0}(\vecy)$ and $w_{1}(\vecy)$ for $\dihiggs$ signal and $\ttbar$ background events.
+with $\sigma_{\rho} = 31.4$~\GeV for when computing the PDs $w_{0}(\vecy)$ and $w_{1}(\vecy)$ for $\dihiggs$ signal and $\ttbar$ background events.
 
 With these TF, we can proceed to compute the PDs $w_{0}(\vecy)$ and $w_{1}(\vecy)$.
 Distributions in $w_{0}(\vecy)$ and $w_{1}(\vecy)$ for $\dihiggs$ signal and $\ttbar$ background events are shown in Fig.~\ref{fig:probS_and_probB}.
@@ -189,8 +189,9 @@ Signal events are characterized by high values of $P(\vecy)$, while background e
 The secondary peak of the distribution at low values for $\dihiggs$ signal (at high values for $\ttbar$ background) events
 is due to events in which the event kinematics are atypical for signal (background) events, 
 resulting in the PD for the wrong hypothesis $w_{1}(\vecy)$ ($w_{0}(\vecy)$) to be higher than the PD for the correct hypothesis $w_{0}(\vecy)$ ($w_{1}(\vecy)$).
-About $X\%$ of signal ($X\%$ of background) events populate the secondary peak in case the LR $P(\vecy)$ is computed at MC-truth level.
-The fraction of $\dihiggs$ signal ($\ttbar$ background) events that populate the secondary peak increases to $X\%$ ($X\%$) in case the LR $P(\vecy)$ is computed at detector level.
+About $4\%$ of signal ($10\%$ of background) events populate the leftmost (rightmost) bin of the distribution in the LR $P(\vecy)$ in case $P(\vecy)$ is computed at MC-truth level.
+In case the LR $P(\vecy)$ is computed at detector level, the fraction of $\dihiggs$ signal ($\ttbar$ background) events 
+that populate the leftmost (rightmost) bin increases to $14\%$ (decreases to $7\%$).
 The ``receiver-operating-characteristic'' (ROC) curves~\cite{ROCcurve} that correspond to these distributions are shown in Fig.~\ref{fig:ROC}.
 The ROC curve quantifies the separation between the $\dihiggs$ signal and the $\ttbar$ background
 and is obtained by varying the threshold of a cut on the LR $P(\vecy)$ and plotting the fractions of signal and background events passing the cut.
