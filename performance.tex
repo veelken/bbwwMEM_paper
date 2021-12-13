@@ -122,9 +122,9 @@ The resolution on $\pX^{\rho}$ and $\pY^{\rho}$ in the $\textsc{DELPHES}$ simula
 The resolution on the energy of $\Pbottom$-jets is small compared to the resolution on the hadronic recoil.
 The resolution on the latter is thus similar to the resolution on $\vecMET$.
 This similarity allows us to compare the resolutions on $\pX^{\rho}$ and $\pY^{\rho}$ in the $\textsc{DELPHES}$ simulation to the resolution on $\vecMET$
-published by the ATLAS collaboration for simulated $\ttbar$ events during LHC Run $2$,
-which is shown in Fig.~9 of Ref.~\cite{ATLAS:2018txj} and amounts to $25$-$30$~\GeV~\footnote{
-  The CMS collaboration has not published the $\vecMET$ resolution during LHC Run $2$ specifically for $\ttbar$ events.}.
+published by the ATLAS collaboration for simulated $\ttbar$ events during LHC Run $2$~\footnote{
+  The CMS collaboration has not published the $\vecMET$ resolution during LHC Run $2$ specifically for $\ttbar$ events.},
+which is shown in Fig.~9 of Ref.~\cite{ATLAS:2018txj} and amounts to $25$-$30$~\GeV.
 We assume that the resolutions on $\pX^{\rho}$ and $\pY^{\rho}$ are uncorrelated and amount to the same for signal and background events.
 Rounding the numbers for the resolution on $\pX^{\rho}$ and $\pY^{\rho}$ to one significant digit, we use:
 \begin{linenowrapper}
@@ -160,13 +160,13 @@ as well as of the misidentification of light quark or gluon jets as $\Pbottom$-j
 \begin{center}
 \begin{picture}(160,144)(0,0)
 \put(-1.0, 78.0){\mbox{\includegraphics*[height=66mm]
- {plots/effectOfFakes_2histograms_probS_signal.pdf}}}
+ {plots/makePlotsForPaper_delphes_vs_mctruth_probS_signal.pdf}}}
 \put(80.0, 78.0){\mbox{\includegraphics*[height=66mm]
- {plots/effectOfFakes_2histograms_probS_background.pdf}}}
+ {plots/makePlotsForPaper_delphes_vs_mctruth_probS_background.pdf}}}
 \put(-1.0, 0.0){\mbox{\includegraphics*[height=66mm]
- {plots/effectOfFakes_2histograms_probB_signal.pdf}}}
+ {plots/makePlotsForPaper_delphes_vs_mctruth_probB_signal.pdf}}}
 \put(80.0, 0.0){\mbox{\includegraphics*[height=66mm]
- {plots/effectOfFakes_2histograms_probB_background.pdf}}}
+ {plots/makePlotsForPaper_delphes_vs_mctruth_probB_background.pdf}}}
 \end{picture}
 \end{center}
 \fi
@@ -296,16 +296,16 @@ We conclude from these figures that the usage of LO ME represents a viable appro
 \begin{center}
 \begin{picture}(160,78)(0,0)
 \put(0.0, 0.0){\mbox{\includegraphics*[height=78mm]
- {plots/lo_vs_nlo_memLR_signal.pdf}}}
+ {plots/hh_bbwwMEM_dilepton_lo_vs_nlo_memLR_signal.pdf}}}
 \put(81.0, 0.0){\mbox{\includegraphics*[height=78mm]
- {plots/lo_vs_nlo_memLR_background.pdf}}}
+ {plots/hh_bbwwMEM_dilepton_lo_vs_nlo_memLR_background.pdf}}}
 \end{picture}
 \end{center}
 \fi
 \ifx\ver\verPAPER
 \centering
-\includegraphics[width=0.48\textwidth]{plots/lo_vs_nlo_memLR_signal.pdf}
-\includegraphics[width=0.48\textwidth]{plots/lo_vs_nlo_memLR_background.pdf}
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_lo_vs_nlo_memLR_signal.pdf}
+\includegraphics[width=0.48\textwidth]{plots/hh_bbwwMEM_dilepton_lo_vs_nlo_memLR_background.pdf}
 \fi
 \caption{
   Distribution in the LR $P(\vecy)$ 
@@ -322,13 +322,13 @@ We conclude from these figures that the usage of LO ME represents a viable appro
 \begin{center}
 \begin{picture}(160,67)(0,0)
 \put(39.5, 0.0){\mbox{\includegraphics*[height=67mm]
- {plots/lo_vs_nlo_ROC.pdf}}}
+ {plots/hh_bbwwMEM_dilepton_lo_vs_nlo_ROC.pdf}}}
 \end{picture}
 \end{center}
 \fi
 \ifx\ver\verPAPER
 \centering
-\includegraphics[width=0.57\textwidth]{plots/lo_vs_nlo_ROC.pdf}
+\includegraphics[width=0.57\textwidth]{plots/hh_bbwwMEM_dilepton_lo_vs_nlo_ROC.pdf}
 \fi
 \caption{
   Separation between the $\dihiggs$ signal and the $\ttbar$ background 
