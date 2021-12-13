@@ -30,5 +30,7 @@ if [[ -f bbwwMEM.pdf ]] && [[ "$1" = "grayscale" ]]; then
    bbwwMEM.pdf
 fi
 
+cp bbwwMEM.pdf ~
+
 #acroread bbwwMEM.pdf
 
