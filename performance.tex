@@ -22,16 +22,14 @@ Detector effects are simulated using the program $\textsc{DELPHES}$ $v3.5.0$~\ci
 On average forty inelastic proton-proton interactions (pileup) are added to each simulated event
 in order to simulate the data-taking conditions during Run $2$ of the LHC.
 
-Jets are reconstructed using the anti-$\kt$ algorithm~\cite{Cacciari:2008gp, Cacciari:2011ma} with a distance parameter of $0.4$.
-We produce two separate collections of jets for studying the performance of the MEM at MC-truth and at detector level,
-using either all stable generator-level particles or the detector-level particle-flow objects created by $\textsc{DELPHES}$ as input to the jet reconstruction.
-We refer to the first collection as generator-level and to the second as detector-level jets.
-The generator-level jets exclude the particles from pileup.
-The energy of jets reconstructed at detector level includes particles from pileup and is corrected for pileup effects using the method described in Refs.~\cite{Cacciari:2008gn, Cacciari:2007fd}.
-The jets are calibrated as function of jet $\pT$ and $\eta$, where $\eta = -\ln\tan(\theta/2)$ denotes the pseudorapidity of the jet,
-such that the energy of jets reconstructed at detector level and that are tagged, at detector level, as originating from the hadronization of a bottom quark
+Jets are reconstructed using the anti-$\kt$ algorithm~\cite{Cacciari:2008gp, Cacciari:2011ma} with a distance parameter of $0.4$,
+using the detector-level particle-flow objects created by $\textsc{DELPHES}$ as input.
+We refer to these jets as detector-level jets.
+Their energy is corrected for pileup effects using the method described in Refs.~\cite{Cacciari:2008gn, Cacciari:2007fd}
+and is calibrated as function of jet $\pT$ and $\eta$, where $\eta = -\ln\tan(\theta/2)$ denotes the pseudorapidity of the jet.
+The calibration is performed such that the energy of the jets that are tagged, at detector level, as originating from the hadronization of a bottom quark
 on average matches the energy of the bottom quarks that result from $\PHiggs$ boson or top quark decays at the parton level.
-We refer to detector-level jets that pass this parton-level matching as $\Pbottom$-jets.
+We refer to detector-level jets that pass the $\Pbottom$-tagging criteria as $\Pbottom$-jets.
 By calibrating detector-level jets to the energy of the bottom quarks at the parton level,
 the calibration procedure corrects the jet energy for out-of-cone effects and for the energy carried away, on average, by the neutrinos produced in heavy-flavor decays.
 
@@ -58,8 +56,8 @@ The selection criteria are applied to generator-level leptons and jets when anal
 and to detector-level leptons and jets when analyzing simulated events at the detector level.
 In case the selection criteria are applied at MC-truth level,
 no isolation requirements are applied to the leptons,
-the conditions $\pT > 25$~\GeV and $\abs{\eta} < 2.4$ of the jet selection are applied on the generator-level jets that originate from the hadronization of the bottom quarks 
-produced in the $\PHiggs$ boson or top quark decays and no detector-level $\Pbottom$-tagging criteria are applied.
+the conditions $\pT > 25$~\GeV and $\abs{\eta} < 2.4$ of the jet selection are applied at the parton level, 
+on the bottom quarks that are produced in the $\PHiggs$ boson or top quark decays, and no detector-level $\Pbottom$-tagging criteria are applied.
 
 Fig.~\ref{fig:mbb} shows the distribution in $\mbb$, the mass of the two $\Pbottom$-tagged jets at detector level, 
 in $\dihiggs$ signal and $\ttbar$ background events that pass the selection criteria described in the previous paragraph.
