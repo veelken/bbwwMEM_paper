@@ -236,7 +236,11 @@ The issue that the LO ME is only well-defined for events with zero ISR
 is resolved by evaluating the ME $\mathcal{M}_{i}(\vecyhat)$ in a frame in which the $\PHiggs\PHiggs$ ($\ttbar$) system has zero $\pT$, 
 to which we refer as the zero-transverse-momentum (ZTM) frame.
 The Lorentz transformation of the energy $\Ehat_{(k)}$ and momenta $\vecphat^{(k)}$ in Eq.~(\ref{eq:mem2})
-from the laboratory to the ZTM frame is performed using the vector $\left(-\frac{\pX^{\rho}}{\pT^{\rho}},-\frac{\pY^{\rho}}{\pT^{\rho}},0\right)$ as the boost vector.
+from the laboratory to the ZTM frame is performed using the vector $\left(-\frac{\pXhat^{\rho}}{\pThat^{\rho}},-\frac{\pYhat^{\rho}}{\pThat^{\rho}},0\right)$ as the boost vector.
+The values of $\pXhat^{\rho}$, $\pYhat^{\rho}$, and $\pThat^{\rho}$ are computed using Eq.~(\ref{eq:hadRecoil_true}).
+The momentum components $\pXhat^{\Plepton^{+}}$, $\pXhat^{\Plepton^{-}}$, $\pYhat^{\Plepton^{+}}$, and $\pYhat^{\Plepton^{-}}$ are set to their measured values,
+while the components $\pXhat^{\Pbottom}$, $\pXhat^{\APbottom}$, $\pXhat^{\Pnu}$, $\pXhat^{\APnu}$, $\pYhat^{\Pbottom}$, $\pYhat^{\APbottom}$, $\pYhat^{\Pnu}$, and $\pYhat^{\APnu}$
+are recomputed as function of the integration variables $\Ehat_{\Pbottom}$, $\Ehat_{\APbottom}$, $\vecphat_{\Pnu}$, and $\vecphat_{\APnu}$ when evaluating Eq.~(\ref{eq:hadRecoil_true}).
 
 Eliminating the energy and longitudinal momentum components of the four-dimensional $\delta$-function 
 $\delta( \xhat_{a} \, \Ehat_{a} + \xhat_{b} \, \Ehat_{b} - \sum_{k}^{6} \Ehat_{(k)}) \cdot \delta( \xhat_{a} \, \pZhat^{a} + \xhat_{b} \, \pZhat^{b} - \sum_{k}^{6} \pZhat^{(k)}) \cdot \delta( \pXhat^{\rho} + \sum_{k}^{6} \pXhat^{(k)}) \cdot \delta( \pYhat^{\rho} + \sum_{k}^{6} \pYhat^{(k)})$
