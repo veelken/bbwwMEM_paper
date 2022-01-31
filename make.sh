@@ -12,6 +12,10 @@ if [ "$NONSTOP" = 1 ]; then
   PDFLATEX_ARGS="-interaction=nonstopmode"
 fi
 
+# CV: without this clean-up, 
+#     latex produces an error when switching between paper and arXiv version
+rm bbwwMEM.aux
+
 pdflatex $PDFLATEX_ARGS bbwwMEM.tex
 bibtex bbwwMEM
 pdflatex $PDFLATEX_ARGS bbwwMEM.tex
