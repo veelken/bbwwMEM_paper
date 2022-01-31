@@ -1,21 +1,21 @@
 \def\verPreprint{1}
 \def\verPAPER{2}
-\def\ver{2}
+\def\ver{1}
 
 \def\lineNumbersEnabled{true}
 \def\lineNumbersDisabled{false}
-\def\showLineNumbers{true}
-%\def\showLineNumbers{false}
+%\def\showLineNumbers{true}
+\def\showLineNumbers{false}
 
 \ifx\ver\verPreprint
 \documentclass[a4paper,english,11pt]{article}
 \usepackage[bindingoffset=0.5cm,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,footskip=1.0cm]{geometry}
-\usepackage{authblk,graphicx,cite}
+\usepackage{hepnames,bm,multirow,amssymb,xspace,hyperref,lineno,amsmath,bm,multirow,authblk,graphicx,newclude,rotating,cite}
 \fi
 \ifx\ver\verPAPER
 \documentclass[review,sort&compress]{elsarticle}
-\fi
 \usepackage{hepnames,bm,multirow,amssymb,xspace,hyperref}
+\fi
 
 \ifx\showLineNumbers\lineNumbersEnabled
 \usepackage{lineno}
